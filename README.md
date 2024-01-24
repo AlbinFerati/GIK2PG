@@ -1,4 +1,4 @@
-# Hajsan och välkommen till Gängets projekt! 
+# Hejsan och välkommen till Gängets projekt! 
 
 ### Vi är glada över att du har hittat till vår GitHub-sida! Här hos Gänget strävar vi efter att göra en positiv skillnad i människors liv genom att erbjuda anpassade bilar som möter behoven hos personer med olika typer av funktionsnedsättningar.
 
