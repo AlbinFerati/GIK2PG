@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/CSS delen/Formulär.css">
-=======
+    <link rel="stylesheet" type="text/css" href="/CSS/Formulär.css">
+
 
 </head>
 
@@ -44,37 +44,37 @@
         
         <!-----------------------------DEL 1---------------------------->
         <section class="kroppen">
-            <img src="/IMG/Del1_Kroppen/man.jpg" alt="En bild utav en människokropp">
+            <img class="kroppen_img" src="/IMG/Kroppen/man.jpg" alt="En bild utav en människokropp">
             <div>
-                <ol>
+                <ol class="ol_sliders">
                     <h3>Vilken styrka/funktion har du i händer, armar och ben? (0-100%)</h3>
                     <li>
-                        <input type="range" min="1" max="100" value="50" class="slider" id="harm" name="harm">
+                        <input type="range" min="1" max="100" value="16" class="slider" id="harm" name="harm">
                         <label for="harm">Höger arm</label>
                         <input type="text" id="harmValue" value="50" size="3">
                     </li>
                     <li>
-                        <input type="range" min="0" max="100" value="50" class="slider" id="varm" name="varm">
+                        <input type="range" min="0" max="100" value="32" class="slider" id="varm" name="varm">
                         <label for="varm">Vänster arm</label>
                         <input type="text" id="varmValue" value="50" size="3">
                     </li>
                     <li>
-                        <input type="range" min="0" max="100" value="50" class="slider" id="hben" name="hben">
+                        <input type="range" min="0" max="100" value="48" class="slider" id="hben" name="hben">
                         <label for="hben">Höger ben</label>
                         <input type="text" id="hbenValue" value="50" size="3">
                     </li>
                     <li>
-                        <input type="range" min="0" max="100" value="50" class="slider" id="vben" name="vben">
+                        <input type="range" min="0" max="100" value="64" class="slider" id="vben" name="vben">
                         <label for="vben">Vänster ben</label>
                         <input type="text" id="vbenValue" value="50" size="3">
                     </li>
                     <li>
-                        <input type="range" min="0" max="100" value="50" class="slider" id="hhand" name="hhand">
+                        <input type="range" min="0" max="100" value="80" class="slider" id="hhand" name="hhand">
                         <label for="hhand">Höger hand</label>
                         <input type="text" id="hhandValue" value="50" size="3">
                     </li>
                     <li>
-                        <input type="range" min="0" max="100" value="50" class="slider" id="vhand" name="vhand">
+                        <input type="range" min="0" max="100" value="96" class="slider" id="vhand" name="vhand">
                         <label for="vhand">Vänster hand</label>
                         <input type="text" id="vhandValue" value="50" size="3">
                     </li>
@@ -82,19 +82,123 @@
             </div>
         </section>
         
-
         
 
         <!-----------------------------DEL 2---------------------------->
-        
+        <section class="hjälpmedel">
+            <h3>
+                Markera vilka hjälpmedel du använder idag:
+            </h3>
+            <section class="hjälpmedel_bildsektion">
+                <ol class="list_hjälpmedel">
+                    <div class="img_cont">
+                        <img class="img_test" src="/IMG/Hjälpmedel/El-moped.webp" alt="En bild på en Elmoped" id="elmoped">
+                        <label for="elmoped">El-moped 3-/4-hjulig</label>
+                    </div>
+                    <div class="img_cont">
+                        <img src="/IMG/Hjälpmedel/ElRullstol.webp" alt="En bil på en ElRullstol" id="elrullstol">
+                        <label for="elrullstol"> Elrullstol/Permobil</label>
+                    </div>
+                    <div class="img_cont">
+                        <img src="/IMG/Hjälpmedel/Kryckor.webp" alt="En bild på kryckor" id="kryckor">
+                        <label for="kryckor">Kryckor</label>
+                    </div>
+                    <div class="img_cont">
+                        <img src="/IMG/Hjälpmedel/rullatorwebp.webp" alt="En bild på en rullator" id="rullator">
+                        <label for="rullator">Rullator</label>
+                    </div>
+                    <div class="img_cont">
+                        <img src="/IMG/Hjälpmedel/Rullstol.webp" alt="En bild på en rullstol" id="rullstol">
+                        <label for="rullstol">Rullstol</label>
+                    </div>
+                    <div class="img_cont">
+                        <img src="./IMG/Hjälpmedel/" alt="" id="">
+                        <label for="">Manuell rullstol med hjälpmotor</label>
+                    </div>
+                </ol>
+                <h5>
+                    <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel</label><br>
+                    <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel"><br> 
+                </h5>
+            </section>
+        </section>
         
         
         <!-----------------------------DEL 3---------------------------->
+        <div class="checkboxfragor1">
+            <label for="fragaett"> Är du förare eller passangerare eller både och?</label>
+            <input type="checkbox" id="forare" name="forare" value="forare">
+            <label for="alt1"> Förare</label>
+            <input type="checkbox" id="passagerare" name="passagerare" value="passagerare">
+            <label for="alt2"> Passangerare</label>
+            <input type="checkbox" id="badaoch" name="badaoch" value="badaoch">
+            <label for="alt3"> Både förare och passagerare</label>
+        </div>
+
+        <div class="checkboxfragor2">
+            <label for="fragatva"> Föreställer du dig att åka som förare, passagerare eller både och?</label>
+            <input type="checkbox" id="foraree" name="foraree" value="foraree">
+            <label for="altett"> Förare</label>
+            <input type="checkbox" id="passageraree" name="passagerare" value="passagerare">
+            <label for="alttva"> Passangerare</label>
+            <input type="checkbox" id="badaochh" name="badaoch" value="badaoch">
+            <label for="alttre"> Både förare och passagerare</label>
+        </div>
+
+        
+        
+        <section class="fordon">
+            <h3>
+
+            </h3>
+
+            <h3>
+
+            </h3>
+            <h3>
+
+            </h3>
+            <section class="grid-container">
+                <ol>
+                    <div class="grid-item1">
+                        <img src="/IMG/Fordon/mindre_personbil.webp" alt="En bild på en mindre personbil" id="mindreBil">
+                        <label for="mindreBil">Mindre personbil</label>
+                    </div>
+                    <div class="grid-item2">
+                        <img src="/IMG/Fordon/Större_personbil.webp" alt="En bild på en större personbil (Kombi)" id="störrePersonbil">
+                        <label for="störrePersonbil">Större personbil (Kombi)</label>
+                    </div>
+                    <div class="grid-item3">
+                        <img src="/IMG/Fordon/SUV.webp" alt="En bild på en SUV" id="SUV">
+                        <label for="SUV">SUV</label>
+                    </div>
+                    <div class="grid-item4">
+                        <img src="/IMG/Fordon/Mindre_transportbil.webp" alt="En bild på en mindre transportbil" id="mindreTransportbil">
+                        <label for="mindreTransportbil">Mindre transportbil (ex. Citroën/VW Caddy)</label>
+                    </div>
+                    <div class="grid-item5">
+                        <img src="/IMG/Fordon/Amerikansk_golvsankt_bil.webp" alt="En bild på en Amerikansk golvsänkt bil" id="amerikanskGolvsänktbil">
+                        <label for="amerikanskGolvsänktbil">Amerikask golvsänkt bil (ex. Chrysler Pacifica)</label>
+                    </div>
+                    <div class="grid-item6">
+                        <img src="/IMG/Fordon/minibuss.webp" alt="En bild på en minibuss" id="minibuss">
+                        <label for="minibuss">Minibuss (ex. Ford Tourneo)</label>
+                    </div>
+                </ol>
+                <h5>
+                    <label for="annat_fordon">Annat fordon</label><br>
+                    <input type="text" id="annat_fordon" name="annat_fordon"><br>
+                </h5>
+            </section>
+
+            
+        </section>
+        <!-----------------------------FOOTER---------------------------->
     </main>
     
     
     <footer>
-        <div class="container">
+        <div class="footer_container">
             <div class="contact-info">
               <h2>KONTAKTUPPGIFTER HEDEMORA</h2>
               <p>Anpassarna Gunnérius AB</p>
@@ -136,6 +240,6 @@
             </div>
           </div>
     </footer>
-    <script src="JS DELEN/Formulär.js"></script>
+    <script src="JS/Formulär.js"></script>
 </body>
 </html>
