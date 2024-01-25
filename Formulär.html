@@ -1,11 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/CSS delen/Formulär.css">
 </head>
+
 <body>
+    <header>
+        <img src="/IMG/logo.jpeg" alt="Anpassarna logga">
+        <nav class="nav_bar">
+            <a class="nav_bar_a"  href="https://anpassarna.se/">Hem</a>
+            <a class="nav_bar_a" href="https://anpassarna.se/hem/anpassning/">Bilanpassningar</a>
+            <a class="nav_bar_a" href="https://anpassarna.se/hem/tjanster/">Övriga tjänster</a>
+            <a class="nav_bar_a" href="https://anpassarna.se/hem/anpassning/produkter/">Produkter</a>
+            <a class="nav_bar_a" href="https://anpassarna.se/hem/kontakt/">Kontakt</a>
+            <div class="nav_bar_dropdown">
+                    <div class="nav_bar_a">Mer info
+                    <div class="nav_bar_dropdown_content">
+                        <a href="https://anpassarna.se/om-oss/">Om oss</a>
+                        <a href="https://anpassarna.se/personal/">Personal</a>
+                        <a href="https://anpassarna.se/bidrag-och-fonder/">Bidrag & fonder</a>
+                    </div>
+        
+                </div>
+        </nav>
+    </header>
+    <main>
+        <!-----------------------------Kontaktinfo---------------------------->
+        <form class="kontaktinfo">
+            <label for="fnamn">Förnamn</label><br>
+            <input type="text" id="fnamn" name="fnamn"><br>
+            <label for="enamn">Efternamn</label><br>
+            <input type="text" id="enamn" name="enamn"><br>
+            <label for="telnmr">Telefon</label><br>
+            <input type="text" id="telnmr" name="telnmr"><br>
+            <label for="Mail">Mail</label><br>
+            <input type="text" id="Mail" name="Mail"><br>
+        </form>
+        
+        <!-----------------------------DEL 1---------------------------->
+        <section class="kroppen">
+            <img src="/IMG/Del1_Kroppen/man.jpg" alt="En bild utav en människokropp">
+            <div>
+                <ol>
+                    <h3>Vilken styrka/funktion har du i händer, armar och ben? (0-100%)</h3>
+                    <li>
+                        <input type="range" min="1" max="100" value="50" class="slider" id="harm" name="harm">
+                        <label for="harm">Höger arm</label>
+                        <input type="text" id="harmValue" value="50" size="3">
+                    </li>
+                    <li>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="varm" name="varm">
+                        <label for="varm">Vänster arm</label>
+                        <input type="text" id="varmValue" value="50" size="3">
+                    </li>
+                    <li>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="hben" name="hben">
+                        <label for="hben">Höger ben</label>
+                        <input type="text" id="hbenValue" value="50" size="3">
+                    </li>
+                    <li>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="vben" name="vben">
+                        <label for="vben">Vänster ben</label>
+                        <input type="text" id="vbenValue" value="50" size="3">
+                    </li>
+                    <li>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="hhand" name="hhand">
+                        <label for="hhand">Höger hand</label>
+                        <input type="text" id="hhandValue" value="50" size="3">
+                    </li>
+                    <li>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="vhand" name="vhand">
+                        <label for="vhand">Vänster hand</label>
+                        <input type="text" id="vhandValue" value="50" size="3">
+                    </li>
+                </ol>
+            </div>
+        </section>
+        
+
+        
+
+        <!-----------------------------DEL 2---------------------------->
+        
+        
+        
+        <!-----------------------------DEL 3---------------------------->
+    </main>
     
+    
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+              <h2>KONTAKTUPPGIFTER HEDEMORA</h2>
+              <p>Anpassarna Gunnérius AB</p>
+              <p>Kraftgatan 8</p>
+              <p>776 33 Hedemora</p>
+              <p>Telefon: 0225-28 69 00</p>
+              <p>E-post: <a href="mailto:info@anpassarna.se">info@anpassarna.se</a></p>
+              <h3>Öppettider:</h3>
+              <p>Måndag-Torsdag 07.00 – 16.00</p>
+              <p>Fredag 07.00 – 15.00</p>
+            </div>
+          
+            <div class="contact-info">
+              <h2>KONTAKTUPPGIFTER STOCKHOLM</h2>
+              <p>Anpassarna Stockholm AB</p>
+              <p>Skarpövägen 14</p>
+              <p>132 38 Saltsjö-boo</p>
+              <p>Telefon: 08-400 169 00</p>
+              <p>E-post: <a href="mailto:stockholm@anpassarna.se">stockholm@anpassarna.se</a></p>
+              <h3>Öppettider:</h3>
+              <p>Måndag-Fredag 08.00 – 16.00</p>
+              <p>För bokade kunder</p>
+              <h3>Telefontider:</h3>
+              <p>Måndag-Fredag 08.00 – 16.00</p>
+            </div>
+          
+            <div class="links">
+              <h2>LÄNKAR</h2>
+              <a href="/kontakt">Kontakt</a>
+              <a href="/om-oss">Om oss</a>
+              <a href="/personal">Personal</a>
+            </div>
+          
+            <div class="social-media">
+              <h2>SOCIALA MEDIER:</h2>
+              <a href="https://www.facebook.com/anpassarna"><img src="facebook-icon.png" alt="Facebook"></a>
+              <a href="https://www.instagram.com/anpassarna/"><img src="instagram-icon.png" alt="Instagram"></a>
+              <a href="https://fordonsanpassning.se/"><img src="BSF-icon.png" alt="BSF"></a>
+            </div>
+          </div>
+    </footer>
+    <script src="JS DELEN/Formulär.js"></script>
 </body>
 </html>
