@@ -1,3 +1,8 @@
+// <!-----------------------------START NAV---------------------------->
+
+// <!-----------------------------SLUT NAV---------------------------->
+
+// <!-----------------------------START DEL 1---------------------------->
 document.addEventListener('DOMContentLoaded', (event) => {
   // Function to update the slider and the text input to have the same value
   function updateValue(slider, textInput, value) {
@@ -39,3 +44,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Repeat for other slider-text input pairs with their respective IDs
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Hämta alla bilder och lägg till klickhändelse
+  var images = document.querySelectorAll('.img_hjälpmedel');
+
+  images.forEach(function (image) {
+    image.addEventListener('click', function () {
+      // Toggle klassen 'marked' på den klickade bilden
+      image.classList.toggle('marked');
+    });
+  });
+});
+
+// <!-----------------------------SLUT DEL 1---------------------------->
+
+// <!-----------------------------START DEL 2---------------------------->
+
+// <!-----------------------------SLUT DEL 2---------------------------->
+
+// <!-----------------------------START DEL 3---------------------------->
+
+// <!-----------------------------SLUT DEL 3---------------------------->
+
+// <!-----------------------------FOOTER DEL 1---------------------------->
