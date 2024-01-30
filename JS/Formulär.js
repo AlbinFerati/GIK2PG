@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Function to update the slider and the text input to have the same value
   function updateValue(slider, textInput, value) {
     slider.value = value;
-    textInput.value = value;
+    textInput.value = value + '%';
   }
 
   // Function to set up each slider-text pair
