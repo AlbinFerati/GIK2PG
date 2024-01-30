@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/CSS/Formulär.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/Screens.css">
     
 
 
@@ -95,8 +96,8 @@
             <h3>
                 Markera vilka hjälpmedel du använder idag:
             </h3>
-            <section class="hjälpmedel_bildsektion">
-                <ol class="list_hjälpmedel">
+            <section class="grid-container">
+                <ol class="container_list">
                     <div class="img_cont"> 
                         <label for="elmoped">El-moped 3-/4-hjulig</label>
                         <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/El-moped.webp" alt="En bild på en Elmoped" id="elmoped">
@@ -121,11 +122,14 @@
                         <label for="">Manuell rullstol med hjälpmotor</label>
                         <img class="img_hjälpmedel" src="./IMG/Hjälpmedel/" alt="" id="">
                     </div>
+                    <div>
+                        <h5>
+                            <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel</label><br>
+                            <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel"><br> 
+                        </h5>
+                    </div>
                 </ol>
-                <h5>
-                    <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel</label><br>
-                    <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel"><br> 
-                </h5>
+                
             </section>
         </section>
         <!-----------------------------SLUT DEL 2---------------------------->
@@ -146,7 +150,7 @@
             <input type="checkbox" id="foraree" name="foraree" value="foraree">
             <label for="altett"> Förare</label>
             <input type="checkbox" id="passageraree" name="passagerare" value="passagerare">
-            <label for="alttva"> Passangerare</label>
+            <label for="alttva"> Passagerare</label>
             <input type="checkbox" id="badaochh" name="badaoch" value="badaoch">
             <label for="alttre"> Både förare och passagerare</label>
         </div>
@@ -155,9 +159,10 @@
         
         <section class="fordon">
             <h3>
-
+                Föreställer du dig att åka som förare, passagerare eller både och?
+                <input type="checkbox" id="foraree" name="foraree" value="foraree">
+                <label for="altett"> Förare</label>
             </h3>
-
             <h3>
 
             </h3>
@@ -165,28 +170,29 @@
 
             </h3>
             <section class="grid-container">
-                <ol>
-                    <div class="grid-item1">
+                
+                <ol class="container_list">
+                    <div class="img_cont">
                         <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/mindre_personbil.webp" alt="En bild på en mindre personbil" id="mindreBil">
                         <label for="mindreBil">Mindre personbil</label>
                     </div>
-                    <div class="grid-item2">
+                    <div class="img_cont">
                         <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/Större_personbil.webp" alt="En bild på en större personbil (Kombi)" id="störrePersonbil">
                         <label for="störrePersonbil">Större personbil (Kombi)</label>
                     </div>
-                    <div class="grid-item3">
+                    <div class="img_cont">
                         <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/SUV.webp" alt="En bild på en SUV" id="SUV">
                         <label for="SUV">SUV</label>
                     </div>
-                    <div class="grid-item4">
+                    <div class="img_cont">
                         <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/Mindre_transportbil.webp" alt="En bild på en mindre transportbil" id="mindreTransportbil">
                         <label for="mindreTransportbil">Mindre transportbil (ex. Citroën/VW Caddy)</label>
                     </div>
-                    <div class="grid-item5">
+                    <div class="img_cont">
                         <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/Amerikansk_golvsankt_bil.webp" alt="En bild på en Amerikansk golvsänkt bil" id="amerikanskGolvsänktbil">
                         <label for="amerikanskGolvsänktbil">Amerikask golvsänkt bil (ex. Chrysler Pacifica)</label>
                     </div>
-                    <div class="grid-item6">
+                    <div class="img_cont">
                         <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/minibuss.webp" alt="En bild på en minibuss" id="minibuss">
                         <label for="minibuss">Minibuss (ex. Ford Tourneo)</label>
                     </div>

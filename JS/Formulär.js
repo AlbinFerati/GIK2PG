@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Repeat for other slider-text input pairs with their respective IDs
 });
 
+// <!-----------------------------SLUT DEL 1---------------------------->
+
+// <!-----------------------------START DEL 2---------------------------->
 document.addEventListener('DOMContentLoaded', function () {
   // Hämta alla bilder och lägg till klickhändelse
   var images = document.querySelectorAll('.img_hjälpmedel');
@@ -56,14 +59,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
-
-// <!-----------------------------SLUT DEL 1---------------------------->
-
-// <!-----------------------------START DEL 2---------------------------->
-
 // <!-----------------------------SLUT DEL 2---------------------------->
 
 // <!-----------------------------START DEL 3---------------------------->
+document.addEventListener('DOMContentLoaded', function () {
+  // Hämta alla bilder och lägg till klickhändelse
+  var images = document.querySelectorAll('.img_fordon_hjälpmedel');
+
+  images.forEach(function (image) {
+    image.addEventListener('click', function () {
+      // Ta bort markering från andra bilder
+      images.forEach(function (otherImage) {
+        otherImage.classList.remove('marked');
+      });
+
+      // Lägg till markering på klickad bild
+      image.classList.toggle('marked');
+    });
+  });
+});
 
 // <!-----------------------------SLUT DEL 3---------------------------->
 
