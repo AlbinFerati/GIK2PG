@@ -82,3 +82,12 @@ document.addEventListener('DOMContentLoaded', function () {
 // <!-----------------------------SLUT DEL 3---------------------------->
 
 // <!-----------------------------FOOTER DEL 1---------------------------->
+
+function myFunction() {
+  var x = document.getElementById('myLinks');
+  if (x.style.display === 'block') {
+    x.style.display = 'none';
+  } else {
+    x.style.display = 'block';
+  }
+}
