@@ -32,17 +32,17 @@ body {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  width: 30px;
-  height: 20px;
+  width: 3rem;
+  height: 2rem;
   position: relative;
 }
 
 .bar {
   width: 100%;
-  height: 3px;
+  height: 0.3rem;
   background-color: #333; /* Färgen på staplarna */
-  margin: 3px 0;
-  border-radius: 3px;
+  margin: 0.3rem 0;
+  border-radius: 0.3rem;
   transition: transform 0.4s;
 }
 
@@ -198,11 +198,28 @@ label {
 .img_fordon_hjälpmedel {
   max-width: 100%;
 }
-.Q1 {
+.Q1_yes {
   display: flex;
   flex-direction: column;
   gap: 10px; /* Justera avståndet mellan varje rad */
   font-size: 1.5rem;
+  display: none; /*ny för att gömma*/
+}
+
+.if_yes{
+  display: none;
+}
+
+.Q1_no {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Justera avståndet mellan varje rad */
+  font-size: 1.5rem;
+  display: none; /*ny för att gömma*/
+}
+
+.if_no{
+  display: none;
 }
 
 .Q1_label_container {
@@ -219,7 +236,11 @@ label {
 .Q1_input {
   width: 30%; /* Tar upp den sista 1/3 av raden */
 }
-
+.cont_fordon{
+  display: none;
+  grid-template-columns: repeat(2, 1fr); /* Två kolumner med lika stor bredd */
+  gap: 20px; /* Justera avståndet mellan bilderna */
+}
 
 
 

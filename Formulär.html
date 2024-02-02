@@ -176,7 +176,20 @@
         
         
         <section class="fordon">
-            <div class="Q1">
+          <h3>
+            Har du/ni någon anpassad bil idag?
+          </h3>
+          <div class="Q1_label_container">
+            <div>
+              <label class="Q1_label" for="choice_yes">Ja</label>
+            <input type="checkbox" id="choice_yes" name="choice_yes">
+            </div>
+            <div>
+              <label class="Q1_label" for="choice_no">Nej</label>
+            <input type="checkbox" id="choice_no" name="choice_no">
+            </div>
+          </div>
+            <div class="Q1_yes"> 
                 <h3>Är du förare eller passagerare eller både och?</h3>
               
                 <div class="Q1_label_container">
@@ -197,7 +210,7 @@
               
               
               
-              <div class="Q1">
+              <div class="Q1_no">
                 <h3>Föreställer du dig att åka som förare, passagerare eller både och?</h3>
                 
                 <div class="Q1_label_container">
@@ -215,10 +228,13 @@
                     <input class="Q1_input" type="checkbox" id="badaoch_q2" name="badaoch_q2" value="badaoch_q2">
                   </div>
               </div>
-              <h3>
-                Vilken typ av anpassad bil tror du skulle passa dina behov?
+              <h3 class="if_no">
+                  Vilken typ av anpassad bil tror du skulle passa dina behov?
               </h3>
-            <section class="grid-container">
+              <h3 class="if_yes">
+                  Ange vilken typ av anpassad bil ni har idag?
+              </h3>
+            <section class="grid-container cont_fordon">
                 <div class="img_cont">
                     <label for="mindreBil">Mindre personbil</label>
                     <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/mindre_personbil.webp" alt="En bild på en mindre personbil" id="mindreBil">
