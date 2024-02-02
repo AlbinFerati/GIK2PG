@@ -181,12 +181,10 @@
           </h3>
           <div class="Q1_label_container">
             <div>
-              <label class="Q1_label" for="choice_yes">Ja</label>
-            <input type="checkbox" id="choice_yes" name="choice_yes">
-            </div>
-            <div>
-              <label class="Q1_label" for="choice_no">Nej</label>
-            <input type="checkbox" id="choice_no" name="choice_no">
+            <label class="Q1_label" for="choice_yes">Ja</label>
+            <input type="radio" id="choice_yes" name="choice">
+            <label class="Q1_label" for="choice_no">Nej</label>
+            <input type="radio" id="choice_no" name="choice">
             </div>
           </div>
             <div class="Q1_yes"> 
@@ -194,17 +192,17 @@
               
                 <div class="Q1_label_container">
                   <label class="Q1_label" for="forare_q1">Förare</label>
-                  <input class="Q1_input" type="checkbox" id="forare_q1" name="forare_q1" value="forare_q1">
+                  <input class="Q1_input" type="radio" id="forare_q1" name="choice_2" value="forare_q1">
                 </div>
               
                 <div class="Q1_label_container">
                   <label class="Q1_label" for="passagerare_q1">Passagerare</label>
-                  <input class="Q1_input" type="checkbox" id="passagerare_q1" name="passagerare_q1" value="passagerare_q1">
+                  <input class="Q1_input" type="radio" id="passagerare_q1" name="choice_2" value="passagerare_q1">
                 </div>
               
                 <div class="Q1_label_container">
                   <label class="Q1_label" for="badaoch_q1">Både förare och passagerare</label>
-                  <input class="Q1_input" type="checkbox" id="badaoch_q1" name="badaoch_q1" value="badaoch_q1">
+                  <input class="Q1_input" type="radio" id="badaoch_q1" name="choice_2" value="badaoch_q1">
                 </div>
               </div>
               
@@ -215,17 +213,17 @@
                 
                 <div class="Q1_label_container">
                     <label class="Q1_label" for="forare_q2">Förare</label>
-                    <input class="Q1_input" type="checkbox" id="forare_q2" name="forare_q2" value="forare_q2">
+                    <input class="Q1_input" type="radio" id="forare_q2" name="choice_2" value="forare_q2">
                   </div>
                 
                   <div class="Q1_label_container">
                     <label class="Q1_label" for="passagerare_q2">Passagerare</label>
-                    <input class="Q1_input" type="checkbox" id="passagerare_q2" name="passagerare_q2" value="passagerare_q2">
+                    <input class="Q1_input" type="radio" id="passagerare_q2" name="choice_2" value="passagerare_q2">
                   </div>
                 
                   <div class="Q1_label_container">
                     <label class="Q1_label" for="badaoch_q2">Både förare och passagerare</label>
-                    <input class="Q1_input" type="checkbox" id="badaoch_q2" name="badaoch_q2" value="badaoch_q2">
+                    <input class="Q1_input" type="radio" id="badaoch_q2" name="choice_2" value="badaoch_q2">
                   </div>
               </div>
               <h3 class="if_no">
@@ -263,6 +261,11 @@
                     <label for="annat_fordon">Annat fordon</label><br>
                     <input type="text" id="annat_fordon" name="annat_fordon"><br>
                 </h5>
+                <div>
+                  <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon --> 
+ 
+                  <input type="checkbox" id="vet_ej" name="vet_ej">
+                </div>
             </section>
 
             
@@ -319,4 +322,9 @@
     </footer>
     <script src="JS/Formulär.js"></script>
 </body>
+
 </html>
+
+
+<!-- Dubbelkolla om något behöver fixas: -->
+<!-- rad 265 -->
