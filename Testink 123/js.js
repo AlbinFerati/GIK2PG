@@ -28,16 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Select the elements by their IDs and add click event listeners
-    const element1 = document.getElementById('v__nster-tumme');
-    const element2 = document.getElementById('v__nster-pekfinger');
-    const element3 = document.getElementById('v__nster-ringfinger');
-    const element4 = document.getElementById('path13');
-    const element5 = document.getElementById('path14');
-    const element6 = document.getElementById('path15');
-    const element7 = document.getElementById('path16');
-    const element8 = document.getElementById('path17');
-    const element9 = document.getElementById('path18');
-    const element10 = document.getElementById('path19');
+    const element1 = document.getElementById('path55');
+    const element2 = document.getElementById('path56');
+    const element3 = document.getElementById('path57');
+    const element4 = document.getElementById('path58');
+    const element5 = document.getElementById('path59');
+    const element6 = document.getElementById('path60');
+    const element7 = document.getElementById('path61');
+    const element8 = document.getElementById('path62');
+    const element9 = document.getElementById('path63');
+    const element10 = document.getElementById('path64');
 
     if (element1) {
         element1.addEventListener('click', toggleColor);
