@@ -124,6 +124,10 @@ body {
   margin: 10% 0%;
 }
 
+.kontaktinfo label{
+  margin: 1rem 0rem ;
+}
+
 input {
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -134,9 +138,14 @@ input {
   color: #2C3E50;
 
 }
+
 /* <!-----------------------------START DEL 1 (KROPPEN)----------------------------> */
 
-
+.siluett {
+  width: 100%;
+  height: auto;
+  /* fill: var(--color-5) */
+}
 
 label {
   display: block; /* Gör label till ett blockelement för att placera den ovanför bilden */
@@ -159,6 +168,10 @@ label {
 .range_slider{
   margin-bottom: 2.5rem;
 }
+
+
+
+
 
 /* <!-----------------------------SLUT DEL 1----------------------------> */
 

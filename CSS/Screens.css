@@ -1,19 +1,87 @@
-@media only screen and (min-width: 360px) {
-    
-  }
-
-
 
 
 
   @media only screen and (min-width: 768px) {
-
+/* -----------------KONTAKTINFO GRID---------------- */
+    .kontaktinfo {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "ett två"
+      "tre fyra";
   }
+  .kontaktinfo div {
+      display: grid;
+      /* justify-content: center; */
+      align-items: center;
+      text-align: left;
+    }
 
-  
-
+    .kontaktinfo div:nth-child(1) {
+      grid-area: ett;
+    }
+    .kontaktinfo div:nth-child(2) {
+      grid-area: två;
+    }
+    .kontaktinfo div:nth-child(3) {
+      grid-area: tre;
+    }
+    .kontaktinfo div:nth-child(4) {
+      grid-area: fyra;
+    }
+/* -------------------DEL 1---------------------  */
+    .section_sliders {
+      display: grid;
+    
+      gap: 1.5rem;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "header header"
+      "vhand hhand"
+      "varm harm"
+      "vben hben";
+    }
+   
+    .section_sliders h3:nth-child(1) {
+      text-align: center;
+      grid-area: header;
+      align-self: flex-end;
+    }
+    .section_sliders li:nth-child(2) {
+      grid-area: harm;
+    }
+    .section_sliders li:nth-child(3) {
+      grid-area: varm;
+    }
+    .section_sliders li:nth-child(4) {
+      grid-area: hben;
+    }
+    .section_sliders li:nth-child(5) {
+      grid-area: vben;
+    }
+    .section_sliders li:nth-child(6) {
+      grid-area: hhand;
+    }
+    .section_sliders li:nth-child(7) {
+      grid-area: vhand;
+    }
+}
 
 
   @media only screen and (min-width: 1024px) {
+
+    
+    
+  }
+
+
+  @media only screen and (min-width: 1280px) {
+    
+  }
+
+  @media only screen and (min-width: 1440px) {
     
   }
