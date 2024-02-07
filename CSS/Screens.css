@@ -1,5 +1,17 @@
 
-
+@media only screen and (min-width: 481px){
+  .kontaktinfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .kontaktinfo div {
+    flex-basis: 45%;
+    margin: 1rem 1rem;
+  }
+}
 
   @media only screen and (min-width: 768px) {
 /* -----------------KONTAKTINFO GRID---------------- */
