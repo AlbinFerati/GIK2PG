@@ -9,17 +9,20 @@ html {
     --color-4: hsl(230, 80%, 72%);
     --color-5: hsl(192, 89%, 71%);
     --color-6: hsl(192, 50%, 50%);
-    --color-7: hsl(190, 74%, 59%); 
+    --color-7: hsl(190, 74%, 59%);
     --bg: hsl(198, 51%, 35%);
     --text: hsl(197, 20%, 10%);
     --text-white: hsl(0, 0%, 100%);
     --text-grey: hsl(0, 0%, 84%);
     --text-hover: hsl(199, 100%, 40%);
+    --button: hsl(199, 100%, 51%)
+    --body_typography-font-family: Roboto;
 }
 
 /* BODY */
 body {
-  font-family: montserrat, arial, verdana;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, arial, verdana;
+  font-weight: 300;
 }
 
 
@@ -143,8 +146,6 @@ input {
 
 .siluett {
   width: 100%;
-  height: auto;
-  /* fill: var(--color-5) */
 }
 
 label {
@@ -191,6 +192,10 @@ label {
   border: 1px solid #ccc; /* Lägg till en ram runt varje bild */
   padding: 1rem; /* Justera utrymmet inuti ramen */
   text-align: center; /* Centrera text och bild */
+}
+
+.hjälpmedel_textfield input{
+width: 32%;
 }
 
 .img_hjälpmedel {
@@ -253,7 +258,9 @@ label {
   gap: 20px; /* Justera avståndet mellan bilderna */
 }
 
-
+h5 label{
+  font-size: 1.6rem;
+}
 
 
 
@@ -266,7 +273,15 @@ label {
 
 /* <!-----------------------------FOOTER DEL 1----------------------------> */
 
-
+.skicka{
+  color: var(--color-2);
+  background-color: var(--button);
+  border-radius: 0.4rem;
+  border: transparent;
+  padding: 1.3rem 2.9rem;
+  
+  
+}
 
 .footer_container {
     background-color: var(--color-1);

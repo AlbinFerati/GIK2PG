@@ -13,6 +13,7 @@
   }
 }
 
+
   @media only screen and (min-width: 768px) {
 /* -----------------KONTAKTINFO GRID---------------- */
     .kontaktinfo {
@@ -21,8 +22,8 @@
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: 
-      "ett två"
-      "tre fyra";
+      "fnamn enamn"
+      "telnmr mail";
   }
   .kontaktinfo div {
       display: grid;
@@ -32,17 +33,23 @@
     }
 
     .kontaktinfo div:nth-child(1) {
-      grid-area: ett;
+      grid-area: fnamn;
     }
     .kontaktinfo div:nth-child(2) {
-      grid-area: två;
+      grid-area: enamn;
     }
     .kontaktinfo div:nth-child(3) {
-      grid-area: tre;
+      grid-area: telnmr;
     }
     .kontaktinfo div:nth-child(4) {
-      grid-area: fyra;
+      grid-area: mail;
     }
+/* -------------------KROPPEN---------------------  */
+    .siluett{
+    width: 80%;
+    padding: 0rem 7rem;
+    }
+
 /* -------------------DEL 1---------------------  */
     .section_sliders {
       display: grid;
@@ -84,12 +91,11 @@
     .hjälpmedel .grid-container {
       display: grid;
       gap: 1.5rem;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: 
       "elmoped permobil kryckor"
-      "rullator rullstol hjälpmotor"
-      "annat . . ";
+      "rullator rullstol hjälpmotor";
     }
    
     .hjälpmedel .grid-container div:nth-child(1) {
@@ -110,29 +116,62 @@
    .hjälpmedel .grid-container div:nth-child(6) {
       grid-area: hjälpmotor;
     } 
-    .hjälpmedel .grid-container div:nth-child(7) {
-      grid-area: annat;
-    } 
+   
 
     /* -------------------DEL 3---------------------  */
 
+    .fordon .cont_fordon .grid-container {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "mindreBil kombi suv"
+      "transportbil amerikansk minibuss"
+      "annatFordon . . ";
+    }
 
+    .cont_fordon{
+      grid-template-columns: repeat(3,1fr);
+    }
+   
+    .fordon .cont_fordon .grid-container div:nth-child(1) {
+      grid-area: mindreBil;
+    }
+    .fordon .cont_fordon .grid-container div:nth-child(2) {
+      grid-area: kombi;
+    }
+    .fordon .cont_fordon .grid-container div:nth-child(3) {
+      grid-area: suv;
+    }
+    .fordon .cont_fordon .grid-container div:nth-child(4) {
+      grid-area: transportbil;
+    }
+    .fordon .cont_fordon .grid-container div:nth-child(5) {
+      grid-area: amerikansk;
+    }
+    .forodn .cont_fordon .grid-container div:nth-child(6) {
+      grid-area: minibuss;
+    } 
+    .forodn .cont_fordon .grid-container div:nth-child(7) {
+      grid-area: annatFordon;
+    } 
 
 }
 
 
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 961px) {
 
     
     
   }
 
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1025px) {
     
   }
 
-  @media only screen and (min-width: 1440px) {
+  @media only screen and (min-width: 1281px) {
     
   }
