@@ -46,7 +46,7 @@
 /* -------------------DEL 1---------------------  */
     .section_sliders {
       display: grid;
-    
+
       gap: 1.5rem;
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
@@ -58,7 +58,7 @@
     }
    
     .section_sliders h3:nth-child(1) {
-      text-align: center;
+      text-align: left;
       grid-area: header;
       align-self: flex-end;
     }
@@ -80,7 +80,46 @@
     .section_sliders li:nth-child(7) {
       grid-area: vhand;
     }
+    /* -------------------DEL 2---------------------  */
+    .hjälpmedel .grid-container {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 
+      "elmoped permobil kryckor"
+      "rullator rullstol hjälpmotor"
+      "annat . . ";
+    }
+   
+    .hjälpmedel .grid-container div:nth-child(1) {
+      grid-area: elmoped;
+    }
+    .hjälpmedel .grid-container div:nth-child(2) {
+      grid-area: permobil;
+    }
+    .hjälpmedel .grid-container div:nth-child(3) {
+      grid-area: kryckor;
+    }
+    .hjälpmedel .grid-container div:nth-child(4) {
+      grid-area: rullator;
+    }
+    .hjälpmedel .grid-container div:nth-child(5) {
+      grid-area: rullstol;
+    }
+   .hjälpmedel .grid-container div:nth-child(6) {
+      grid-area: hjälpmotor;
+    } 
+    .hjälpmedel .grid-container div:nth-child(7) {
+      grid-area: annat;
+    } 
+
+    /* -------------------DEL 3---------------------  */
+
+
+
 }
+
 
 
   @media only screen and (min-width: 1024px) {
