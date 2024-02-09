@@ -1,49 +1,58 @@
 
-@media only screen and (min-width: 481px){
+@media only screen and (min-width: 320px){
+  /* -----------------KONTAKTINFO GRID---------------- */
   .kontaktinfo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+    display: grid;
+    gap: 1.5rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "fnamn enamn"
+    "telnmr mail";
   }
-  
-  .kontaktinfo div {
-    flex-basis: 45%;
-    margin: 1rem 1rem;
-  }
-}
 
-
-  @media only screen and (min-width: 768px) {
-/* -----------------KONTAKTINFO GRID---------------- */
-    .kontaktinfo {
-      display: grid;
-      gap: 1.5rem;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-      "fnamn enamn"
-      "telnmr mail";
-  }
   .kontaktinfo div {
       display: grid;
       /* justify-content: center; */
       align-items: center;
       text-align: left;
-    }
+  }
 
-    .kontaktinfo div:nth-child(1) {
-      grid-area: fnamn;
-    }
-    .kontaktinfo div:nth-child(2) {
-      grid-area: enamn;
-    }
-    .kontaktinfo div:nth-child(3) {
-      grid-area: telnmr;
-    }
-    .kontaktinfo div:nth-child(4) {
-      grid-area: mail;
-    }
+  .kontaktinfo div:nth-child(1) {
+    grid-area: fnamn;
+  }
+  .kontaktinfo div:nth-child(2) {
+    grid-area: enamn;
+  }
+  .kontaktinfo div:nth-child(3) {
+    grid-area: telnmr;
+  }
+  .kontaktinfo div:nth-child(4) {
+    grid-area: mail;
+  }
+
+  .hjälpmedel_textfield input{
+    width: 45%;
+  }
+
+
+/* -------------------KROPPEN---------------------  */
+
+
+/* -------------------DEL 1---------------------  */
+
+
+/* -------------------DEL 2---------------------  */
+  
+
+/* -------------------DEL 3------------------- */
+
+
+}
+
+  @media only screen and (min-width: 768px) {
+/* -----------------KONTAKTINFO GRID---------------- */
+    
 /* -------------------KROPPEN---------------------  */
     .siluett{
     width: 80%;
@@ -55,8 +64,8 @@
       display: grid;
 
       gap: 1.5rem;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
       "header header"
       "vhand hhand"
@@ -88,43 +97,41 @@
       grid-area: vhand;
     }
     /* -------------------DEL 2---------------------  */
-    .hjälpmedel .grid-container {
+    .hjälpmedel .grid-hjälpmedel {
       display: grid;
       gap: 1.5rem;
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-areas: 
-      "elmoped permobil kryckor"
-      "rullator rullstol hjälpmotor";
+      "kryckor rullator rullstol"
+      "hjälpmotor elmoped permobil";
     }
    
-    .hjälpmedel .grid-container div:nth-child(1) {
+    .hjälpmedel .grid-hjälpmedel div:nth-child(1) {
       grid-area: elmoped;
     }
-    .hjälpmedel .grid-container div:nth-child(2) {
+    .hjälpmedel .grid-hjälpmedel div:nth-child(2) {
       grid-area: permobil;
     }
-    .hjälpmedel .grid-container div:nth-child(3) {
+    .hjälpmedel .grid-hjälpmedel div:nth-child(3) {
       grid-area: kryckor;
     }
-    .hjälpmedel .grid-container div:nth-child(4) {
+    .hjälpmedel .grid-hjälpmedel div:nth-child(4) {
       grid-area: rullator;
     }
-    .hjälpmedel .grid-container div:nth-child(5) {
+    .hjälpmedel .grid-hjälpmedel div:nth-child(5) {
       grid-area: rullstol;
     }
-   .hjälpmedel .grid-container div:nth-child(6) {
+   .hjälpmedel .grid-hjälpmedel div:nth-child(6) {
       grid-area: hjälpmotor;
     } 
    
 
     /* -------------------DEL 3---------------------  */
 
-    .fordon .cont_fordon .grid-container {
+    .fordon .cont_fordon .grid-fordon {
       display: grid;
       gap: 1.5rem;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: 
       "mindreBil kombi suv"
       "transportbil amerikansk minibuss"
@@ -135,43 +142,73 @@
       grid-template-columns: repeat(3,1fr);
     }
    
-    .fordon .cont_fordon .grid-container div:nth-child(1) {
+    .fordon .cont_fordon .grid-fordon div:nth-child(1) {
       grid-area: mindreBil;
     }
-    .fordon .cont_fordon .grid-container div:nth-child(2) {
+    .fordon .cont_fordon .grid-fordon div:nth-child(2) {
       grid-area: kombi;
     }
-    .fordon .cont_fordon .grid-container div:nth-child(3) {
+    .fordon .cont_fordon .grid-fordon div:nth-child(3) {
       grid-area: suv;
     }
-    .fordon .cont_fordon .grid-container div:nth-child(4) {
+    .fordon .cont_fordon .grid-fordon div:nth-child(4) {
       grid-area: transportbil;
     }
-    .fordon .cont_fordon .grid-container div:nth-child(5) {
+    .fordon .cont_fordon .grid-fordon div:nth-child(5) {
       grid-area: amerikansk;
     }
-    .forodn .cont_fordon .grid-container div:nth-child(6) {
+    .fordon .cont_fordon .grid-fordon div:nth-child(6) {
       grid-area: minibuss;
     } 
-    .forodn .cont_fordon .grid-container div:nth-child(7) {
+    .fordon .cont_fordon .grid-fordon h5:nth-child(1) {
       grid-area: annatFordon;
-    } 
+    }
+    .fordon .cont_fordon .grid-fordon div:nth-child(7) {
+      grid-area: vetEJ;
+    }  
 
 }
 
 
+  @media only screen and (min-width: 1024px) {
 
-  @media only screen and (min-width: 961px) {
+    .section_sliders {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      " . header header . "
+      " . vhand hhand . "
+      " . varm harm . "
+      " . vben hben . ";
+    }
 
-    
-    
+    .hjälpmedel .grid-hjälpmedel {
+      display: grid;
+      gap: 1.5rem;
+      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 
+      " . kryckor rullator rullstol . "
+      " . hjälpmotor elmoped permobil . ";
+    }
+
+    .fordon .cont_fordon .grid-fordon {
+      display: grid;
+      gap: 1.5rem;
+      /* grid-template-rows: repeat(3, 1fr); */
+      /* grid-template-columns: repeat(4 ,1fr); */
+      grid-template-areas: 
+      " . mindreBil kombi suv . "
+      " . transportbil amerikansk minibuss . ";
+    }
+
+    .cont_fordon{
+      grid-template-columns: repeat(5, 1fr);
+      /* grid-template-rows: repeat(3, 1fr); */
+    }
+
   }
 
-
-  @media only screen and (min-width: 1025px) {
-    
-  }
-
-  @media only screen and (min-width: 1281px) {
-    
-  }
+ 
