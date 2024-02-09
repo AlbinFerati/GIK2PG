@@ -47,15 +47,75 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // <!-----------------------------SLUT DEL 1---------------------------->
 
-// <!-----------------------------START DEL 2---------------------------->
+// <!-----------------------------START DEL 2 (HJÄLPMEDEL) ---------------------------->
+
+
 document.querySelectorAll('.img_cont').forEach((item) => {
   item.addEventListener('click', function (event) {
-    event.stopPropagation(); // Detta stoppar händelsen från att bubbla uppåt i DOM-trädet
-    this.classList.toggle('marked');
+    event.stopPropagation(); // Stoppar händelsen från att bubbla uppåt i DOM-trädet
+    this.classList.toggle('marked'); // Toggla klassen 'marked' på klickat element
+
+
   });
 });
 
-// <!-----------------------------SLUT DEL 2---------------------------->
+// ------------TEST
+document.querySelectorAll('.img_cont').forEach((item) => {
+  item.addEventListener('click', function (event) {
+    event.stopPropagation(); // Förhindra eventet från att bubbla uppåt i DOM-trädet
+
+    const section = document.querySelector('.hjälpmedel_med_i_fordon');
+    
+    // Använd data-attribute från klickad bild för att hitta motsvarande checkbox
+    const targetId = this.dataset.target;
+    const checkbox = document.getElementById(targetId);
+    
+    if (checkbox) {
+      // Växla synlighet för checkboxens förälder baserat på om checkboxen är checked eller inte
+      checkbox.checked = !checkbox.checked; // Växla checkboxens checked-tillstånd
+      checkbox.parentElement.style.display = checkbox.checked ? 'block' : 'none'; // Visa eller dölj baserat på checkboxens tillstånd
+    }
+
+    // Kontrollera om någon checkbox är markerad
+    const anyChecked = Array.from(document.querySelectorAll('.hjälpmedel_med_i_fordon input[type="checkbox"]')).some(checkbox => checkbox.checked);
+
+    // Visa eller dölj sektionen baserat på om någon checkbox är markerad
+    section.style.display = anyChecked ? 'block' : 'none';
+  });
+});
+
+
+
+
+
+// ---------TEST 2 
+// document.querySelectorAll('.img_cont').forEach(item => {
+//   item.addEventListener('click', function(event) {
+//     event.stopPropagation(); // Förhindrar eventet från att bubbla uppåt i DOM-trädet
+
+//     // Hämta ID:t för det mål-container baserat på data-target-attribute
+//     const targetId = this.getAttribute('data-target');
+//     const targetContainer = document.getElementById(targetId);
+
+//     // Kontrollera alla checkbox_containers och dölj dem
+//     document.querySelectorAll('.checkbox_container').forEach(container => {
+//       if (container.id === targetId) {
+//         // Om vi hittar matchande container, växla dess synlighet
+//         container.style.display = container.style.display === 'block' ? 'none' : 'block';
+//       } else {
+//         // Dölj alla andra containers
+//         container.style.display = 'none';
+//       }
+//     });
+//   });
+// });
+
+
+
+
+
+
+// <!-----------------------------SLUT DEL 2 (HJÄLPMEDEL)---------------------------->
 
 // <!-----------------------------START DEL 3---------------------------->
 var yesCheckbox = document.getElementById('choice_yes');
@@ -65,10 +125,13 @@ var cont_fordon = document.querySelector('.cont_fordon');
 var noCheckbox = document.getElementById('choice_no');
 var q1_noDiv = document.querySelector('.Q1_no');
 var if_no = document.querySelector('.if_no');
+var fordon_textfield = document.querySelector('.fordon_textfield');
+
 // Lyssna på ändringar i Ja-kryssrutan
 yesCheckbox.addEventListener('change', function () {
   if (yesCheckbox.checked) {
     // Om användaren klickar på "Ja", visa Q1-diven
+    fordon_textfield.style.display ='block';
     q1_yesDiv.style.display = 'block';
     if_yes.style.display = 'block';
     cont_fordon.style.display = 'grid';
@@ -85,6 +148,7 @@ yesCheckbox.addEventListener('change', function () {
 noCheckbox.addEventListener('change', function () {
   if (noCheckbox.checked) {
     // Om användaren klickar på "Ja", visa Q1-diven
+    fordon_textfield.style.display ='block';
     q1_noDiv.style.display = 'block';
     if_no.style.display = 'block';
     cont_fordon.style.display = 'grid';
@@ -119,7 +183,29 @@ document.addEventListener('DOMContentLoaded', function () {
       clearSelections('.Q1_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
     }
   });
+
+  // noCheckbox.addEventListener('change', function () {
+  //   if (noCheckbox.checked) {
+  //     clearSelections('.fordon_textfield input[type="text"]'); // Rensa val i "Ja"-sektionen
+  //   }
+  // });
+
+  // yesCheckbox.addEventListener('change', function () {
+  //   if (yesCheckbox.checked) {
+  //     clearSelections('.fordon_textfield input[type="checkbox"]'); // Rensa val i "Nej"-sektionen
+  //   }
+  // });
+
+  // noCheckbox.addEventListener('change', function () {
+  //   if (noCheckbox.checked) {
+  //     clearSelections('.Q1_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
+  //   }
+  // });
 });
+
+// ------------TEST------------
+
+
 
 // <!-----------------------------SLUT DEL 3---------------------------->
 

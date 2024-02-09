@@ -197,27 +197,27 @@
                 Markera vilka hjälpmedel du använder idag:
             </h3>
             <section class="grid-hjälpmedel">
-                <div class="img_cont"> 
+                <div class="img_cont" data-target="elmoped_till_fordon"> 
                     <label for="elmoped">El-moped 3-/4-hjulig</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/El-moped.webp" alt="En bild på en Elmoped" id="elmoped">
                 </div>
-                <div class="img_cont">
+                <div class="img_cont" data-target="permobil_till_fordon">
                     <label for="elrullstol"> Elrullstol/Permobil</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/ElRullstol.webp" alt="En bil på en ElRullstol" id="elrullstol">
                 </div>
-                <div class="img_cont">
+                <div class="img_cont" data-target="kryckor_till_fordon">
                     <label for="kryckor">Kryckor</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/Kryckor.webp" alt="En bild på kryckor" id="kryckor">
                 </div>
-                <div class="img_cont">
+                <div class="img_cont" data-target="rullator_till_fordon">
                     <label for="rullator">Rullator</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/rullatorwebp.webp" alt="En bild på en rullator" id="rullator">
                 </div>
-                <div class="img_cont">
+                <div class="img_cont" data-target="rullstol_till_fordon">
                     <label for="rullstol">Rullstol</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/Rullstol.webp" alt="En bild på en rullstol" id="rullstol">
                 </div>
-                <div class="img_cont">
+                <div class="img_cont" data-target="hjälpmotor_till_fordon">
                     <label for="">Manuell rullstol med hjälpmotor</label>
                     <img class="img_hjälpmedel" src="./IMG/Hjälpmedel/Manuell Rullstol med hjälpmotor.webp" alt="Manuell Rullstol med hjälpmotor" id="Manuell Rullstol med hjälpmotor">
                 </div>
@@ -228,34 +228,34 @@
                   <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel</label><br>
                   <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel"><br> 
               </h5>
-          </div>
+            </div>
         <section class="hjälpmedel_med_i_fordon">
           <h3>
             Vilken/vilka av hjälpmedlen behöver du få med i fordonet?
           </h3>
-          <div>
+          <div id="kryckor_container" class="checkbox_container">
             <label for="kryckor_till_fordon">Kryckor</label>
-            <input type="checkbox">
+            <input type="checkbox" id="kryckor_till_fordon">
           </div>
-          <div>
+          <div id="rullator_container" class="checkbox_container">
             <label for="rullator_till_fordon">Rullator</label>
-            <input type="checkbox">
+            <input type="checkbox" id="rullator_till_fordon">
           </div>
-          <div>
+          <div id="rullstol_container" class="checkbox_container">
             <label for="rullstol_till_fordon">Rullstol</label>
-            <input type="checkbox">
+            <input type="checkbox" id="rullstol_till_fordon">
           </div>
-          <div>
+          <div id="hjälpmotor_container" class="checkbox_container">
             <label for="hjälpmotor_till_fordon">Manuell Rullstol med hjälpmotor</label>
-            <input type="checkbox">
+            <input type="checkbox" id="hjälpmotor_till_fordon">
           </div>
-          <div>
+          <div id="elmoped_container" class="checkbox_container">
             <label for="elmoped_till_fordon">El-moped 3-/4-hjulig</label>
-            <input type="checkbox">
+            <input type="checkbox" id="elmoped_till_fordon">
           </div>
-          <div>
+          <div id="permobil_container" class="checkbox_container">
             <label for="permobil_till_fordon">Elrullstol/Permobil</label>
-            <input type="checkbox">
+            <input type="checkbox" id="permobil_till_fordon">
           </div>
         </section>
         <!-----------------------------SLUT DEL 2---------------------------->
@@ -292,7 +292,7 @@
                   <label class="Q1_label" for="badaoch_q1">Både förare och passagerare</label>
                   <input class="Q1_input" type="radio" id="badaoch_q1" name="choice_2" value="badaoch_q1">
                 </div>
-              </div>
+            </div>
               
               
               
@@ -345,24 +345,21 @@
                     <label for="minibuss">Minibuss</label>
                     <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/minibuss.webp" alt="En bild på en minibuss" id="minibuss">
                 </div>
-                  <h5>
-                    <label for="annat_fordon">Annat fordon</label><br>
-                    <input type="text" id="annat_fordon" name="annat_fordon"><br>
-                  </h5>
-                  <h5>
-                    <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon --> 
-                    
-                    <input type="checkbox" id="vet_ej" name="vet_ej">
-                  </h5>
-                  <div>
-                    <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon --> 
-                    
-                    <input type="checkbox" id="vet_ej" name="vet_ej">
-                  </div>
+                  
             </section>
-            <section>
-              
-            </section>
+            <div class="fordon_textfield">
+                
+                <h5>
+                  <label for="annat_fordon">Annat fordon</label><br>
+                  <input type="text" id="annat_fordon" name="annat_fordon"><br>
+                </h5>
+                <h5>
+                  <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon --> 
+                  
+                  <input type="checkbox" id="vet_ej" name="vet_ej">
+                </h5>
+            
+            </div>
 
             
         </section>
