@@ -182,11 +182,11 @@ label {
   font-size: 1.5rem;
 }
 
-/* .grid-container {
+.grid-hjälpmedel {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
-} */
+  /* gap: 1.5rem;  */
+}
 
 .img_cont {
   border: 1px solid #ccc; /* Lägg till en ram runt varje bild */
@@ -262,7 +262,7 @@ width: 32%;
 }
 .cont_fordon{
   display: none;
-  
+  grid-template-columns: repeat(2, 1fr);
 }
 
 h5 label{
@@ -276,6 +276,13 @@ h5 label{
 .fordon_textfield input{
   width: 32%;
   }
+
+.img_cont_fordon{
+  border: 1px solid #ccc; /* Lägg till en ram runt varje bild */
+  padding: 1rem; /* Justera utrymmet inuti ramen */
+  text-align: center; /* Centrera text och bild */
+  display: none;
+}
 
 
 

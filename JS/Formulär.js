@@ -118,6 +118,76 @@ document.querySelectorAll('.img_cont').forEach((item) => {
 // <!-----------------------------SLUT DEL 2 (HJÄLPMEDEL)---------------------------->
 
 // <!-----------------------------START DEL 3---------------------------->
+// var yesCheckbox = document.getElementById('choice_yes');
+// var q1_yesDiv = document.querySelector('.Q1_yes');
+// var if_yes = document.querySelector('.if_yes');
+// var cont_fordon = document.querySelector('.cont_fordon');
+// var noCheckbox = document.getElementById('choice_no');
+// var q1_noDiv = document.querySelector('.Q1_no');
+// var if_no = document.querySelector('.if_no');
+// var fordon_textfield = document.querySelector('.fordon_textfield');
+
+// // Lyssna på ändringar i Ja-kryssrutan
+// yesCheckbox.addEventListener('change', function () {
+//   if (yesCheckbox.checked) {
+//     // Om användaren klickar på "Ja", visa Q1-diven
+//     fordon_textfield.style.display ='block';
+//     q1_yesDiv.style.display = 'block';
+//     if_yes.style.display = 'block';
+//     cont_fordon.style.display = 'grid';
+//     q1_noDiv.style.display = 'none';
+//     if_no.style.display = 'none';
+//   } else {
+//     // Annars dölj Q1-diven
+//     q1_yesDiv.style.display = 'none';
+//     if_no.style.display = 'none';
+//     cont_fordon.style.display = 'none';
+//   }
+// });
+// // Lyssna på ändringar i Ja-kryssrutan
+// noCheckbox.addEventListener('change', function () {
+//   if (noCheckbox.checked) {
+//     // Om användaren klickar på "Ja", visa Q1-diven
+//     fordon_textfield.style.display ='block';
+//     q1_noDiv.style.display = 'block';
+//     if_no.style.display = 'block';
+//     cont_fordon.style.display = 'grid';
+//     q1_yesDiv.style.display = 'none';
+//     if_yes.style.display = 'none';
+//   } else {
+//     // Annars dölj Q1-diven
+//     q1_noDiv.style.display = 'none';
+//     if_no.style.display = 'none';
+//     cont_fordon.style.display = 'none';
+//   }
+// });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   var yesCheckbox = document.getElementById('choice_yes');
+//   var noCheckbox = document.getElementById('choice_no');
+
+//   function clearSelections(selector) {
+//     document.querySelectorAll(selector).forEach(function (input) {
+//       input.checked = false; // Avmarkera varje radioknapp
+//     });
+//   }
+
+//   yesCheckbox.addEventListener('change', function () {
+//     if (yesCheckbox.checked) {
+//       clearSelections('.Q1_no input[type="radio"]'); // Rensa val i "Nej"-sektionen
+//     }
+//   });
+
+//   noCheckbox.addEventListener('change', function () {
+//     if (noCheckbox.checked) {
+//       clearSelections('.Q1_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
+//     }
+//   });
+
+
+// });
+
+// ------------NYA SOM FUNGERAR------------
 var yesCheckbox = document.getElementById('choice_yes');
 var q1_yesDiv = document.querySelector('.Q1_yes');
 var if_yes = document.querySelector('.if_yes');
@@ -126,39 +196,58 @@ var noCheckbox = document.getElementById('choice_no');
 var q1_noDiv = document.querySelector('.Q1_no');
 var if_no = document.querySelector('.if_no');
 var fordon_textfield = document.querySelector('.fordon_textfield');
+var bilder = document.querySelectorAll('.img_cont_fordon');
+
+// Dölj bilderna initialt
+bilder.forEach(function(bild) {
+  bild.style.display = 'none';
+});
 
 // Lyssna på ändringar i Ja-kryssrutan
 yesCheckbox.addEventListener('change', function () {
   if (yesCheckbox.checked) {
-    // Om användaren klickar på "Ja", visa Q1-diven
+    // Om användaren klickar på "Ja", visa Q1-diven och bilderna
     fordon_textfield.style.display ='block';
     q1_yesDiv.style.display = 'block';
     if_yes.style.display = 'block';
     cont_fordon.style.display = 'grid';
     q1_noDiv.style.display = 'none';
     if_no.style.display = 'none';
+    bilder.forEach(function(bild) {
+      bild.style.display = 'block';
+    });
   } else {
-    // Annars dölj Q1-diven
+    // Annars dölj Q1-diven och bilderna
     q1_yesDiv.style.display = 'none';
     if_no.style.display = 'none';
     cont_fordon.style.display = 'none';
+    bilder.forEach(function(bild) {
+      bild.style.display = 'none';
+    });
   }
 });
-// Lyssna på ändringar i Ja-kryssrutan
+
+// Lyssna på ändringar i Nej-kryssrutan
 noCheckbox.addEventListener('change', function () {
   if (noCheckbox.checked) {
-    // Om användaren klickar på "Ja", visa Q1-diven
+    // Om användaren klickar på "Nej", visa Q1-diven och bilderna
     fordon_textfield.style.display ='block';
     q1_noDiv.style.display = 'block';
     if_no.style.display = 'block';
     cont_fordon.style.display = 'grid';
     q1_yesDiv.style.display = 'none';
     if_yes.style.display = 'none';
+    bilder.forEach(function(bild) {
+      bild.style.display = 'block';
+    });
   } else {
-    // Annars dölj Q1-diven
+    // Annars dölj Q1-diven och bilderna
     q1_noDiv.style.display = 'none';
     if_no.style.display = 'none';
     cont_fordon.style.display = 'none';
+    bilder.forEach(function(bild) {
+      bild.style.display = 'none';
+    });
   }
 });
 
@@ -183,27 +272,8 @@ document.addEventListener('DOMContentLoaded', function () {
       clearSelections('.Q1_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
     }
   });
-
-  // noCheckbox.addEventListener('change', function () {
-  //   if (noCheckbox.checked) {
-  //     clearSelections('.fordon_textfield input[type="text"]'); // Rensa val i "Ja"-sektionen
-  //   }
-  // });
-
-  // yesCheckbox.addEventListener('change', function () {
-  //   if (yesCheckbox.checked) {
-  //     clearSelections('.fordon_textfield input[type="checkbox"]'); // Rensa val i "Nej"-sektionen
-  //   }
-  // });
-
-  // noCheckbox.addEventListener('change', function () {
-  //   if (noCheckbox.checked) {
-  //     clearSelections('.Q1_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
-  //   }
-  // });
 });
 
-// ------------TEST------------
 
 
 
