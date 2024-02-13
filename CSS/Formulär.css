@@ -182,10 +182,10 @@ label {
   font-size: 1.5rem;
 }
 
-.grid-container {
+.grid-hjälpmedel {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Två kolumner med lika stor bredd */
-  gap: 20px; /* Justera avståndet mellan bilderna */
+  grid-template-columns: repeat(2, 1fr); 
+  /* gap: 1.5rem;  */
 }
 
 .img_cont {
@@ -205,6 +205,14 @@ width: 32%;
   border: 2px solid blue;
   opacity: 0.7;
 }
+
+.hjälpmedel_med_i_fordon, .checkbox_container{
+  display: none;
+}
+
+/* .checkbox_container{
+  display: none;
+} */
 /* <!-----------------------------SLUT DEL 2----------------------------> */
 
 /* <!-----------------------------START DEL 3 (FORDON)----------------------------> */
@@ -254,14 +262,27 @@ width: 32%;
 }
 .cont_fordon{
   display: none;
-  grid-template-columns: repeat(2, 1fr); /* Två kolumner med lika stor bredd */
-  gap: 20px; /* Justera avståndet mellan bilderna */
+  grid-template-columns: repeat(2, 1fr);
 }
 
 h5 label{
   font-size: 1.6rem;
 }
 
+.fordon_textfield{
+  display: none;
+}
+
+.fordon_textfield input{
+  width: 32%;
+  }
+
+.img_cont_fordon{
+  border: 1px solid #ccc; /* Lägg till en ram runt varje bild */
+  padding: 1rem; /* Justera utrymmet inuti ramen */
+  text-align: center; /* Centrera text och bild */
+  display: none;
+}
 
 
 

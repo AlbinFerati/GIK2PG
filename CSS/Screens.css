@@ -40,13 +40,70 @@
 
 
 /* -------------------DEL 1---------------------  */
+.hjälpmedel .grid-hjälpmedel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "kryckor rullator"
+   "rullstol hjälpmotor"
+  "elmoped permobil";
+}
 
+.hjälpmedel .grid-hjälpmedel div:nth-child(1) {
+  grid-area: elmoped;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(2) {
+  grid-area: permobil;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(3) {
+  grid-area: kryckor;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(4) {
+  grid-area: rullator;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(5) {
+  grid-area: rullstol;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(6) {
+  grid-area: hjälpmotor;
+} 
 
 /* -------------------DEL 2---------------------  */
   
 
 /* -------------------DEL 3------------------- */
 
+    .cont_fordon {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-areas: 
+        "mindreBil kombi"
+        "suv transportbil"
+        "amerikansk minibuss";
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .img_cont_fordon:nth-child(1) {
+      grid-area: mindreBil;
+    }
+    .img_cont_fordon:nth-child(2) {
+      grid-area: kombi;
+    }
+    .img_cont_fordon:nth-child(3) {
+      grid-area: suv;
+    }
+    .img_cont_fordon:nth-child(4) {
+      grid-area: transportbil;
+    }
+    .img_cont_fordon:nth-child(5) {
+      grid-area: amerikansk;
+    }
+    .img_cont_fordon:nth-child(6) {
+      grid-area: minibuss;
+    }
 
 }
 
@@ -107,65 +164,20 @@
       "hjälpmotor elmoped permobil";
     }
    
-    .hjälpmedel .grid-hjälpmedel div:nth-child(1) {
-      grid-area: elmoped;
-    }
-    .hjälpmedel .grid-hjälpmedel div:nth-child(2) {
-      grid-area: permobil;
-    }
-    .hjälpmedel .grid-hjälpmedel div:nth-child(3) {
-      grid-area: kryckor;
-    }
-    .hjälpmedel .grid-hjälpmedel div:nth-child(4) {
-      grid-area: rullator;
-    }
-    .hjälpmedel .grid-hjälpmedel div:nth-child(5) {
-      grid-area: rullstol;
-    }
-   .hjälpmedel .grid-hjälpmedel div:nth-child(6) {
-      grid-area: hjälpmotor;
-    } 
-   
-
     /* -------------------DEL 3---------------------  */
 
-    .fordon .cont_fordon .grid-fordon {
+
+    .cont_fordon {
       display: grid;
       gap: 1.5rem;
       grid-template-areas: 
-      "mindreBil kombi suv"
-      "transportbil amerikansk minibuss"
-      "annatFordon . . ";
-    }
-
-    .cont_fordon{
-      grid-template-columns: repeat(3,1fr);
+        "mindreBil kombi suv"
+        "transportbil amerikansk minibuss";
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
    
-    .fordon .cont_fordon .grid-fordon div:nth-child(1) {
-      grid-area: mindreBil;
-    }
-    .fordon .cont_fordon .grid-fordon div:nth-child(2) {
-      grid-area: kombi;
-    }
-    .fordon .cont_fordon .grid-fordon div:nth-child(3) {
-      grid-area: suv;
-    }
-    .fordon .cont_fordon .grid-fordon div:nth-child(4) {
-      grid-area: transportbil;
-    }
-    .fordon .cont_fordon .grid-fordon div:nth-child(5) {
-      grid-area: amerikansk;
-    }
-    .fordon .cont_fordon .grid-fordon div:nth-child(6) {
-      grid-area: minibuss;
-    } 
-    .fordon .cont_fordon .grid-fordon h5:nth-child(1) {
-      grid-area: annatFordon;
-    }
-    .fordon .cont_fordon .grid-fordon div:nth-child(7) {
-      grid-area: vetEJ;
-    }  
+
 
 }
 
@@ -187,26 +199,24 @@
     .hjälpmedel .grid-hjälpmedel {
       display: grid;
       gap: 1.5rem;
-      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+      
       grid-template-columns: repeat(5, 1fr);
       grid-template-areas: 
       " . kryckor rullator rullstol . "
       " . hjälpmotor elmoped permobil . ";
     }
 
-    .fordon .cont_fordon .grid-fordon {
+
+    .cont_fordon {
       display: grid;
       gap: 1.5rem;
-      /* grid-template-rows: repeat(3, 1fr); */
-      /* grid-template-columns: repeat(4 ,1fr); */
       grid-template-areas: 
-      " . mindreBil kombi suv . "
-      " . transportbil amerikansk minibuss . ";
+        " . mindreBil kombi suv . "
+        " . transportbil amerikansk minibuss . ";
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
 
-    .cont_fordon{
-      grid-template-columns: repeat(5, 1fr);
-      /* grid-template-rows: repeat(3, 1fr); */
-    }
+
 
   }
