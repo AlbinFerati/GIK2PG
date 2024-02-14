@@ -321,3 +321,193 @@ document.addEventListener('DOMContentLoaded', function() {
     this.style.fill = alreadyGrey ? '' : 'grey';
   });
 });
+
+// SILUETT TILL SLIDERS KOD 
+
+
+// HÖGER ARM 
+document.addEventListener('DOMContentLoaded', function() {
+  // Definiera paths för höger arm
+  var rightArmPaths = ['path27', 'path28'];
+
+  // Funktion för att kontrollera färg och sätta slider värde
+  function adjustSliderBasedOnColor() {
+      var slider = document.getElementById('harm');
+      var textInput = document.getElementById('harmValue');
+      var pathElement = this; // 'this' refererar till det element som klickades på
+
+      // Kontrollera om elementets färg är svart
+      var fillColor = getComputedStyle(pathElement).fill;
+      if (fillColor === 'rgb(0, 0, 0)') { // Svart i RGB
+          slider.value = 100;
+          textInput.value = '100%';
+      } else {
+          slider.value = 0;
+          textInput.value = '0%';
+      }
+  }
+
+  // Lägg till eventlyssnare till varje path för höger arm
+  rightArmPaths.forEach(function(pathId) {
+      var pathElement = document.getElementById(pathId);
+      if (pathElement) {
+          pathElement.addEventListener('click', adjustSliderBasedOnColor);
+      }
+  });
+});
+
+// HÖGER HAND
+document.addEventListener('DOMContentLoaded', function() {
+  // Definiera paths för höger arm
+  var rightArmPaths = ['path26', 'path27', 'path28'];
+
+  // Funktion för att kontrollera färg och sätta slider värde
+  function adjustSliderBasedOnColor() {
+      var slider = document.getElementById('hhand');
+      var textInput = document.getElementById('hhandValue');
+      var pathElement = this; // 'this' refererar till det element som klickades på
+
+      // Kontrollera om elementets färg är svart
+      var fillColor = getComputedStyle(pathElement).fill;
+      if (fillColor === 'rgb(0, 0, 0)') { // Svart i RGB
+          slider.value = 100;
+          textInput.value = '100%';
+      } else {
+          slider.value = 0;
+          textInput.value = '0%';
+      }
+  }
+
+  // Lägg till eventlyssnare till varje path för höger arm
+  rightArmPaths.forEach(function(pathId) {
+      var pathElement = document.getElementById(pathId);
+      if (pathElement) {
+          pathElement.addEventListener('click', adjustSliderBasedOnColor);
+      }
+  });
+});
+
+// HÖGER BEN
+document.addEventListener('DOMContentLoaded', function() {
+  // Definiera paths för höger arm
+  var rightArmPaths = ['path30', 'path31'];
+
+  // Funktion för att kontrollera färg och sätta slider värde
+  function adjustSliderBasedOnColor() {
+      var slider = document.getElementById('hben');
+      var textInput = document.getElementById('hbenValue');
+      var pathElement = this; // 'this' refererar till det element som klickades på
+
+      // Kontrollera om elementets färg är svart
+      var fillColor = getComputedStyle(pathElement).fill;
+      if (fillColor === 'rgb(0, 0, 0)') { // Svart i RGB
+          slider.value = 100;
+          textInput.value = '100%';
+      } else {
+          slider.value = 0;
+          textInput.value = '0%';
+      }
+  }
+
+  // Lägg till eventlyssnare till varje path för höger arm
+  rightArmPaths.forEach(function(pathId) {
+      var pathElement = document.getElementById(pathId);
+      if (pathElement) {
+          pathElement.addEventListener('click', adjustSliderBasedOnColor);
+      }
+  });
+});
+
+
+// VÄNSTER ARM 
+document.addEventListener('DOMContentLoaded', function() {
+  // Definiera paths för höger arm
+  var rightArmPaths = ['path16', 'path17'];
+
+  // Funktion för att kontrollera färg och sätta slider värde
+  function adjustSliderBasedOnColor() {
+      var slider = document.getElementById('varm');
+      var textInput = document.getElementById('varmValue');
+      var pathElement = this; // 'this' refererar till det element som klickades på
+
+      // Kontrollera om elementets färg är svart
+      var fillColor = getComputedStyle(pathElement).fill;
+      if (fillColor === 'rgb(0, 0, 0)') { // Svart i RGB
+          slider.value = 100;
+          textInput.value = '100%';
+      } else {
+          slider.value = 0;
+          textInput.value = '0%';
+      }
+  }
+
+  // Lägg till eventlyssnare till varje path för höger arm
+  rightArmPaths.forEach(function(pathId) {
+      var pathElement = document.getElementById(pathId);
+      if (pathElement) {
+          pathElement.addEventListener('click', adjustSliderBasedOnColor);
+      }
+  });
+});
+
+// VÄNSTER HAND
+document.addEventListener('DOMContentLoaded', function() {
+  // Definiera paths för höger arm
+  var rightArmPaths = ['path15', 'path16', 'path17'];
+
+  // Funktion för att kontrollera färg och sätta slider värde
+  function adjustSliderBasedOnColor() {
+      var slider = document.getElementById('vhand');
+      var textInput = document.getElementById('vhandValue');
+      var pathElement = this; // 'this' refererar till det element som klickades på
+
+      // Kontrollera om elementets färg är svart
+      var fillColor = getComputedStyle(pathElement).fill;
+      if (fillColor === 'rgb(0, 0, 0)') { // Svart i RGB
+          slider.value = 100;
+          textInput.value = '100%';
+      } else {
+          slider.value = 0;
+          textInput.value = '0%';
+      }
+  }
+
+  // Lägg till eventlyssnare till varje path för höger arm
+  rightArmPaths.forEach(function(pathId) {
+      var pathElement = document.getElementById(pathId);
+      if (pathElement) {
+          pathElement.addEventListener('click', adjustSliderBasedOnColor);
+      }
+  });
+});
+
+// VÄNSTER BEN
+document.addEventListener('DOMContentLoaded', function() {
+  // Definiera paths för höger arm
+  var rightArmPaths = ['path19', 'path20'];
+
+  // Funktion för att kontrollera färg och sätta slider värde
+  function adjustSliderBasedOnColor() {
+      var slider = document.getElementById('vben');
+      var textInput = document.getElementById('vbenValue');
+      var pathElement = this; // 'this' refererar till det element som klickades på
+
+      // Kontrollera om elementets färg är svart
+      var fillColor = getComputedStyle(pathElement).fill;
+      if (fillColor === 'rgb(0, 0, 0)') { // Svart i RGB
+          slider.value = 100;
+          textInput.value = '100%';
+      } else {
+          slider.value = 0;
+          textInput.value = '0%';
+      }
+  }
+
+  // Lägg till eventlyssnare till varje path för höger arm
+  rightArmPaths.forEach(function(pathId) {
+      var pathElement = document.getElementById(pathId);
+      if (pathElement) {
+          pathElement.addEventListener('click', adjustSliderBasedOnColor);
+      }
+  });
+});
