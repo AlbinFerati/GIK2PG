@@ -125,9 +125,9 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
       "header header"
-      "vhand hhand"
-      "varm harm"
-      "vben hben";
+      "hhand vhand"
+      "harm varm"
+      "hben vben";
     }
    
     .section_sliders h3:nth-child(1) {
@@ -191,9 +191,9 @@
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: 
       " . header header . "
-      " . vhand hhand . "
-      " . varm harm . "
-      " . vben hben . ";
+      " . hhand vhand . "
+      " . harm varm . "
+      " . hben vben . ";
     }
 
     .hjälpmedel .grid-hjälpmedel {
