@@ -15,8 +15,8 @@ html {
     --text-white: hsl(0, 0%, 100%);
     --text-grey: hsl(0, 0%, 84%);
     --text-hover: hsl(199, 100%, 40%);
-    --button: hsl(199, 100%, 51%)
-    --body_typography-font-family: Roboto;
+    --button: hsl(199, 100%, 51%);
+    /* --body_typography-font-family: Roboto;  VAD GÖR DERNNA? */
 }
 
 /* BODY */
