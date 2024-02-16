@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulär</title>
 </head>
 <body>
+    <h1>Välj dina alternativ</h1>
     <form id="myForm">
-        <label for="name">Namn:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">E-post:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">Meddelande:</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
-        <button type="submit">Skicka</button>
+        <input type="checkbox" id="option1" name="option" value="Alternativ 1">
+        <label for="option1">Alternativ 1</label><br>
+        <input type="checkbox" id="option2" name="option" value="Alternativ 2">
+        <label for="option2">Alternativ 2</label><br>
+        <button type="button" id="submitForm">Skicka</button>
     </form>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('submitForm').addEventListener('click', function() {
+            var selectedOptions = [];
+            var checkboxes = document.getElementsByName('option');
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    selectedOptions.push(checkbox.value);
+                }
+            });
+
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ selectedOptions: selectedOptions })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Formuläret skickades framgångsrikt!');
+                } else {
+                    alert('Det uppstod ett fel vid skickande av formuläret.');
+                }
+            })
+            .catch(error => console.error('Fel:', error));
+        });
+    </script>
 </body>
 </html>
+
