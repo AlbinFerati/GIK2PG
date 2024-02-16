@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "fnamn enamn"
-    "telnmr mail";
+    "telnr mail";
   }
 
   .kontaktinfo div {
@@ -25,7 +25,7 @@
     grid-area: enamn;
   }
   .kontaktinfo div:nth-child(3) {
-    grid-area: telnmr;
+    grid-area: telnr;
   }
   .kontaktinfo div:nth-child(4) {
     grid-area: mail;

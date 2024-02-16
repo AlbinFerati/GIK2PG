@@ -49,46 +49,54 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 // <!-----------------------------START DEL 2 (HJÄLPMEDEL) ---------------------------->
 
+// document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
+//   item.addEventListener('click', function (event) {
+//     event.stopPropagation(); // Stoppar händelsen från att bubbla uppåt i DOM-trädet
+//     this.classList.toggle('marked'); // Toggla klassen 'marked' på klickat element
+//   });
+// });
 
-document.querySelectorAll('.img_cont').forEach((item) => {
-  item.addEventListener('click', function (event) {
-    event.stopPropagation(); // Stoppar händelsen från att bubbla uppåt i DOM-trädet
-    this.classList.toggle('marked'); // Toggla klassen 'marked' på klickat element
-
-
+document
+  .querySelectorAll('.img_cont_hjälpmedel, .img_cont_fordon')
+  .forEach((item) => {
+    item.addEventListener('click', function (event) {
+      event.stopPropagation(); // Stoppar händelsen från att bubbla uppåt i DOM-trädet
+      this.classList.toggle('marked'); // Toggla klassen 'marked' på klickat element
+    });
   });
-});
 
 // ------------TEST
-document.querySelectorAll('.img_cont').forEach((item) => {
+document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
   item.addEventListener('click', function (event) {
     event.stopPropagation(); // Förhindra eventet från att bubbla uppåt i DOM-trädet
 
     const section = document.querySelector('.hjälpmedel_med_i_fordon');
-    
+
     // Använd data-attribute från klickad bild för att hitta motsvarande checkbox
     const targetId = this.dataset.target;
     const checkbox = document.getElementById(targetId);
-    
+
     if (checkbox) {
       // Växla synlighet för checkboxens förälder baserat på om checkboxen är checked eller inte
       checkbox.checked = !checkbox.checked; // Växla checkboxens checked-tillstånd
-      checkbox.parentElement.style.display = checkbox.checked ? 'block' : 'none'; // Visa eller dölj baserat på checkboxens tillstånd
+      checkbox.parentElement.style.display = checkbox.checked
+        ? 'block'
+        : 'none'; // Visa eller dölj baserat på checkboxens tillstånd
     }
 
     // Kontrollera om någon checkbox är markerad
-    const anyChecked = Array.from(document.querySelectorAll('.hjälpmedel_med_i_fordon input[type="checkbox"]')).some(checkbox => checkbox.checked);
+    const anyChecked = Array.from(
+      document.querySelectorAll(
+        '.hjälpmedel_med_i_fordon input[type="checkbox"]'
+      )
+    ).some((checkbox) => checkbox.checked);
 
     // Visa eller dölj sektionen baserat på om någon checkbox är markerad
     section.style.display = anyChecked ? 'block' : 'none';
   });
 });
 
-
-
-
-
-// ---------TEST 2 
+// ---------TEST 2
 // document.querySelectorAll('.img_cont').forEach(item => {
 //   item.addEventListener('click', function(event) {
 //     event.stopPropagation(); // Förhindrar eventet från att bubbla uppåt i DOM-trädet
@@ -109,11 +117,6 @@ document.querySelectorAll('.img_cont').forEach((item) => {
 //     });
 //   });
 // });
-
-
-
-
-
 
 // <!-----------------------------SLUT DEL 2 (HJÄLPMEDEL)---------------------------->
 
@@ -184,22 +187,21 @@ document.querySelectorAll('.img_cont').forEach((item) => {
 //     }
 //   });
 
-
 // });
 
 // ------------NYA SOM FUNGERAR------------
 var yesCheckbox = document.getElementById('choice_yes');
-var q1_yesDiv = document.querySelector('.Q1_yes');
+var fordon_yesDiv = document.querySelector('.fordon_yes');
 var if_yes = document.querySelector('.if_yes');
 var cont_fordon = document.querySelector('.cont_fordon');
 var noCheckbox = document.getElementById('choice_no');
-var q1_noDiv = document.querySelector('.Q1_no');
+var fordon_noDiv = document.querySelector('.fordon_no');
 var if_no = document.querySelector('.if_no');
 var fordon_textfield = document.querySelector('.fordon_textfield');
 var bilder = document.querySelectorAll('.img_cont_fordon');
 
 // Dölj bilderna initialt
-bilder.forEach(function(bild) {
+bilder.forEach(function (bild) {
   bild.style.display = 'none';
 });
 
@@ -207,21 +209,21 @@ bilder.forEach(function(bild) {
 yesCheckbox.addEventListener('change', function () {
   if (yesCheckbox.checked) {
     // Om användaren klickar på "Ja", visa Q1-diven och bilderna
-    fordon_textfield.style.display ='block';
-    q1_yesDiv.style.display = 'block';
+    fordon_textfield.style.display = 'block';
+    fordon_yesDiv.style.display = 'block';
     if_yes.style.display = 'block';
     cont_fordon.style.display = 'grid';
-    q1_noDiv.style.display = 'none';
+    fordon_noDiv.style.display = 'none';
     if_no.style.display = 'none';
-    bilder.forEach(function(bild) {
+    bilder.forEach(function (bild) {
       bild.style.display = 'block';
     });
   } else {
     // Annars dölj Q1-diven och bilderna
-    q1_yesDiv.style.display = 'none';
+    fordon_yesDiv.style.display = 'none';
     if_no.style.display = 'none';
     cont_fordon.style.display = 'none';
-    bilder.forEach(function(bild) {
+    bilder.forEach(function (bild) {
       bild.style.display = 'none';
     });
   }
@@ -231,21 +233,21 @@ yesCheckbox.addEventListener('change', function () {
 noCheckbox.addEventListener('change', function () {
   if (noCheckbox.checked) {
     // Om användaren klickar på "Nej", visa Q1-diven och bilderna
-    fordon_textfield.style.display ='block';
-    q1_noDiv.style.display = 'block';
+    fordon_textfield.style.display = 'block';
+    fordon_noDiv.style.display = 'block';
     if_no.style.display = 'block';
     cont_fordon.style.display = 'grid';
-    q1_yesDiv.style.display = 'none';
+    fordon_yesDiv.style.display = 'none';
     if_yes.style.display = 'none';
-    bilder.forEach(function(bild) {
+    bilder.forEach(function (bild) {
       bild.style.display = 'block';
     });
   } else {
     // Annars dölj Q1-diven och bilderna
-    q1_noDiv.style.display = 'none';
+    fordon_noDiv.style.display = 'none';
     if_no.style.display = 'none';
     cont_fordon.style.display = 'none';
-    bilder.forEach(function(bild) {
+    bilder.forEach(function (bild) {
       bild.style.display = 'none';
     });
   }
@@ -263,19 +265,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   yesCheckbox.addEventListener('change', function () {
     if (yesCheckbox.checked) {
-      clearSelections('.Q1_no input[type="radio"]'); // Rensa val i "Nej"-sektionen
+      clearSelections('.fordon_no input[type="radio"]'); // Rensa val i "Nej"-sektionen
     }
   });
 
   noCheckbox.addEventListener('change', function () {
     if (noCheckbox.checked) {
-      clearSelections('.Q1_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
+      clearSelections('.fordon_yes input[type="radio"]'); // Rensa val i "Ja"-sektionen
     }
   });
 });
-
-
-
 
 // <!-----------------------------SLUT DEL 3---------------------------->
 

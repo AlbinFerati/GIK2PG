@@ -118,22 +118,22 @@ body {
 /* <!-----------------------------SLUT NAV----------------------------> */
 
 /* <!----------------------------- Kontakt Info ----------------------------> */
-.form_div {
+/* .form_div {
   margin: 0% 0%;
-}
+} */
 
 .kontaktinfo {
   font-size: 1.6rem;
-  margin: 10% 0%;
+  margin: 5rem 0rem;
 }
 
-.kontaktinfo label{
+/* .kontaktinfo label{
   margin: 1rem 0rem ;
-}
+} */
 
 input {
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: .1rem solid #ccc;
+  border-radius: .3rem;
  
   width: 100%;
   box-sizing: border-box;
@@ -185,11 +185,10 @@ label {
 .grid-hjälpmedel {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  /* gap: 1.5rem;  */
 }
 
-.img_cont {
-  border: 1px solid #ccc; /* Lägg till en ram runt varje bild */
+.img_cont_hjälpmedel {
+  border: .1rem solid #ccc; /* Lägg till en ram runt varje bild */
   padding: 1rem; /* Justera utrymmet inuti ramen */
   text-align: center; /* Centrera text och bild */
 }
@@ -201,10 +200,7 @@ width: 32%;
 .img_hjälpmedel {
   max-width: 100%; /* Säkerställ att bilden inte överskrider ramens bredd */
 }
-.marked {
-  border: 2px solid blue;
-  opacity: 0.7;
-}
+
 
 .hjälpmedel_med_i_fordon, .checkbox_container{
   display: none;
@@ -222,10 +218,10 @@ width: 32%;
 .img_fordon_hjälpmedel {
   max-width: 100%;
 }
-.Q1_yes {
+.fordon_yes {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Justera avståndet mellan varje rad */
+  gap: 1rem; /* Justera avståndet mellan varje rad */
   font-size: 1.5rem;
   display: none; /*ny för att gömma*/
 }
@@ -234,10 +230,10 @@ width: 32%;
   display: none;
 }
 
-.Q1_no {
+.fordon_no {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Justera avståndet mellan varje rad */
+  gap: 1rem; /* Justera avståndet mellan varje rad */
   font-size: 1.5rem;
   display: none; /*ny för att gömma*/
 }
@@ -246,18 +242,18 @@ width: 32%;
   display: none;
 }
 
-.Q1_label_container {
+.fordon_label_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%; /* Tar upp 2/3 av raden */
 }
 
-.Q1_label {
+.fordon_label_container_label {
   white-space: nowrap; /* Förhindra att texten bryts på flera rader */
 }
 
-.Q1_input {
+.fordon_input {
   width: 30%; /* Tar upp den sista 1/3 av raden */
 }
 .cont_fordon{
@@ -278,13 +274,16 @@ h5 label{
   }
 
 .img_cont_fordon{
-  border: 1px solid #ccc; /* Lägg till en ram runt varje bild */
+  border: .1rem solid #ccc; /* Lägg till en ram runt varje bild */
   padding: 1rem; /* Justera utrymmet inuti ramen */
   text-align: center; /* Centrera text och bild */
   display: none;
 }
 
-
+.marked {
+  border: .2rem solid blue;
+  opacity: 0.7;
+}
 
 
 

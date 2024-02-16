@@ -46,33 +46,35 @@
     </header>
     <main>
         <!-----------------------------Kontaktinfo---------------------------->
-        <div class="form_div">
-            <form class="kontaktinfo">
-              <div>
-                <label for="fnamn">Förnamn</label>
-                <input type="text" id="fnamn" name="fnamn">
-              </div>
-              <div>
-                <label for="enamn">Efternamn</label>
-                <input type="text" id="enamn" name="enamn">
-              </div>
-              <div>
-                <label for="telnmr">Telefon</label>
-                <input type="text" id="telnmr" name="telnmr">
-              </div>
-              <div>
-                <label for="Mail">Mail</label>
-                <input type="text" id="Mail" name="Mail">
-              </div>
-            </form>
-        </div>
+      <section>
+          <form class="kontaktinfo">
+            <div>
+              <label for="fnamn">Förnamn</label>
+              <input type="text" id="fnamn" name="fnamn">
+            </div>
+            <div>
+              <label for="enamn">Efternamn</label>
+              <input type="text" id="enamn" name="enamn">
+            </div>
+            <div>
+              <label for="telnr">Telefon</label>
+              <input type="text" id="telnr" name="telnr">
+            </div>
+            <div>
+              <label for="mail">Mail</label>
+              <input type="text" id="mail" name="mail">
+            </div>
+          </form>
+      </section>
 
 
         
         <!-----------------------------START DEL 1---------------------------->
         <!-- <img src="./IMG/Kroppen/standing-human-body-silhouette-svgrepo-com.svg"> -->
         <section class="kroppen">
-          
+          <h3>
+            Markera/klicka i kroppen utifrån de funktioner du har kvar, kroppen står riktad mot dig.
+          </h3>
           <svg class="siluett" version="1.1" viewBox="0 0 206.33 206.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
             <g
             id="g2">
@@ -150,44 +152,41 @@
             style="fill:#000000;stroke-width:0.257908"
             d="m 97.123743,156.0074 0.191266,-1.23333 0.883782,-4.26722 0.47487,-2.26222 0.250624,-1.54992 0.626563,-4.17488 0.41551,-2.94155 0.362742,-2.68432 0.30339,-2.48646 0.42211,-3.4362 0.33636,-2.8756 0.30999,-3.04047 0.17148,-1.91926 0.16488,-2.24903 0.066,-1.41801 0.0198,-0.48146 v -0.50785 l -0.0462,-0.53422 -19.369937,-0.021 -0.304751,0.005 0.155002,1.31105 0.258333,2.12157 0.448857,3.47459 0.355208,2.58981 0.306774,2.15063 0.448854,2.95793 0.381046,2.23782 0.548958,2.89657 0.377814,1.61782 0.297086,1.07855 0.103334,0.50698 0.103333,0.70073 0.109791,0.99782 0.132397,2.10219 0.07427,2.42512 0.05167,1.77281 0.08719,2.04085 0.164687,1.52094 0.219585,0.6975 0.06781,0.39073 0.03229,0.25188 -0.177606,1.0624 z"
             id="path31" /></svg>
-            <div>
               
-              
-                <section class="section_sliders">
-                  <h3>Vilken styrka/funktion har du i händer, armar och ben? (0-100%)</h3>  
-                    <li class="range_slider">
-                        <label for="harm">Höger arm</label>
-                        <input type="range" min="0" max="100" value="100" class="slider" id="harm" name="harm">
-                        <input class="slider_input" type="text" id="harmValue" size="3">
-                    </li>
-                    <li class="range_slider">
-                        <label for="varm">Vänster arm</label>
-                        <input type="range" min="0" max="100" value="100" class="slider" id="varm" name="varm">
-                        <input class="slider_input" type="text" id="varmValue" size="3">
-                    </li>
-                    <li class="range_slider">
-                        <label for="hben">Höger ben</label>
-                        <input type="range" min="0" max="100" value="100" class="slider" id="hben" name="hben">
-                        <input class="slider_input" type="text" id="hbenValue" size="3">
-                    </li>
-                    <li class="range_slider">
-                        <label for="vben">Vänster ben</label>
-                        <input type="range" min="0" max="100" value="100" class="slider" id="vben" name="vben">
-                        <input class="slider_input" type="text" id="vbenValue" size="3">
-                    </li>
-                    <li class="range_slider">
-                        <label for="hhand">Höger hand</label>
-                        <input type="range" min="0" max="100" value="100" class="slider" id="hhand" name="hhand">
-                        <input class="slider_input" type="text" id="hhandValue" size="3">
-                    </li>
-                    <li class="range_slider">
-                        <label for="vhand">Vänster hand</label>
-                        <input type="range" min="0" max="100" value="100" class="slider" id="vhand" name="vhand">
-                        <input class="slider_input" type="text" id="vhandValue" size="3">
-                    </li>
-                </section>
-            </div>
-        </section>
+            <section class="section_sliders">
+              <h3>Vilken styrka/funktion har du i händer, armar och ben? (0-100%)</h3>  
+                <li class="range_slider">
+                    <label for="harm">Höger arm</label>
+                    <input type="range" min="0" max="100" value="100" class="slider" id="harm" name="harm">
+                    <input class="slider_input" type="text" id="harmValue" size="3">
+                </li>
+                <li class="range_slider">
+                    <label for="varm">Vänster arm</label>
+                    <input type="range" min="0" max="100" value="100" class="slider" id="varm" name="varm">
+                    <input class="slider_input" type="text" id="varmValue" size="3">
+                </li>
+                <li class="range_slider">
+                    <label for="hben">Höger ben</label>
+                    <input type="range" min="0" max="100" value="100" class="slider" id="hben" name="hben">
+                    <input class="slider_input" type="text" id="hbenValue" size="3">
+                </li>
+                <li class="range_slider">
+                    <label for="vben">Vänster ben</label>
+                    <input type="range" min="0" max="100" value="100" class="slider" id="vben" name="vben">
+                    <input class="slider_input" type="text" id="vbenValue" size="3">
+                </li>
+                <li class="range_slider">
+                    <label for="hhand">Höger hand</label>
+                    <input type="range" min="0" max="100" value="100" class="slider" id="hhand" name="hhand">
+                    <input class="slider_input" type="text" id="hhandValue" size="3">
+                </li>
+                <li class="range_slider">
+                    <label for="vhand">Vänster hand</label>
+                    <input type="range" min="0" max="100" value="100" class="slider" id="vhand" name="vhand">
+                    <input class="slider_input" type="text" id="vhandValue" size="3">
+                </li>
+            </section>
+        </section> 
         <!-----------------------------SLUT DEL 1---------------------------->
         
 
@@ -197,27 +196,27 @@
                 Markera vilka hjälpmedel du använder idag:
             </h3>
             <section class="grid-hjälpmedel">
-                <div class="img_cont" data-target="elmoped_till_fordon"> 
+                <div class="img_cont_hjälpmedel" data-target="elmoped_till_fordon"> 
                     <label for="elmoped">El-moped 3-/4-hjulig</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/El-moped.webp" alt="En bild på en Elmoped" id="elmoped">
                 </div>
-                <div class="img_cont" data-target="permobil_till_fordon">
+                <div class="img_cont_hjälpmedel" data-target="permobil_till_fordon">
                     <label for="elrullstol"> Elrullstol/Permobil</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/ElRullstol.webp" alt="En bil på en ElRullstol" id="elrullstol">
                 </div>
-                <div class="img_cont" data-target="kryckor_till_fordon">
+                <div class="img_cont_hjälpmedel" data-target="kryckor_till_fordon">
                     <label for="kryckor">Kryckor</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/Kryckor.webp" alt="En bild på kryckor" id="kryckor">
                 </div>
-                <div class="img_cont" data-target="rullator_till_fordon">
+                <div class="img_cont_hjälpmedel" data-target="rullator_till_fordon">
                     <label for="rullator">Rullator</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/rullatorwebp.webp" alt="En bild på en rullator" id="rullator">
                 </div>
-                <div class="img_cont" data-target="rullstol_till_fordon">
+                <div class="img_cont_hjälpmedel" data-target="rullstol_till_fordon">
                     <label for="rullstol">Rullstol</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/Rullstol.webp" alt="En bild på en rullstol" id="rullstol">
                 </div>
-                <div class="img_cont" data-target="hjälpmotor_till_fordon">
+                <div class="img_cont_hjälpmedel" data-target="hjälpmotor_till_fordon">
                     <label for="">Manuell rullstol med hjälpmotor</label>
                     <img class="img_hjälpmedel" src="./IMG/Hjälpmedel/Manuell Rullstol med hjälpmotor.webp" alt="Manuell Rullstol med hjälpmotor" id="Manuell Rullstol med hjälpmotor">
                 </div>
@@ -267,51 +266,53 @@
           <h3>
             Har du/ni någon anpassad bil idag?
           </h3>
-          <div class="Q1_label_container">
+          <div class="fordon_label_container"> 
             <div>
-            <label class="Q1_label" for="choice_yes">Ja</label>
-            <input type="radio" id="choice_yes" name="choice">
-            <label class="Q1_label" for="choice_no">Nej</label>
-            <input type="radio" id="choice_no" name="choice">
+              <label class="fordon_label_container_label" for="choice_yes">Ja</label>
+              <input type="radio" id="choice_yes" name="choice">
+            </div>
+            <div>
+              <label class="fordon_label_container_label" for="choice_no">Nej</label>
+              <input type="radio" id="choice_no" name="choice">
             </div>
           </div>
-            <div class="Q1_yes"> 
+            <div class="fordon_yes">
                 <h3>Är du förare eller passagerare eller både och?</h3>
               
-                <div class="Q1_label_container">
-                  <label class="Q1_label" for="forare_q1">Förare</label>
-                  <input class="Q1_input" type="radio" id="forare_q1" name="choice_2" value="forare_q1">
+                <div class="fordon_label_container">
+                  <label class="fordon_label_container_label" for="forare_q1">Förare</label> 
+                  <input class="fordon_input" type="radio" id="forare_q1" name="choice_2" value="forare_q1"> 
                 </div>
               
-                <div class="Q1_label_container">
-                  <label class="Q1_label" for="passagerare_q1">Passagerare</label>
-                  <input class="Q1_input" type="radio" id="passagerare_q1" name="choice_2" value="passagerare_q1">
+                <div class="fordon_label_container">
+                  <label class="fordon_label_container_label" for="passagerare_q1">Passagerare</label>
+                  <input class="fordon_input" type="radio" id="passagerare_q1" name="choice_2" value="passagerare_q1">
                 </div>
               
-                <div class="Q1_label_container">
-                  <label class="Q1_label" for="badaoch_q1">Både förare och passagerare</label>
-                  <input class="Q1_input" type="radio" id="badaoch_q1" name="choice_2" value="badaoch_q1">
+                <div class="fordon_label_container">
+                  <label class="fordon_label_container_label" for="badaoch_q1">Både förare och passagerare</label>
+                  <input class="fordon_input" type="radio" id="badaoch_q1" name="choice_2" value="badaoch_q1">
                 </div>
             </div>
               
               
               
-              <div class="Q1_no">
+              <div class="fordon_no">
                 <h3>Föreställer du dig att åka som förare, passagerare eller både och?</h3>
                 
-                <div class="Q1_label_container">
-                    <label class="Q1_label" for="forare_q2">Förare</label>
-                    <input class="Q1_input" type="radio" id="forare_q2" name="choice_2" value="forare_q2">
+                <div class="fordon_label_container">
+                    <label class="fordon_label_container_label" for="forare_q2">Förare</label>
+                    <input class="fordon_input" type="radio" id="forare_q2" name="choice_2" value="forare_q2">
                   </div>
                 
-                  <div class="Q1_label_container">
-                    <label class="Q1_label" for="passagerare_q2">Passagerare</label>
-                    <input class="Q1_input" type="radio" id="passagerare_q2" name="choice_2" value="passagerare_q2">
+                  <div class="fordon_label_container">
+                    <label class="fordon_label_container_label" for="passagerare_q2">Passagerare</label>
+                    <input class="fordon_input" type="radio" id="passagerare_q2" name="choice_2" value="passagerare_q2">
                   </div>
                 
-                  <div class="Q1_label_container">
-                    <label class="Q1_label" for="badaoch_q2">Både förare och passagerare</label>
-                    <input class="Q1_input" type="radio" id="badaoch_q2" name="choice_2" value="badaoch_q2">
+                  <div class="fordon_label_container">
+                    <label class="fordon_label_container_label" for="badaoch_q2">Både förare och passagerare</label>
+                    <input class="fordon_input" type="radio" id="badaoch_q2" name="choice_2" value="badaoch_q2">
                   </div>
               </div>
               <h3 class="if_no">
@@ -354,7 +355,7 @@
                   <input type="text" id="annat_fordon" name="annat_fordon"><br>
                 </h5>
                 <h5>
-                  <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon --> 
+                  <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon ligger bra på sidan --> 
                   
                   <input type="checkbox" id="vet_ej" name="vet_ej">
                 </h5>
