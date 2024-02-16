@@ -3,60 +3,98 @@
 // path 21 - 28 höger arm
 // path 29 - 31 höger ben
 
+// När DOM-trädet har laddats, kör följande kod
 document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path10');
+  // Funktionen som sätter upp interaktiviteten för en del av handen
+  function setupInteractivePath(pathId, relatedPaths) {
+      var interactivePath = document.querySelector(pathId);
+      var bodyPartClickedOnce = false;
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
+      interactivePath.addEventListener('click', function() {
+          // Om tummen är grå och detta är första klicket, gör hela armen svart
+          if (this.style.fill === 'grey' && !bodyPartClickedOnce) {
+              this.style.fill = '';
+              relatedPaths.forEach(function(path) {
+                  document.querySelector(path).style.fill = '';
+              });
+              bodyPartClickedOnce = true;
+          } else { // Annars, växla färgen på tummen
+              this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+              // Återställ variabeln för att tillåta återgång av hela armen till grått efter att ha varit svart
+              bodyPartClickedOnce = false;
+          }
+      });
+  }
+
+  // Sätt upp interaktiviteten för vänster hand
+  setupInteractivePath('#path10', ['#path15', '#path16', '#path17']); //TUMME
+  setupInteractivePath('#path11', ['#path15', '#path16', '#path17']); //PEKFINGER
+  setupInteractivePath('#path12', ['#path15', '#path16', '#path17']); //LÅNGFINGER
+  setupInteractivePath('#path13', ['#path15', '#path16', '#path17']); //RINGFINGER
+  setupInteractivePath('#path14', ['#path15', '#path16', '#path17']); //LILLFINGER
+
+  // Sätt upp interaktiviteten för vänster ben
+  setupInteractivePath('#path18', ['#path19', '#path20']); //FOT
+  // setupInteractivePath('#path19', ['#path20']);
+
+  // Sätt upp interaktiviteten för höger hand
+  setupInteractivePath('#path21', ['#path26', '#path27', '#path28']); //TUMME
+  setupInteractivePath('#path22', ['#path26', '#path27', '#path28']); //PEKFINGER
+  setupInteractivePath('#path23', ['#path26', '#path27', '#path28']); //LÅNGFINGER
+  setupInteractivePath('#path24', ['#path26', '#path27', '#path28']); //RINGFINGER
+  setupInteractivePath('#path25', ['#path26', '#path27', '#path28']); //LILLFINGER
+
+  // Sätt upp interaktiviteten för höger ben
+  setupInteractivePath('#path29', ['#path30', '#path31']); //FOT
+
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path11');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path10');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path12');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path11');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path13');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path12');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path14');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path13');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path14');
+
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path15');
-
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   // Lägg till klick-eventlyssnare till "path15" - vänster hand och fingrar
@@ -118,14 +156,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path18');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path18');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
   // Lägg till klick-eventlyssnare till "path19" - vänster underben och nedåt
@@ -167,50 +205,50 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path21');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path21');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path22');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path22');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path23');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path23');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path24');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path24');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path25');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path25');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
   // Lägg till klick-eventlyssnare till "path26" - höger hand och nedåt
@@ -272,14 +310,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  var interactivePath = document.querySelector('#path29');
+// document.addEventListener('DOMContentLoaded', function() {
+//   var interactivePath = document.querySelector('#path29');
 
-  interactivePath.addEventListener('click', function() {
-    // Kontrollera om den aktuella färgen är grå, och växla den
-    this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
-  });
-});
+//   interactivePath.addEventListener('click', function() {
+//     // Kontrollera om den aktuella färgen är grå, och växla den
+//     this.style.fill = this.style.fill === 'grey' ? '' : 'grey';
+//   });
+// });
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -322,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// SILUETT TILL SLIDERS KOD 
+// -----------------------------------SILUETT TILL SLIDERS KOD 
 
 
 // HÖGER ARM 
