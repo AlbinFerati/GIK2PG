@@ -1,68 +1,39 @@
-// Klientens JavaScript
-document.getElementById('submitForm').addEventListener('click', function() {
-    var selectedOptions = []; // Samla in användarens val här
+var firstName = document.getElementById('fnamn').value;
+var lastName = document.getElementById('enamn').value;
+var phoneNumber = document.getElementById('telnr').value;
+var email = document.getElementById('mail').value;
 
-    // Skicka data till servern
-    fetch('/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ selectedOptions: selectedOptions })
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Formuläret skickades framgångsrikt!');
-        } else {
-            alert('Det uppstod ett fel vid skickande av formuläret.');
-        }
-    })
-    .catch(error => console.error('Fel:', error));
+var rightArmStrength = document.getElementById('harm').value;
+var leftArmStrength = document.getElementById('varm').value;
+var rightLegStrength = document.getElementById('hben').value;
+var leftLegStrength = document.getElementById('vben').value;
+var rightHandStrength = document.getElementById('hhand').value;
+var leftHandStrength = document.getElementById('vhand').value;
+
+var markedHelpMed = [];
+document.querySelectorAll('.grid-hjälpmedel .marked').forEach(function(item) {
+    markedHelpMed.push(item.textContent); // Exempelvis hämta textinnehållet för varje markerat hjälpmedel
 });
 
-// Node.js-server
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
+var otherHelpMed = document.getElementById('annat_hjälpmedel').value;
 
-const app = express();
-const port = 3000;
+var checkedHelpMedInVehicle = {
+    kryckor: document.getElementById('kryckor_till_fordon').checked,
+    rullator: document.getElementById('rullator_till_fordon').checked,
+    rullstol: document.getElementById('rullstol_till_fordon').checked,
+    hjälpmotor: document.getElementById('hjälpmotor_till_fordon').checked,
+    elmoped: document.getElementById('elmoped_till_fordon').checked,
+    permobil: document.getElementById('permobil_till_fordon').checked,
+};
 
-// Middleware för att tolka JSON och urlencoded-data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+var hasCustomCar = document.getElementById('choice_yes').checked ? 'Ja' : 'Nej';
+var userRoleInCar = document.querySelector('.fordon_yes input[type="radio"]:checked')?.value ||
+                    document.querySelector('.fordon_no input[type="radio"]:checked')?.value || '';
 
-// Hantera POST-begäran från klienten
-app.post('/submit', (req, res) => {
-    const selectedOptions = req.body.selectedOptions;
-
-    // Förbered och skicka e-postmeddelande
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'din.email@gmail.com', // Ändra till din e-postadress
-            pass: 'dittlösenord' // Ändra till ditt e-postlösenord
-        }
-    });
-
-    const mailOptions = {
-        from: 'din.email@gmail.com', // Ändra till din e-postadress
-        to: 'mottagarens.email@example.com', // Ändra till mottagarens e-postadress
-        subject: 'Formulärsvaren',
-        text: 'Valda svar: ' + selectedOptions.join(', ') // Skapa meddelandetext med användarens val
-        // Du kan också bifoga bilderna här om de finns som filer eller länkar
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error('Fel vid skickande av e-post:', error);
-            res.status(500).send('Ett fel uppstod vid skickande av e-post.');
-        } else {
-            console.log('E-post skickat:', info.response);
-            res.sendStatus(200);
-        }
-    });
+                    var markedVehicles = [];
+document.querySelectorAll('.grid-fordon .marked').forEach(function(item) {
+    markedVehicles.push(item.textContent); // Exempelvis hämta textinnehållet för varje markerat fordon
 });
 
-// Starta servern
-app.listen(port, () => console.log(`Servern lyssnar på port ${port}`));
+var otherVehicle = document.getElementById('annat_fordon').value;
+var dontKnowVehicle = document.getElementById('vet_ej').checked;
