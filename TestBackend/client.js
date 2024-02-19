@@ -30,7 +30,7 @@ var hasCustomCar = document.getElementById('choice_yes').checked ? 'Ja' : 'Nej';
 var userRoleInCar = document.querySelector('.fordon_yes input[type="radio"]:checked')?.value ||
                     document.querySelector('.fordon_no input[type="radio"]:checked')?.value || '';
 
-                    var markedVehicles = [];
+var markedVehicles = [];
 document.querySelectorAll('.grid-fordon .marked').forEach(function(item) {
     markedVehicles.push(item.textContent); // Exempelvis hämta textinnehållet för varje markerat fordon
 });
