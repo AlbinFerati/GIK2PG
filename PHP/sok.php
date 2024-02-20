@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -28,9 +27,12 @@
         // Visa resultatet i en tabell
         if($result) {
             echo "<table border='1'>";
-            echo "<tr><th>Förnamn</th><th>Efternamn</th><th>Telefon</th><th>Mail</th></tr>";
+            // Uppdatera rubrikerna för att inkludera ID
+            echo "<tr><th>ID</th><th>Förnamn</th><th>Efternamn</th><th>Telefon</th><th>Mail</th></tr>";
             foreach($result as $row) {
                 echo "<tr>";
+                // Lägg till en cell för ID
+                echo "<td>".$row['id']."</td>";
                 echo "<td>".$row['fnamn']."</td>";
                 echo "<td>".$row['enamn']."</td>";
                 echo "<td>".$row['telnr']."</td>";
@@ -44,7 +46,7 @@
     }
     ?>
 
-<br>
-    <a href="admin.html">Gå tillbaka till sökningen</a>
+    <br>
+    <a href="../admin.html">Gå tillbaka till sökningen</a>
 </body>
 </html>
