@@ -37,7 +37,9 @@
                 echo "<td>".$row['enamn']."</td>";
                 echo "<td>".$row['telnr']."</td>";
                 echo "<td>".$row['mail']."</td>";
+                echo "<td><a href='remove.php?id=".$row['id']."'>Remove</a> | <a href='edit.php?id=".$row['id']."'>Redigera</a></td>";
                 echo "</tr>";
+
             }
             echo "</table>";
         } else {
