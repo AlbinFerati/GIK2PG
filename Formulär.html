@@ -47,7 +47,7 @@
     <main>
         <!-----------------------------Kontaktinfo---------------------------->
       <section>
-          <form class="kontaktinfo" action="/PHP/sparadata.php" method="post">
+          <form class="kontaktinfo" action="/PHP/sparadatakontinfo.php" method="post">
             <div>
               <label for="fnamn">Förnamn</label>
               <input type="text" id="fnamn" name="fnamn">
@@ -157,6 +157,7 @@
             
               
             <section class="section_sliders">
+              <form action="/PHP/sparadatasliders.php" method="post">
               <h3>Vilken styrka/funktion har du i händer, armar och ben? (0-100%)</h3>  
                 <li class="range_slider">
                     <label for="harm">Höger arm</label>
@@ -188,6 +189,8 @@
                     <input type="range" min="0" max="100" value="100" class="slider" id="vhand" name="vhand">
                     <input class="slider_input" type="text" id="vhandValue" size="3">
                 </li>
+                <button type="submit">Spara</button>
+              </form>
             </section>
         </section> 
         <!-----------------------------SLUT DEL 1---------------------------->
