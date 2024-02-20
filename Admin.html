@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminsida - Sök information</title>
+</head>
+<body>
+    <h2>Sök information</h2>
+    <form action="/PHP/sok.php" method="post">
+        <div>
+            <label for="fnamn">Förnamn:</label>
+            <input type="text" id="fnamn" name="fnamn">
+        </div>
+        <div>
+            <label for="enamn">Efternamn:</label>
+            <input type="text" id="enamn" name="enamn">
+        </div>
+        <div>
+            <button type="submit" name="submit">Sök</button>
+        </div>
+    </form>
+</body>
+</html>
