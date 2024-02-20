@@ -202,6 +202,7 @@
                 Markera vilka hjälpmedel du använder idag:
             </h3>
             <section class="grid-hjälpmedel">
+              <form action="/PHP/sparadatahjälpmedel.php" method="post">
                 <div class="img_cont_hjälpmedel" data-target="elmoped_till_fordon"> 
                     <label for="elmoped">El-moped 3-/4-hjulig</label>
                     <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/El-moped.webp" alt="En bild på en Elmoped" id="elmoped">
@@ -226,7 +227,8 @@
                     <label for="">Manuell rullstol med hjälpmotor</label>
                     <img class="img_hjälpmedel" src="./IMG/Hjälpmedel/Manuell Rullstol med hjälpmotor.webp" alt="Manuell Rullstol med hjälpmotor" id="Manuell Rullstol med hjälpmotor">
                 </div>
-
+                <button type="submit">Spara</button>
+              </form>
             </section>
             <div>
               <h5 class="hjälpmedel_textfield">

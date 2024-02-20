@@ -27,3 +27,15 @@ CREATE TABLE kontaktinfo (
 DROP TABLE kontaktinfo;
 
 SELECT * FROM kontaktinfo;
+
+CREATE TABLE hjälpmedel(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    kryckor TEXT,
+    rullator TEXT,
+    rullstol TEXT,
+    manuell_rullstol_hjälpmotor TEXT,
+    elmoped TEXT,
+    permobil TEXT
+);
+
+SELECT * FROM hjälpmedel;
