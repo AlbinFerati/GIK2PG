@@ -35,7 +35,8 @@ CREATE TABLE hjälpmedel(
     rullstol BOOLEAN,
     manuell_rullstol_hjälpmotor BOOLEAN,
     elmoped BOOLEAN,
-    permobil BOOLEAN
+    permobil BOOLEAN,
+    annat_hjälpmedel TEXT
 );
 
 DROP TABLE hjälpmedel;
