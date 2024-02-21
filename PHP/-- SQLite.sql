@@ -42,3 +42,20 @@ CREATE TABLE hjälpmedel(
 DROP TABLE hjälpmedel;
 
 SELECT * FROM hjälpmedel;
+
+CREATE TABLE hjälpmedel (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    kryckor BOOLEAN,
+    rullator BOOLEAN,
+    rullstol BOOLEAN,
+    manuell_rullstol_hjälpmotor BOOLEAN,
+    elmoped BOOLEAN,
+    permobil BOOLEAN,
+    annat_hjälpmedel TEXT,
+    kryckor_till_fordon BOOLEAN,
+    rullator_till_fordon BOOLEAN,
+    rullstol_till_fordon BOOLEAN,
+    hjälpmotor_till_fordon BOOLEAN,
+    elmoped_till_fordon BOOLEAN,
+    permobil_till_fordon BOOLEAN
+);
