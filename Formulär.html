@@ -282,7 +282,7 @@
         
         <!-----------------------------START DEL 3---------------------------->
         
-        
+        <form action="/PHP/sparadatafordon.php" method="post">
         <section class="fordon">
           <h3>
             Har du/ni någon anpassad bil idag?
@@ -290,14 +290,14 @@
           <div class="fordon_label_container"> 
             <div>
               <label class="fordon_label_container_label" for="choice_yes">Ja</label>
-              <input type="radio" id="choice_yes" name="choice">
+              <input type="radio" id="choice_yes" name="choice" value="1">
             </div>
             <div>
               <label class="fordon_label_container_label" for="choice_no">Nej</label>
-              <input type="radio" id="choice_no" name="choice">
+              <input type="radio" id="choice_no" name="choice" value="0">
             </div>
           </div>
-            <div class="fordon_yes">
+            <!-- <div class="fordon_yes">
                 <h3>Är du förare eller passagerare eller både och?</h3>
               
                 <div class="fordon_label_container">
@@ -335,7 +335,41 @@
                     <label class="fordon_label_container_label" for="badaoch_q2">Både förare och passagerare</label>
                     <input class="fordon_input" type="radio" id="badaoch_q2" name="choice_2" value="badaoch_q2">
                   </div>
-              </div>
+              </div> -->
+              <!-- Del för förare/passagerare/både och -->
+                  <div class="fordon_yes">
+                    <h3>Är du förare eller passagerare eller både och?</h3>
+                    <div class="fordon_label_container">
+                        <label class="fordon_label_container_label" for="forare_q1">Förare</label> 
+                        <input class="fordon_input" type="radio" id="forare_q1" name="forare_passagerare" value="Förare"> 
+                    </div>
+                    <div class="fordon_label_container">
+                        <label class="fordon_label_container_label" for="passagerare_q1">Passagerare</label>
+                        <input class="fordon_input" type="radio" id="passagerare_q1" name="forare_passagerare" value="Passagerare">
+                    </div>
+                    <div class="fordon_label_container">
+                        <label class="fordon_label_container_label" for="badaoch_q1">Både förare och passagerare</label>
+                        <input class="fordon_input" type="radio" id="badaoch_q1" name="forare_passagerare" value="Både">
+                    </div>
+                  </div>
+
+                  <!-- Del för föreställd roll som förare/passagerare/både och -->
+                  <div class="fordon_no">
+                    <h3>Föreställer du dig att åka som förare, passagerare eller både och?</h3>
+                    <div class="fordon_label_container">
+                        <label class="fordon_label_container_label" for="forare_q2">Förare</label>
+                        <input class="fordon_input" type="radio" id="forare_q2" name="forare_passagerare" value="Förare">
+                    </div>
+                    <div class="fordon_label_container">
+                        <label class="fordon_label_container_label" for="passagerare_q2">Passagerare</label>
+                        <input class="fordon_input" type="radio" id="passagerare_q2" name="forare_passagerare" value="Passagerare">
+                    </div>
+                    <div class="fordon_label_container">
+                        <label class="fordon_label_container_label" for="badaoch_q2">Både förare och passagerare</label>
+                        <input class="fordon_input" type="radio" id="badaoch_q2" name="forare_passagerare" value="Både">
+                    </div>
+                  </div>
+
               <h3 class="if_no">
                   Vilken typ av anpassad bil tror du skulle passa dina behov?
               </h3>
@@ -391,8 +425,10 @@
 
             
         </section>
-        <!-----------------------------SLUT DEL 3---------------------------->
         <button class="skicka" type="submit">Skicka</button>
+      </form>
+        <!-----------------------------SLUT DEL 3---------------------------->
+        
     </main>
     
     <!-----------------------------FOOTER---------------------------->

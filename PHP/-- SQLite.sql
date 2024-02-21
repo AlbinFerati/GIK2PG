@@ -59,3 +59,23 @@ CREATE TABLE hjälpmedel (
     elmoped_till_fordon BOOLEAN,
     permobil_till_fordon BOOLEAN
 );
+
+CREATE TABLE fordon (
+    id INTEGER PRIMARY KEY,
+    anpassad_bil INTEGER,
+    forare_passagerare TEXT,
+    mindre_personbil INTEGER,
+    storre_personbil INTEGER,
+    suv INTEGER,
+    mindre_transportbil INTEGER,
+    amerikansk_golvsanktbil INTEGER,
+    minibuss INTEGER,
+    annat_fordon TEXT,
+    vet_ej INTEGER
+);
+
+
+
+SELECT * FROM fordon;
+
+DROP TABLE fordon;
