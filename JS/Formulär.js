@@ -85,30 +85,29 @@ document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
     event.stopPropagation(); // Förhindra eventet från att bubbla uppåt i DOM-trädet
 
     const section = document.querySelector('.hjälpmedel_med_i_fordon');
-
-    // Använd data-attribute från klickad bild för att hitta motsvarande checkbox
-    const targetId = this.dataset.target;
+    const targetId = this.dataset.target; // Hämta data-target attributet
     const checkbox = document.getElementById(targetId);
 
     if (checkbox) {
-      // Växla synlighet för checkboxens förälder baserat på om checkboxen är checked eller inte
-      checkbox.checked = !checkbox.checked; // Växla checkboxens checked-tillstånd
-      checkbox.parentElement.style.display = checkbox.checked
-        ? 'block'
-        : 'none'; // Visa eller dölj baserat på checkboxens tillstånd
+      // Uppdatera kryssrutan baserat på om bilden är markerad eller inte
+      checkbox.checked = this.classList.contains('marked');
+      
+      // Visa eller dölj kryssrutan baserat på om bilden är markerad eller inte
+      checkbox.parentElement.style.display = this.classList.contains('marked') ? 'block' : 'none';
     }
 
-    // Kontrollera om någon checkbox är markerad
-    const anyChecked = Array.from(
-      document.querySelectorAll(
-        '.hjälpmedel_med_i_fordon input[type="checkbox"]'
-      )
-    ).some((checkbox) => checkbox.checked);
+    // Uppdatera värdet på det dolda inputfältet baserat på om bilden är markerad eller inte
+    var hiddenInput = this.querySelector('input[type="hidden"]');
+    hiddenInput.value = this.classList.contains('marked') ? '1' : '0';
 
-    // Visa eller dölj sektionen baserat på om någon checkbox är markerad
+    // Kontrollera om någon bild är markerad efter uppdateringen
+    const anyChecked = Array.from(document.querySelectorAll('.img_cont_hjälpmedel.marked')).length > 0;
+
+    // Visa eller dölj sektionen baserat på om någon bild är markerad
     section.style.display = anyChecked ? 'block' : 'none';
   });
 });
+
 
 // ---------TEST 2
 // document.querySelectorAll('.img_cont').forEach(item => {
