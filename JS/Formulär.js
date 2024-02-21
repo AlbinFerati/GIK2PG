@@ -56,14 +56,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //   });
 // });
 
-document
+/* document
   .querySelectorAll('.img_cont_hjälpmedel, .img_cont_fordon')
   .forEach((item) => {
     item.addEventListener('click', function (event) {
       event.stopPropagation(); // Stoppar händelsen från att bubbla uppåt i DOM-trädet
       this.classList.toggle('marked'); // Toggla klassen 'marked' på klickat element
     });
-  });
+  }); */
+
+  document.querySelectorAll('.img_cont_hjälpmedel, .img_cont_fordon').forEach((item) => {
+    item.addEventListener('click', function(event) {
+        event.stopPropagation(); // Stoppa händelsen från att bubbla uppåt i DOM-trädet
+        this.classList.toggle('marked'); // Toggla klassen 'marked' på klickat element
+
+        // Hitta det dolda inputfältet för detta hjälpmedel
+        var hiddenInput = this.querySelector('input[type="hidden"]');
+
+        // Uppdatera värdet på det dolda inputfältet baserat på om hjälpmedlet är markerat eller inte
+        hiddenInput.value = this.classList.contains('marked') ? '1' : '0';
+    });
+});
+
 
 // ------------TEST
 document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {

@@ -4,20 +4,15 @@ $dbh = new PDO('sqlite:../anpassarna.db');
 
 // Förbered och bind parametrarna för att lägga till eller uppdatera poster
 $stmt = $dbh->prepare("INSERT INTO hjälpmedel (kryckor, rullator, rullstol, manuell_rullstol_hjälpmotor, elmoped, permobil) VALUES (:kryckor, :rullator, :rullstol, :manuell_rullstol_hjälpmotor, :elmoped, :permobil)
-                      ON CONFLICT(id) DO UPDATE SET kryckor = COALESCE(:kryckor, kryckor), rullator = COALESCE(:rullator, rullator), rullstol = COALESCE(:rullstol, rullstol), manuell_rullstol_hjälpmotor = COALESCE(:manuell_rullstol_hjälpmotor, manuell_rullstol_hjälpmotor), elmoped = COALESCE(:elmoped, elmoped), permobil = COALESCE(:permobil, permobil)");
+                      ON CONFLICT(id) DO UPDATE SET kryckor = :kryckor, rullator = :rullator, rullstol = :rullstol, manuell_rullstol_hjälpmotor = :manuell_rullstol_hjälpmotor, elmoped = :elmoped, permobil = :permobil");
 
-// Funktion för att avgöra om ett hjälpmedel är markerat eller inte
-function isMarked($value) {
-    return $value === "marked" ? "marked" : "null";
-}
-
-// Hämta data från POST-formuläret och bestäm om de är markerade eller inte
-$kryckor = isMarked($_POST['kryckor']);
-$rullator = isMarked($_POST['rullator']);
-$rullstol = isMarked($_POST['rullstol']);
-$manuell_rullstol_hjälpmotor = isMarked($_POST['manuell_rullstol_hjälpmotor']);
-$elmoped = isMarked($_POST['elmoped']);
-$permobil = isMarked($_POST['permobil']);
+// Hämta data från POST-formuläret
+$kryckor = $_POST['kryckor'];
+$rullator = $_POST['rullator'];
+$rullstol = $_POST['rullstol'];
+$manuell_rullstol_hjälpmotor = $_POST['manuell_rullstol_hjälpmotor'];
+$elmoped = $_POST['elmoped'];
+$permobil = $_POST['permobil'];
 
 // Bind parametrarna från POST-data till de motsvarande SQL-parametrarna
 $stmt->bindParam(':kryckor', $kryckor);

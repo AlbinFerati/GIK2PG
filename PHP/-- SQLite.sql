@@ -30,12 +30,14 @@ SELECT * FROM kontaktinfo;
 
 CREATE TABLE hjälpmedel(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    kryckor TEXT,
-    rullator TEXT,
-    rullstol TEXT,
-    manuell_rullstol_hjälpmotor TEXT,
-    elmoped TEXT,
-    permobil TEXT
+    kryckor BOOLEAN,
+    rullator BOOLEAN,
+    rullstol BOOLEAN,
+    manuell_rullstol_hjälpmotor BOOLEAN,
+    elmoped BOOLEAN,
+    permobil BOOLEAN
 );
+
+DROP TABLE hjälpmedel;
 
 SELECT * FROM hjälpmedel;
