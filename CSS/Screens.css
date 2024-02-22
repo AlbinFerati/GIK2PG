@@ -1,72 +1,120 @@
-
-@media only screen and (min-width: 320px){
-  /* -----------------KONTAKTINFO GRID---------------- */
-  .kontaktinfo {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "fnamn enamn"
-    "telnr mail";
-  }
-
-  .kontaktinfo div {
-      display: grid;
-      /* justify-content: center; */
-      align-items: center;
-      text-align: left;
-  }
-
-  .kontaktinfo div:nth-child(1) {
-    grid-area: fnamn;
-  }
-  .kontaktinfo div:nth-child(2) {
-    grid-area: enamn;
-  }
-  .kontaktinfo div:nth-child(3) {
-    grid-area: telnr;
-  }
-  .kontaktinfo div:nth-child(4) {
-    grid-area: mail;
-  }
-
-  .hjälpmedel_textfield input{
-    width: 45%;
-  }
-
-  /* Om flex ist för grid */
-  /* .kontaktinfo {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .kontaktinfo div {
-    flex-basis: 50%;
-  }
-  
-  .kontaktinfo div label {
-    margin-right: 10px;
-  } */
-  
-  /* Justera bredden efter behov */
-  
-  
-/* -------------------KROPPEN---------------------  */
-
-
-/* -------------------DEL 1---------------------  */
-.hjälpmedel .grid-hjälpmedel {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: 
-  "kryckor rullator"
-   "rullstol hjälpmotor"
-  "elmoped permobil";
+html {
+  font-size: 10px; /* 1 rem motsvarar nu 10px */
 }
 
+:root {
+  --color-1: rgb(51, 51, 51);
+  --color-2: hsl(0, 0%, 100%);
+  --color-3: hsl(266, 71%, 73%);
+  --color-4: hsl(230, 80%, 72%);
+  --color-5: hsl(192, 89%, 71%);
+  --color-6: hsl(192, 50%, 50%);
+  --color-7: hsl(190, 74%, 59%);
+  --bg: hsl(198, 51%, 35%);
+  --text: hsl(197, 20%, 10%);
+  --text-white: hsl(0, 0%, 100%);
+  --text-grey: hsl(0, 0%, 84%);
+  --text-hover: hsl(199, 100%, 40%);
+  --button: hsl(199, 100%, 51%);
+  /* --body_typography-font-family: Roboto;  VAD GÖR DERNNA? */
+}
+/* BODY */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, arial, verdana;
+  font-weight: 300;
+  }
+  
+label {
+  display: block; /* Gör label till ett blockelement för att placera den ovanför bilden */
+  margin-bottom: 5px; /* Justera avståndet mellan etiketten och bilden */
+  font-size: 1.5rem;
+}
+
+h3{
+  font-size: 1.5rem;
+}
+
+h5{
+  font-size: 1.5rem;
+}
+
+/* ------------------------------------------------------KONTAKTINFO---------------------------------------------------------- */
+.kontaktinfo div:nth-child(1) {
+  grid-area: fnamn;
+}
+.kontaktinfo div:nth-child(2) {
+  grid-area: enamn;
+}
+.kontaktinfo div:nth-child(3) {
+  grid-area: telnr;
+}
+.kontaktinfo div:nth-child(4) {
+  grid-area: mail;
+}
+
+.hjälpmedel_textfield input{
+  width: 45%;
+}
+.kontaktinfo {
+  font-size: 1.6rem;
+  margin: 5rem 0rem;
+}
+
+input {
+  border: .1rem solid #ccc;
+  border-radius: .3rem;
+ 
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: var(--color-1);
+
+}
+/* ------------------------------------------------------KONTAKTINFO---------------------------------------------------------- */
+/* ------------------------------------------------------KROPPEN---------------------------------------------------------- */
+.section_sliders h3:nth-child(1) {
+  text-align: left;
+  grid-area: header;
+  align-self: flex-end;
+}
+.section_sliders li:nth-child(2) {
+  grid-area: harm;
+}
+.section_sliders li:nth-child(3) {
+  grid-area: varm;
+}
+.section_sliders li:nth-child(4) {
+  grid-area: hben;
+}
+.section_sliders li:nth-child(5) {
+  grid-area: vben;
+}
+.section_sliders li:nth-child(6) {
+  grid-area: hhand;
+}
+.section_sliders li:nth-child(7) {
+  grid-area: vhand;
+}
+
+
+.kroppen_img {
+  width: 20rem;
+  height: 30rem;
+}
+
+.section_sliders{
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.slider_input{
+  padding: 1rem;
+}
+.range_slider{
+  margin-bottom: 2.5rem;
+}
+/* ------------------------------------------------------KROPPEN---------------------------------------------------------- */
+/* ------------------------------------------------------HJÄLPMEDEL---------------------------------------------------------- */
 .hjälpmedel .grid-hjälpmedel div:nth-child(1) {
   grid-area: kryckor;
 }
@@ -85,11 +133,172 @@
 .hjälpmedel .grid-hjälpmedel div:nth-child(6) {
   grid-area: permobil;
 } 
+.hjälpmedel_med_i_fordon, .checkbox_container{
+  display: none;
+}
 
-/* -------------------DEL 2---------------------  */
+.img_hjälpmedel {
+  max-width: 100%; /* Säkerställ att bilden inte överskrider ramens bredd */
+}
+
+.hjälpmedel_textfield input{
+  width: 50%;
+  }
+
+  .img_cont_hjälpmedel {
+    border: .1rem solid #ccc; /* Lägg till en ram runt varje bild */
+    padding: 1rem; /* Justera utrymmet inuti ramen */
+    text-align: center; /* Centrera text och bild */
+  }
+/* ------------------------------------------------------HJÄLPMEDEL---------------------------------------------------------- */
+
+/* ------------------------------------------------------FORDON---------------------------------------------------------- */
+.cont_fordon {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas: 
+    "mindreBil" 
+    "kombi"
+    "suv" 
+    "transportbil"
+    "amerikansk" 
+    "minibuss";
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.img_cont_fordon:nth-child(1) {
+  grid-area: mindreBil;
+}
+.img_cont_fordon:nth-child(2) {
+  grid-area: kombi;
+}
+.img_cont_fordon:nth-child(3) {
+  grid-area: suv;
+}
+.img_cont_fordon:nth-child(4) {
+  grid-area: transportbil;
+}
+.img_cont_fordon:nth-child(5) {
+  grid-area: amerikansk;
+}
+.img_cont_fordon:nth-child(6) {
+  grid-area: minibuss;
+}
+
+.img_fordon_hjälpmedel {
+  max-width: 100%;
+}
+
+.fordon_yes {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  display: none; 
+}
+
+.if_yes{
+  display: none;
+}
+
+.fordon_no {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  display: none; 
+}
+
+.if_no{
+  display: none;
+}
+
+.fordon_label_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.fordon_input {
+  width: 10%; 
+}
+
+
+.img_cont_fordon{
+  border: .1rem solid #ccc; 
+  padding: 1rem; 
+  text-align: center; 
+  display: none;
+}
+
+.marked {
+  border: .2rem solid blue;
+  opacity: 0.7;
+} 
+
+.fordon_textfield{
+  display: none;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.fordon_textfield_input{
+  width: 100%;
+}
+/* ------------------------------------------------------FORDON---------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------FOOTER---------------------------------------------------------- */
+
+.footer_container {
+  background-color: var(--color-1);
+  border-color: var(--color-1);
+}
+
+
+footer {
+  color: var(--color-2);
+}
+
+footer a {
+  color: var(--text-grey);
+  text-decoration: none;
   
+}
 
-/* -------------------DEL 3------------------- */
+/* ------------------------------------------------------ 320px ------------------------------------------------------------ */
+@media only screen and (min-width: 320px){
+    .kontaktinfo {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "fnamn enamn"
+      "telnr mail";
+    }
+
+    .kontaktinfo div {
+        display: grid;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .hjälpmedel .grid-hjälpmedel {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 
+      "kryckor rullator"
+      "rullstol hjälpmotor"
+      "elmoped permobil";
+    }
+
 
     .cont_fordon {
       display: grid;
@@ -102,36 +311,12 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .img_cont_fordon:nth-child(1) {
-      grid-area: mindreBil;
-    }
-    .img_cont_fordon:nth-child(2) {
-      grid-area: kombi;
-    }
-    .img_cont_fordon:nth-child(3) {
-      grid-area: suv;
-    }
-    .img_cont_fordon:nth-child(4) {
-      grid-area: transportbil;
-    }
-    .img_cont_fordon:nth-child(5) {
-      grid-area: amerikansk;
-    }
-    .img_cont_fordon:nth-child(6) {
-      grid-area: minibuss;
-    }
-
 }
-
+/* ------------------------------------------------------ 768px ------------------------------------------------------------ */
   @media only screen and (min-width: 768px) {
-/* -----------------KONTAKTINFO GRID---------------- */
-    
-/* -------------------KROPPEN---------------------  */
 
-/* -------------------DEL 1---------------------  */
     .section_sliders {
       display: grid;
-
       gap: 1.5rem;
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(2, 1fr);
@@ -141,31 +326,7 @@
       "harm varm"
       "hben vben";
     }
-   
-    .section_sliders h3:nth-child(1) {
-      text-align: left;
-      grid-area: header;
-      align-self: flex-end;
-    }
-    .section_sliders li:nth-child(2) {
-      grid-area: harm;
-    }
-    .section_sliders li:nth-child(3) {
-      grid-area: varm;
-    }
-    .section_sliders li:nth-child(4) {
-      grid-area: hben;
-    }
-    .section_sliders li:nth-child(5) {
-      grid-area: vben;
-    }
-    .section_sliders li:nth-child(6) {
-      grid-area: hhand;
-    }
-    .section_sliders li:nth-child(7) {
-      grid-area: vhand;
-    }
-    /* -------------------DEL 2---------------------  */
+
     .hjälpmedel .grid-hjälpmedel {
       display: grid;
       gap: 1.5rem;
@@ -175,10 +336,7 @@
       "kryckor rullator rullstol"
       "hjälpmotor elmoped permobil";
     }
-   
-    /* -------------------DEL 3---------------------  */
-
-
+  
     .cont_fordon {
       display: grid;
       gap: 1.5rem;
@@ -189,11 +347,9 @@
       grid-template-columns: repeat(3, 1fr);
     }
    
-
-
 }
 
-
+/* ------------------------------------------------------ 1024px ------------------------------------------------------------ */
   @media only screen and (min-width: 1024px) {
 
     .section_sliders {
@@ -228,7 +384,5 @@
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(5, 1fr);
     }
-
-
 
   }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/CSS/Formulär.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/CSS/Formulär.css"> -->
     <link rel="stylesheet" type="text/css" href="/CSS/Screens.css">
     
 
@@ -64,7 +64,7 @@
               <label for="mail">Mail</label>
               <input type="text" id="mail" name="mail">
             </div>
-      </section>       
+        </section>       
         <!-----------------------------START DEL 1---------------------------->
         <!-- <img src="./IMG/Kroppen/standing-human-body-silhouette-svgrepo-com.svg"> -->
         <section class="kroppen">
@@ -228,11 +228,9 @@
                 <input type="hidden" name="permobil" value="0">
               </div>
             </section>
-            <div>
-              <h5 class="hjälpmedel_textfield">
-                  <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel</label><br>
-                  <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel"><br> 
-              </h5>
+            <div class="hjälpmedel_textfield">
+                  <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel:</label>
+                  <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel">
             </div> 
         <section class="hjälpmedel_med_i_fordon">
           <h3>
@@ -262,7 +260,9 @@
             <label for="permobil_till_fordon">Elrullstol/Permobil</label>
             <input type="checkbox" id="permobil_till_fordon" name="permobil_till_fordon">
           </div>
+          </section>
         </section>
+
         <!-----------------------------SLUT DEL 2---------------------------->
         
         <!-----------------------------START DEL 3---------------------------->
@@ -271,16 +271,16 @@
           <h3>
             Har du/ni någon anpassad bil idag?
           </h3>
-          <div class="fordon_label_container"> 
-            <div>
+          <!-- <div class="fordon_label_container">  -->
+            <div class="fordon_label_container">
                 <label class="fordon_label_container_label" for="choice_yes">Ja</label>
-                <input type="radio" id="choice_yes" name="anpassad_bil" value="1">
+                <input class="fordon_input" type="radio" id="choice_yes" name="anpassad_bil" value="1">
             </div>
-            <div>
+            <div class="fordon_label_container">
                 <label class="fordon_label_container_label" for="choice_no">Nej</label>
-                <input type="radio" id="choice_no" name="anpassad_bil" value="0">
+                <input class="fordon_input" type="radio" id="choice_no" name="anpassad_bil" value="0">
             </div>
-        </div>
+          <!-- </div> -->
         
               <!-- Del för förare/passagerare/både och -->
                   <div class="fordon_yes">
@@ -355,18 +355,17 @@
                 </div>
                   
             </section>
-            <div class="fordon_textfield">
-                
-                <h5>
-                  <label for="annat_fordon">Annat fordon</label><br>
-                  <input type="text" id="annat_fordon" name="annat_fordon"><br>
-                </h5>
-                <h5>
+            <div class="fordon_textfield" >  
+              <div class="fordon_label_container">
+                <div>
+                  <label for="annat_fordon">Annat fordon:</label>
+                  <input class="fordon_textfield_input" type="text" id="annat_fordon" name="annat_fordon">
+                </div>
+                <div>
                   <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon ligger bra på sidan --> 
-                  
-                  <input type="checkbox" id="vet_ej" name="vet_ej">
-                </h5>
-            
+                  <input  class="fordon_textfield_input" type="checkbox" id="vet_ej" name="vet_ej">
+                </div>
+              </div>
             </div>
 
             
