@@ -17,7 +17,7 @@
         $enamn = $_POST['enamn'];
 
         // Förbered SQL-frågan
-        $sql = "SELECT * FROM kontaktinfo WHERE fnamn LIKE :fnamn AND enamn LIKE :enamn";
+        $sql = "SELECT * FROM din_tabell WHERE fnamn LIKE :fnamn AND enamn LIKE :enamn";
         $stmt = $dbh->prepare($sql);
 
         // Bind parametrarna och utför frågan
@@ -28,15 +28,82 @@
         if($result) {
             echo "<table border='1'>";
             // Uppdatera rubrikerna för att inkludera ID
-            echo "<tr><th>ID</th><th>Förnamn</th><th>Efternamn</th><th>Telefon</th><th>Mail</th></tr>";
+            echo "
+            <th>Åtgärder</th>
+            <th>ID</th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>Telefon</th>
+            <th>Mail</th>
+            <th>Styrka Höger Arm</th>
+            <th>Styrka Vänster Arm</th>
+            <th>Styrka Höger Ben</th>
+            <th>Styrka Vänster Ben</th>
+            <th>Styrka Höger Hand</th>
+            <th>Styrka Vänster Hand</th>
+            <th>Kryckor</th>
+            <th>Rullator</th>
+            <th>Rullstol</th>
+            <th>Manuell Rullstol Hjälpmotor</th>
+            <th>Elmoped</th>
+            <th>Permobil</th>
+            <th>Annat Hjälpmedel</th>
+            <th>Kryckor Till Fordon</th>
+            <th>Rullator Till Fordon</th>
+            <th>Rullstol Till Fordon</th>
+            <th>Hjälpmotor Till Fordon</th>
+            <th>Elmoped Till Fordon</th>
+            <th>Permobil Till Fordon</th>
+            <th>Anpassad Bil</th>
+            <th>Förare Passagerare</th>
+            <th>Mindre Personbil</th>
+            <th>Större Personbil</th>
+            <th>SUV</th>
+            <th>Mindre Transportbil</th>
+            <th>Amerikansk Golvsänktbil</th>
+            <th>Minibuss</th>
+            <th>Annat Fordon</th>
+            <th>Vet Ej</th>
+            <th>Åtgärder</th>
+            ";
             foreach($result as $row) {
                 echo "<tr>";
                 // Lägg till en cell för ID
+                echo "<td><a href='remove.php?id=".$row['id']."'>Remove</a> | <a href='edit.php?id=".$row['id']."'>Redigera</a></td>";
                 echo "<td>".$row['id']."</td>";
                 echo "<td>".$row['fnamn']."</td>";
                 echo "<td>".$row['enamn']."</td>";
                 echo "<td>".$row['telnr']."</td>";
                 echo "<td>".$row['mail']."</td>";
+                echo "<td>".$row["styrka_höger_arm"]."</td>";
+                echo "<td>".$row["styrka_vänster_arm"]."</td>";
+                echo "<td>".$row["styrka_höger_ben"]."</td>";
+                echo "<td>".$row["styrka_vänster_ben"]."</td>";
+                echo "<td>".$row["styrka_höger_hand"]."</td>";
+                echo "<td>".$row["styrka_vänster_hand"]."</td>";
+                echo "<td>".$row["kryckor"]."</td>";
+                echo "<td>".$row["rullator"]."</td>";
+                echo "<td>".$row["rullstol"]."</td>";
+                echo "<td>".$row["manuell_rullstol_hjälpmotor"]."</td>";
+                echo "<td>".$row["elmoped"]."</td>";
+                echo "<td>".$row["permobil"]."</td>";
+                echo "<td>".$row["annat_hjälpmedel"]."</td>";
+                echo "<td>".$row["kryckor_till_fordon"]."</td>";
+                echo "<td>".$row["rullator_till_fordon"]."</td>";
+                echo "<td>".$row["rullstol_till_fordon"]."</td>";
+                echo "<td>".$row["hjälpmotor_till_fordon"]."</td>";
+                echo "<td>".$row["elmoped_till_fordon"]."</td>";
+                echo "<td>".$row["permobil_till_fordon"]."</td>";
+                echo "<td>".$row["anpassad_bil"]."</td>";
+                echo "<td>".$row["forare_passagerare"]."</td>";
+                echo "<td>".$row["mindre_personbil"]."</td>";
+                echo "<td>".$row["storre_personbil"]."</td>";
+                echo "<td>".$row["suv"]."</td>";
+                echo "<td>".$row["mindre_transportbil"]."</td>";
+                echo "<td>".$row["amerikansk_golvsanktbil"]."</td>";
+                echo "<td>".$row["minibuss"]."</td>";
+                echo "<td>".$row["annat_fordon"]."</td>";
+                echo "<td>".$row["vet_ej"]."</td>";
                 echo "<td><a href='remove.php?id=".$row['id']."'>Remove</a> | <a href='edit.php?id=".$row['id']."'>Redigera</a></td>";
                 echo "</tr>";
 
