@@ -35,7 +35,23 @@
     width: 45%;
   }
 
-
+  /* Om flex ist för grid */
+  /* .kontaktinfo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .kontaktinfo div {
+    flex-basis: 50%;
+  }
+  
+  .kontaktinfo div label {
+    margin-right: 10px;
+  } */
+  
+  /* Justera bredden efter behov */
+  
+  
 /* -------------------KROPPEN---------------------  */
 
 
@@ -52,22 +68,22 @@
 }
 
 .hjälpmedel .grid-hjälpmedel div:nth-child(1) {
-  grid-area: elmoped;
-}
-.hjälpmedel .grid-hjälpmedel div:nth-child(2) {
-  grid-area: permobil;
-}
-.hjälpmedel .grid-hjälpmedel div:nth-child(3) {
   grid-area: kryckor;
 }
-.hjälpmedel .grid-hjälpmedel div:nth-child(4) {
+.hjälpmedel .grid-hjälpmedel div:nth-child(2) {
   grid-area: rullator;
 }
-.hjälpmedel .grid-hjälpmedel div:nth-child(5) {
+.hjälpmedel .grid-hjälpmedel div:nth-child(3) {
   grid-area: rullstol;
 }
-.hjälpmedel .grid-hjälpmedel div:nth-child(6) {
+.hjälpmedel .grid-hjälpmedel div:nth-child(4) {
   grid-area: hjälpmotor;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(5) {
+  grid-area: elmoped;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(6) {
+  grid-area: permobil;
 } 
 
 /* -------------------DEL 2---------------------  */
