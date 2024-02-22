@@ -6,17 +6,17 @@ $dbh = new PDO('sqlite:../anpassarna.db');
 $stmt = $dbh->prepare("INSERT INTO fordon (forare_passagerare, anpassad_bil, mindre_personbil, storre_personbil, suv, mindre_transportbil, amerikansk_golvsanktbil, minibuss, annat_fordon, vet_ej) 
                       VALUES (:forare_passagerare, :anpassad_bil, :mindre_personbil, :storre_personbil, :suv, :mindre_transportbil, :amerikansk_golvsanktbil, :minibuss, :annat_fordon, :vet_ej)
                       ON CONFLICT(id) DO UPDATE SET forare_passagerare = :forare_passagerare, anpassad_bil = :anpassad_bil, mindre_personbil = :mindre_personbil, storre_personbil = :storre_personbil, 
-                      suv = :suv, mindre_transportbil = :mindre_transportbil, amerikansk_golvsanktbil = :amerikansk_golvsanktbil, minibuss = :minibuss, annat_fordon = :annat_fordon, vet_ej = :vet_ej");
+                      suv = :suv, mindre_transportbil = :mindre_transportbil, amerikansk_golvsänktbil = :amerikansk_golvsänktbil, minibuss = :minibuss, annat_fordon = :annat_fordon, vet_ej = :vet_ej");
 
 // Hämta data från POST-formuläret
 $forare_passagerare = $_POST['forare_passagerare'];
-$anpassad_bil = isset($_POST['anpassad_bil']) ? 1 : 0;
-$mindre_personbil = isset($_POST['mindre_personbil']) ? 1 : 0;
-$storre_personbil = isset($_POST['storre_personbil']) ? 1 : 0;
-$suv = isset($_POST['suv']) ? 1 : 0;
-$mindre_transportbil = isset($_POST['mindre_transportbil']) ? 1 : 0;
-$amerikansk_golvsanktbil = isset($_POST['amerikansk_golvsanktbil']) ? 1 : 0;
-$minibuss = isset($_POST['minibuss']) ? 1 : 0;
+$anpassad_bil = isset($_POST['anpassad_bil']) ? $_POST['anpassad_bil'] : 0;
+$mindre_personbil = $_POST['mindre_personbil'];
+$storre_personbil = $_POST['storre_personbil'];
+$suv = $_POST['suv'];
+$mindre_transportbil = $_POST['mindre_transportbil'];
+$amerikansk_golvsanktbil = $_POST['amerikansk_golvsänktbil'];
+$minibuss = $_POST['minibuss'];
 $annat_fordon = $_POST['annat_fordon'];
 $vet_ej = isset($_POST['vet_ej']) ? 1 : 0;
 
