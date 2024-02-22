@@ -32,9 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
   setupInteractivePath('#path12', ['#path15', '#path16', '#path17']); //LÅNGFINGER
   setupInteractivePath('#path13', ['#path15', '#path16', '#path17']); //RINGFINGER
   setupInteractivePath('#path14', ['#path15', '#path16', '#path17']); //LILLFINGER
+  setupInteractivePath('#path15', [ '#path16', '#path17']);
+  setupInteractivePath('#path16', [ '#path17']);
 
   // Sätt upp interaktiviteten för vänster ben
-  setupInteractivePath('#path18', ['#path19', '#path20']); //FOT
+  setupInteractivePath('#path18', ['#path19', '#path20']);
+  setupInteractivePath('#path19', [ '#path20']); //FOT
   // setupInteractivePath('#path19', ['#path20']);
 
   // Sätt upp interaktiviteten för höger hand
@@ -43,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
   setupInteractivePath('#path23', ['#path26', '#path27', '#path28']); //LÅNGFINGER
   setupInteractivePath('#path24', ['#path26', '#path27', '#path28']); //RINGFINGER
   setupInteractivePath('#path25', ['#path26', '#path27', '#path28']); //LILLFINGER
+  setupInteractivePath('#path26', ['#path27', '#path28']);
+  setupInteractivePath('#path27', ['#path28']); 
 
   // Sätt upp interaktiviteten för höger ben
   setupInteractivePath('#path29', ['#path30', '#path31']); //FOT
@@ -50,14 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // //------------------------------Kortare version utav alla kroppsdelar----------------------------
 document.addEventListener('DOMContentLoaded', function() {
+
   // Lägg till klick-eventlyssnare till "path15"
   document.getElementById('path15').addEventListener('click', function() {
     toggleColors(['path10', 'path11', 'path12', 'path13', 'path14', 'path15']);
-  });
+  }); 
+  
 
   // Lägg till klick-eventlyssnare till "path16"
   document.getElementById('path16').addEventListener('click', function() {
-    toggleColors(['path10', 'path11', 'path12', 'path13', 'path14', 'path15', 'path16']);
+    toggleColors(['path10', 'path11', 'path12', 'path13', 'path14', 'path15', 'path16']);  
   });
 
   // Lägg till klick-eventlyssnare till "path17"
@@ -112,8 +119,16 @@ document.addEventListener('DOMContentLoaded', function() {
         pathElement.style.fill = alreadyGrey ? '' : 'grey'; // Om den är grå, gör svart, annars gör grå
       }
     });
-    this.style.fill = alreadyGrey ? '' : 'grey';
   }
+  function setToBlack(pathsToChange) {
+    pathsToChange.forEach(function(pathId) {
+        var pathElement = document.getElementById(pathId);
+        if (pathElement) {
+            // Sätt fyllningsfärgen till svart för det angivna path-elementet
+            pathElement.style.fill = 'black';
+        }
+    });
+}
 });
 
 // -----------------------------------SILUETT TILL SLIDERS KOD 
