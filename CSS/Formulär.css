@@ -144,9 +144,6 @@ input {
 
 /* <!-----------------------------START DEL 1 (KROPPEN)----------------------------> */
 
-.siluett {
-  width: 100%;
-}
 
 label {
   display: block; /* Gör label till ett blockelement för att placera den ovanför bilden */
@@ -184,7 +181,7 @@ label {
 
 .grid-hjälpmedel {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(1, 1fr); 
 }
 
 .img_cont_hjälpmedel {
