@@ -6,19 +6,33 @@
     <title>Adminsida - Sök information</title>
 </head>
 <body>
-    <h2>Sök information</h2>
-    <form action="/PHP/sok.php" method="post">
-        <div>
-            <label for="fnamn">Förnamn:</label>
-            <input type="text" id="fnamn" name="fnamn">
-        </div>
-        <div>
-            <label for="enamn">Efternamn:</label>
-            <input type="text" id="enamn" name="enamn">
-        </div>
-        <div>
-            <button type="submit" name="submit">Sök</button>
-        </div>
-    </form>
+    <section>
+        <h2>Sök efter person</h2>
+        <form action="/PHP/sok.php" method="post">
+            <div>
+                <label for="fnamn">Förnamn:</label>
+                <input type="text" id="fnamn" name="fnamn">
+            </div>
+            <div>
+                <label for="enamn">Efternamn:</label>
+                <input type="text" id="enamn" name="enamn">
+            </div>
+            <div>
+                <button type="submit" name="submit">Sök</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>Hämta bild</h2>
+        <form action="/PHP/get_image.php" method="get">
+            <div>
+                <label for="bild_id">Bild ID:</label>
+                <input type="number" id="bild_id" name="id">
+            </div>
+            <div>
+                <button type="submit">Hämta</button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>

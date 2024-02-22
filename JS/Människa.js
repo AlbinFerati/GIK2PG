@@ -1,3 +1,10 @@
+function submitSVG() {
+  var svg = document.querySelector('.siluett');
+  var serializer = new XMLSerializer();
+  var svgString = serializer.serializeToString(svg);
+  document.getElementById('svg-content').value = svgString;
+}
+
 // path 10 - 17 vänster arm
 // path 18 - 20 vänster ben
 // path 21 - 28 höger arm
