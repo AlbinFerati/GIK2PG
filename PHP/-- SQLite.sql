@@ -172,3 +172,14 @@ CREATE TABLE IF NOT EXISTS din_tabell_test (
 SELECT * FROM din_tabell_test;
 
 SELECT * FROM din_tabell_test WHERE svg_content = 1;
+
+
+CREATE TABLE admin (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    password TEXT
+);
+
+INSERT INTO admin (username, password) VALUES ('adminseb', 'abc123');
+
+SELECT * FROM admin
