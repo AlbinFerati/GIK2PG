@@ -3,52 +3,101 @@
 // <!-----------------------------SLUT NAV---------------------------->
 
 // <!-----------------------------START DEL 1---------------------------->
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   // Function to update the slider and the text input to have the same value
+// // Function to update the slider and the text input to have the same value
+// function updateValue(slider, textInput, value, unit = '%') {
+//   slider.value = value;
+//   textInput.value = value + unit;
+// }
+
+// // Function to set up each slider-text pair
+// function setupSliderTextPair(sliderId, textInputId, unit) {
+//   let slider = document.getElementById(sliderId);
+//   let textInput = document.getElementById(textInputId);
+
+//   // Initialize with the current slider value
+//   updateValue(slider, textInput, slider.value, unit);
+
+//   // Event listener for the slider input
+//   slider.addEventListener('input', function () {
+//     updateValue(slider, textInput, this.value, unit);
+//   });
+
+//   // Event listener for the text input
+//   textInput.addEventListener('input', function () {
+//     let value = parseInt(this.value, 10);
+//     if (isNaN(value)) {
+//       value = 0; // Default to 0 if the value is not a number
+//     }
+//     value = Math.max(0, Math.min(value, 100)); // Enforce the range between 0 and 100
+//     updateValue(slider, textInput, value, unit);
+//   });
+// }
+
+// // Call this function for each slider-text input pair
+// setupSliderTextPair('harm', 'harmValue', '%');
+// setupSliderTextPair('varm', 'varmValue', '%');
+// setupSliderTextPair('hben', 'hbenValue', '%');
+// setupSliderTextPair('vben', 'vbenValue', '%');
+// setupSliderTextPair('hhand', 'hhandValue', '%');
+// setupSliderTextPair('vhand', 'vhandValue', '%');
+// setupSliderTextPair('gåförmåga', 'gåförmågaValue', 'm');
+// setupSliderTextPair('längd', 'längdValue', 'cm');
+// setupSliderTextPair('vikt', 'viktValue', 'kg');
+
+
+//   // Repeat for other slider-text input pairs with their respective IDs
+// });
+
 document.addEventListener('DOMContentLoaded', (event) => {
   // Function to update the slider and the text input to have the same value
-// Function to update the slider and the text input to have the same value
-function updateValue(slider, textInput, value, unit = '%') {
-  slider.value = value;
-  textInput.value = value + unit;
-}
-
-// Function to set up each slider-text pair
-function setupSliderTextPair(sliderId, textInputId, unit) {
-  let slider = document.getElementById(sliderId);
-  let textInput = document.getElementById(textInputId);
-
-  // Initialize with the current slider value
-  updateValue(slider, textInput, slider.value, unit);
-
-  // Event listener for the slider input
-  slider.addEventListener('input', function () {
-    updateValue(slider, textInput, this.value, unit);
-  });
-
-  // Event listener for the text input
-  textInput.addEventListener('input', function () {
-    let value = parseInt(this.value, 10);
-    if (isNaN(value)) {
-      value = 0; // Default to 0 if the value is not a number
+  function updateValue(slider, textInput, value, unit = '%') {
+    // Check if the value is greater than or equal to 250
+    if (value >= 251) {
+      textInput.value = '250m+';
+    } else {
+      textInput.value = value + unit;
     }
-    value = Math.max(0, Math.min(value, 100)); // Enforce the range between 0 and 100
-    updateValue(slider, textInput, value, unit);
-  });
-}
+    slider.value = value;
+  }
 
-// Call this function for each slider-text input pair
-setupSliderTextPair('harm', 'harmValue', '%');
-setupSliderTextPair('varm', 'varmValue', '%');
-setupSliderTextPair('hben', 'hbenValue', '%');
-setupSliderTextPair('vben', 'vbenValue', '%');
-setupSliderTextPair('hhand', 'hhandValue', '%');
-setupSliderTextPair('vhand', 'vhandValue', '%');
-setupSliderTextPair('gåförmåga', 'gåförmågaValue', 'm');
-setupSliderTextPair('längd', 'längdValue', 'cm');
-setupSliderTextPair('vikt', 'viktValue', 'kg');
+  // Function to set up each slider-text pair
+  function setupSliderTextPair(sliderId, textInputId, unit) {
+    let slider = document.getElementById(sliderId);
+    let textInput = document.getElementById(textInputId);
 
+    // Initialize with the current slider value
+    updateValue(slider, textInput, slider.value, unit);
 
-  // Repeat for other slider-text input pairs with their respective IDs
+    // Event listener for the slider input
+    slider.addEventListener('input', function () {
+      updateValue(slider, textInput, this.value, unit);
+    });
+
+    // Event listener for the text input
+    textInput.addEventListener('input', function () {
+      let value = parseInt(this.value, 10);
+      if (isNaN(value)) {
+        value = 0; // Default to 0 if the value is not a number
+      }
+      value = Math.max(0, Math.min(value, 100)); // Enforce the range between 0 and 100
+      updateValue(slider, textInput, value, unit);
+    });
+  }
+
+  // Call this function for each slider-text input pair
+  setupSliderTextPair('harm', 'harmValue', '%');
+  setupSliderTextPair('varm', 'varmValue', '%');
+  setupSliderTextPair('hben', 'hbenValue', '%');
+  setupSliderTextPair('vben', 'vbenValue', '%');
+  setupSliderTextPair('hhand', 'hhandValue', '%');
+  setupSliderTextPair('vhand', 'vhandValue', '%');
+  setupSliderTextPair('gåförmåga', 'gåförmågaValue', 'm');
+  setupSliderTextPair('längd', 'längdValue', 'cm');
+  setupSliderTextPair('vikt', 'viktValue', 'kg');
 });
+
 
 // <!-----------------------------SLUT DEL 1---------------------------->
 
@@ -216,6 +265,7 @@ var noCheckbox = document.getElementById('choice_no');
 var fordon_noDiv = document.querySelector('.fordon_no');
 var if_no = document.querySelector('.if_no');
 var fordon_textfield = document.querySelector('.fordon_textfield');
+var fordon_textfield1 = document.querySelector('.fordon_textfield1');
 var bilder = document.querySelectorAll('.img_cont_fordon');
 
 // Dölj bilderna initialt
@@ -228,6 +278,7 @@ yesCheckbox.addEventListener('change', function () {
   if (yesCheckbox.checked) {
     // Om användaren klickar på "Ja", visa Q1-diven och bilderna
     fordon_textfield.style.display = 'block';
+    fordon_textfield1.style.display = 'block';
     fordon_yesDiv.style.display = 'block';
     if_yes.style.display = 'block';
     cont_fordon.style.display = 'grid';
@@ -252,6 +303,7 @@ noCheckbox.addEventListener('change', function () {
   if (noCheckbox.checked) {
     // Om användaren klickar på "Nej", visa Q1-diven och bilderna
     fordon_textfield.style.display = 'block';
+    fordon_textfield1.style.display = 'block';
     fordon_noDiv.style.display = 'block';
     if_no.style.display = 'block';
     cont_fordon.style.display = 'grid';

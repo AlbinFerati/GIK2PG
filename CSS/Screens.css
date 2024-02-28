@@ -37,7 +37,12 @@ h3{
 h5{
   font-size: 1.5rem;
 }
-
+/* ------------------------------------------------------NAV---------------------------------------------------------- */
+.adminIMG{
+  max-block-size: 2rem;
+  float: right;
+}
+/* ------------------------------------------------------NAV---------------------------------------------------------- */
 /* ------------------------------------------------------KONTAKTINFO---------------------------------------------------------- */
 .kontaktinfo div:nth-child(1) {
   grid-area: fnamn;
@@ -52,9 +57,9 @@ h5{
   grid-area: mail;
 }
 
-.hjälpmedel_textfield input{
+/* .hjälpmedel_textfield input{
   width: 45%;
-}
+} */
 .kontaktinfo {
   font-size: 1.6rem;
   margin: 5rem 0rem;
@@ -72,6 +77,14 @@ input {
 }
 /* ------------------------------------------------------KONTAKTINFO---------------------------------------------------------- */
 /* ------------------------------------------------------KROPPEN---------------------------------------------------------- */
+
+/* .siluett {
+  display: grid;
+  width: 30rem;
+  align-items: center;
+  height: 80rem;
+}  */
+
 .section_sliders h3:nth-child(1) {
   text-align: left;
   grid-area: header;
@@ -105,12 +118,6 @@ input {
   grid-area: vikt;
 }
 
-
-.kroppen_img {
-  width: 20rem;
-  height: 30rem;
-}
-
 .section_sliders{
   font-size: 1.5rem;
   list-style: none;
@@ -124,23 +131,31 @@ input {
 }
 /* ------------------------------------------------------KROPPEN---------------------------------------------------------- */
 /* ------------------------------------------------------HJÄLPMEDEL---------------------------------------------------------- */
-.hjälpmedel .grid-hjälpmedel div:nth-child(1) {
-  grid-area: kryckor;
+.hjälpmedel .grid-hjälpmedel h3:nth-child(1) {
+  text-align: left;
+  grid-area: header;
+  align-self: flex-end;
 }
 .hjälpmedel .grid-hjälpmedel div:nth-child(2) {
-  grid-area: rullator;
+  grid-area: kryckor;
 }
 .hjälpmedel .grid-hjälpmedel div:nth-child(3) {
-  grid-area: rullstol;
+  grid-area: rullator;
 }
 .hjälpmedel .grid-hjälpmedel div:nth-child(4) {
-  grid-area: hjälpmotor;
+  grid-area: rullstol;
 }
 .hjälpmedel .grid-hjälpmedel div:nth-child(5) {
-  grid-area: elmoped;
+  grid-area: hjälpmotor;
 }
 .hjälpmedel .grid-hjälpmedel div:nth-child(6) {
+  grid-area: elmoped;
+}
+.hjälpmedel .grid-hjälpmedel div:nth-child(7) {
   grid-area: permobil;
+} 
+.hjälpmedel .grid-hjälpmedel div:nth-child(8) {
+  grid-area: annat;
 } 
 .hjälpmedel_med_i_fordon, .checkbox_container{
   display: none;
@@ -150,15 +165,15 @@ input {
   max-width: 100%; /* Säkerställ att bilden inte överskrider ramens bredd */
 }
 
-.hjälpmedel_textfield input{
+/* .hjälpmedel_textfield input{
   width: 50%;
-  }
+} */
 
-  .img_cont_hjälpmedel {
-    border: .1rem solid #ccc; /* Lägg till en ram runt varje bild */
-    padding: 1rem; /* Justera utrymmet inuti ramen */
-    text-align: center; /* Centrera text och bild */
-  }
+.img_cont_hjälpmedel {
+   border: .1rem solid #ccc; /* Lägg till en ram runt varje bild */
+   padding: 1rem; /* Justera utrymmet inuti ramen */
+   text-align: center; /* Centrera text och bild */
+}
 /* ------------------------------------------------------HJÄLPMEDEL---------------------------------------------------------- */
 
 /* ------------------------------------------------------FORDON---------------------------------------------------------- */
@@ -171,28 +186,49 @@ input {
     "suv" 
     "transportbil"
     "amerikansk" 
-    "minibuss";
-  grid-template-rows: repeat(6, 1fr);
+    "minibuss"
+    "annat"
+    "vetej";
+  grid-template-rows: repeat(8, 1fr);
   grid-template-columns: repeat(1, 1fr);
 }
 
-.img_cont_fordon:nth-child(1) {
-  grid-area: mindreBil;
+.grid-fordon h3:nth-child(1) {
+  text-align: left;
+  grid-area: header;
+  align-self: flex-end;
 }
-.img_cont_fordon:nth-child(2) {
-  grid-area: kombi;
+.grid-fordon h3:nth-child(2) {
+  text-align: left;
+  grid-area: header;
+  align-self: flex-end;
 }
 .img_cont_fordon:nth-child(3) {
-  grid-area: suv;
+  grid-area: mindreBil;
 }
 .img_cont_fordon:nth-child(4) {
-  grid-area: transportbil;
+  grid-area: kombi;
 }
 .img_cont_fordon:nth-child(5) {
-  grid-area: amerikansk;
+  grid-area: suv;
 }
 .img_cont_fordon:nth-child(6) {
+  grid-area: transportbil;
+}
+.img_cont_fordon:nth-child(7) {
+  grid-area: amerikansk;
+}
+.img_cont_fordon:nth-child(8) {
   grid-area: minibuss;
+}
+/* .grid-fordon div:nth-child(9) {
+  grid-area: test;
+} */
+.grid-fordon div:nth-child(9) {
+  grid-area: annat;
+}
+.grid-fordon div:nth-child(10) {
+  grid-area: vetej;
 }
 
 .img_fordon_hjälpmedel {
@@ -246,6 +282,9 @@ input {
 } 
 
 .fordon_textfield{
+  display: none;
+}
+.fordon_textfield1{
   display: none;
 }
 .flex-container {
@@ -303,19 +342,23 @@ footer a {
       grid-template-rows: repeat(3, 1fr);
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
+      "header header"
       "kryckor rullator"
       "rullstol hjälpmotor"
-      "elmoped permobil";
+      "elmoped permobil"
+      "annat .";
     }
 
 
     .cont_fordon {
       display: grid;
       gap: 1.5rem;
-      grid-template-areas: 
+      grid-template-areas:
+        "header header" 
         "mindreBil kombi"
         "suv transportbil"
-        "amerikansk minibuss";
+        "amerikansk minibuss"
+        "annat vetej";
       grid-template-rows: repeat(3, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
@@ -344,16 +387,20 @@ footer a {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas: 
+      "header header ."
       "kryckor rullator rullstol"
-      "hjälpmotor elmoped permobil";
+      "hjälpmotor elmoped permobil"
+      "annat . .";
     }
   
     .cont_fordon {
       display: grid;
       gap: 1.5rem;
-      grid-template-areas: 
+      grid-template-areas:
+        "header header ."
         "mindreBil kombi suv"
-        "transportbil amerikansk minibuss";
+        "transportbil amerikansk minibuss"
+        "annat . vetej";
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
     }
@@ -362,11 +409,20 @@ footer a {
 
 /* ------------------------------------------------------ 1024px ------------------------------------------------------------ */
   @media only screen and (min-width: 1024px) {
+    .kontaktinfo {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      " . fnamn enamn . "
+      " . telnr mail . ";
+    }
 
     .section_sliders {
       display: grid;
       gap: 1.5rem;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 1fr);
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas: 
       " . header header . "
@@ -383,17 +439,21 @@ footer a {
       
       grid-template-columns: repeat(5, 1fr);
       grid-template-areas: 
+      " . header header . ."
       " . kryckor rullator rullstol . "
-      " . hjälpmotor elmoped permobil . ";
+      " . hjälpmotor elmoped permobil . "
+      " . annat . . .";
     }
 
 
     .cont_fordon {
       display: grid;
       gap: 1.5rem;
-      grid-template-areas: 
+      grid-template-areas:
+        " . header header . . " 
         " . mindreBil kombi suv . "
-        " . transportbil amerikansk minibuss . ";
+        " . transportbil amerikansk minibuss . "
+        " . annat . vetej .";
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(5, 1fr);
     }

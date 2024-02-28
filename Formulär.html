@@ -20,7 +20,7 @@
 <div class="topnav">
     <img src="IMG/Logotyper/logo.jpeg">
     <a href="/Login.html">
-      <img src="/IMG/Logotyper/user.png" alt="Användarlogotyp">
+      <img class="adminIMG"src="/IMG/Logotyper/user.png" alt="Användarlogotyp">
   </a>
   
     <!-- <a href="#home" class="active">Logo</a> -->
@@ -190,7 +190,7 @@
                 </li>
                 <li class="range_slider">
                   <label for="gåförmåga">Hur långt klarar du av att gå utan hjälpmedel?</label>
-                  <input type="range" min="0" max="250" value="100" class="slider" id="gåförmåga" name="gåförmåga">
+                  <input type="range" min="0" max="251" value="100" class="slider" id="gåförmåga" name="gåförmåga">
                   <input class="slider_input" type="text" id="gåförmågaValue" size="3">
               </li>
               <li class="range_slider">
@@ -213,10 +213,13 @@
         <!-----------------------------START DEL 2---------------------------->
         
         <section class="hjälpmedel">
-            <h3>
+            <!-- <h3>
                 Markera vilka hjälpmedel du använder idag:
-            </h3>
+            </h3> -->
             <section class="grid-hjälpmedel">
+              <h3>
+                Markera vilka hjälpmedel du använder idag:
+              </h3>
               <div class="img_cont_hjälpmedel" data-target="kryckor_till_fordon">
                 <label for="kryckor">Kryckor</label>
                 <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/Kryckor.webp" alt="En bild på kryckor" id="kryckor">
@@ -247,11 +250,15 @@
                 <img class="img_hjälpmedel" src="/IMG/Hjälpmedel/ElRullstol.webp" alt="En bild på en ElRullstol" id="elrullstol">
                 <input type="hidden" name="permobil" value="0">
               </div>
+              <div class="hjälpmedel_textfield">
+                <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel:</label>
+                <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel">
+              </div> 
             </section>
-            <div class="hjälpmedel_textfield">
+            <!-- <div class="hjälpmedel_textfield">
                   <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel:</label>
                   <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel">
-            </div> 
+            </div>  -->
         <section class="hjälpmedel_med_i_fordon">
           <h3>
             Vilken/vilka av hjälpmedlen behöver du få med i fordonet?
@@ -304,7 +311,7 @@
         
               <!-- Del för förare/passagerare/både och -->
                   <div class="fordon_yes">
-                    <h3>Är du förare eller passagerare eller både och?</h3>
+                    <h3>Ska bilen anpassas för förare, passagerare eller både och?</h3>
                     <div class="fordon_label_container">
                         <label class="fordon_label_container_label" for="forare_q1">Förare</label> 
                         <input class="fordon_input" type="radio" id="forare_q1" name="forare_passagerare" value="Förare"> 
@@ -336,13 +343,19 @@
                     </div>
                   </div>
 
-              <h3 class="if_no">
+              <!-- <h3 class="if_no">
                   Vilken typ av anpassad bil tror du skulle passa dina behov?
               </h3>
               <h3 class="if_yes">
                   Ange vilken typ av anpassad bil ni har idag?
-              </h3>
-            <section class="grid-fordon cont_fordon">
+              </h3> -->
+                <section class="grid-fordon cont_fordon">
+                  <h3 class="if_no">
+                    Vilken typ av anpassad bil tror du skulle passa dina behov?
+                  </h3>
+                  <h3 class="if_yes">
+                    Ange vilken typ av anpassad bil ni har idag?
+                  </h3>
                 <div class="img_cont_fordon">
                     <label for="mindreBil">Mindre personbil</label>
                     <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/mindre_personbil.webp" alt="En bild på en mindre personbil" id="mindreBil">
@@ -373,20 +386,31 @@
                     <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/minibuss.webp" alt="En bild på en minibuss" id="minibuss">
                     <input type="hidden" name="minibuss" value="0">
                 </div>
-                  
+                <!-- <div class="fordon_textfield" >   -->
+                  <!-- <div class="fordon_label_container"> -->
+                    <div class="fordon_textfield">
+                      <label for="annat_fordon">Annat fordon:</label>
+                      <input class="fordon_textfield_input" type="text" id="annat_fordon" name="annat_fordon">
+                    </div>
+                    <div class="fordon_textfield1">
+                      <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon ligger bra på sidan --> 
+                      <input  class="fordon_textfield_input" type="checkbox" id="vet_ej" name="vet_ej">
+                    </div>
+                  <!-- </div> -->
+                <!-- </div> -->
             </section>
-            <div class="fordon_textfield" >  
+            <!-- <div class="fordon_textfield" >  
               <div class="fordon_label_container">
                 <div>
                   <label for="annat_fordon">Annat fordon:</label>
                   <input class="fordon_textfield_input" type="text" id="annat_fordon" name="annat_fordon">
                 </div>
                 <div>
-                  <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon ligger bra på sidan --> 
+                  <label for="vet_ej">Vet ej</label> 
                   <input  class="fordon_textfield_input" type="checkbox" id="vet_ej" name="vet_ej">
                 </div>
               </div>
-            </div>
+            </div> -->
 
             
         </section>

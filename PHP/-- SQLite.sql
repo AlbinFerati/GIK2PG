@@ -44,6 +44,8 @@ CREATE TABLE IF NOT EXISTS din_tabell (
 
 SELECT * FROM din_tabell;
 
+DROP TABLE din_tabell;
+
 SELECT * FROM din_tabell WHERE svg_content = 1;
 
 
@@ -55,6 +57,4 @@ CREATE TABLE admin (
 
 INSERT INTO admin (username, password) VALUES ('adminseb', 'abc123');
 
-SELECT * FROM din_tabell;
-
-DROP TABLE din_tabell;
+SELECT * FROM admin;
