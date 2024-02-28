@@ -5,7 +5,7 @@ $dbh = new PDO('sqlite:../anpassarna.db');
 // Kontrollera om det skickades med ett ID för att ta bort
 if(isset($_GET['id'])) {
     // Förbered SQL-frågan för att ta bort posten baserat på ID
-    $sql = "DELETE FROM kontaktinfo WHERE id = :id";
+    $sql = "DELETE FROM din_tabell WHERE id = :id";
     $stmt = $dbh->prepare($sql);
 
     // Bind ID-parametern och utför frågan

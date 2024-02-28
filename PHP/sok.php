@@ -64,6 +64,8 @@
             <th>Minibuss</th>
             <th>Annat Fordon</th>
             <th>Vet Ej</th>
+            <th>Skapad</th>
+            <th>Redigerad</th>
             <th>Åtgärder</th>
             ";
             foreach($result as $row) {
@@ -104,6 +106,8 @@
                 echo "<td>".$row["minibuss"]."</td>";
                 echo "<td>".$row["annat_fordon"]."</td>";
                 echo "<td>".$row["vet_ej"]."</td>";
+                echo "<td>".$row["created_at"]."</td>";
+                echo "<td>".$row["updated_at"]."</td>";
                 echo "<td><a href='remove.php?id=".$row['id']."'>Remove</a> | <a href='edit.php?id=".$row['id']."'>Redigera</a></td>";
                 echo "</tr>";
 
@@ -117,5 +121,17 @@
 
     <br>
     <a href="../admin.html">Gå tillbaka till sökningen</a>
+    <section>
+        <h2>Hämta bild</h2>
+        <form action="/PHP/get_image.php" method="get">
+            <div>
+                <label for="bild_id">Bild ID:</label>
+                <input type="number" id="bild_id" name="id">
+            </div>
+            <div>
+                <button type="submit">Hämta</button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>

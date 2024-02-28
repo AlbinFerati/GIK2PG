@@ -34,7 +34,9 @@ CREATE TABLE IF NOT EXISTS din_tabell (
     minibuss INTEGER,
     annat_fordon TEXT,
     vet_ej INTEGER,
-    svg_content BLOB  -- Här sparas det komprimerade SVG-innehållet
+    svg_content BLOB,  -- Här sparas det komprimerade SVG-innehållet
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
 SELECT * FROM din_tabell;
@@ -52,4 +54,4 @@ INSERT INTO admin (username, password) VALUES ('adminseb', 'abc123');
 
 SELECT * FROM din_tabell;
 
-DROP TABLE din_tabell_test;
+DROP TABLE din_tabell;
