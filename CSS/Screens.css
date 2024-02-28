@@ -462,7 +462,8 @@ footer a {
         " . header header . . " 
         " . mindreBil kombi suv . "
         " . transportbil amerikansk minibuss . "
-        " . annat . vetej .";
+        " . annat . . ."
+        ". vetej . . .";
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(5, 1fr);
     }
