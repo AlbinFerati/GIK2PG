@@ -13,7 +13,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 </head>
 <body>
     <?php
-    $stmt = $dbh->prepare("SELECT svg_content FROM din_tabell_test WHERE id = ?");
+    $stmt = $dbh->prepare("SELECT svg_content FROM din_tabell WHERE id = ?");
     $stmt->bindParam(1, $id, PDO::PARAM_INT);
     if ($stmt->execute()) {
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
