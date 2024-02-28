@@ -19,6 +19,9 @@ if(isset($_GET['id'])) {
         $styrka_vänster_arm = $_POST['styrka_vänster_arm'];
         $styrka_höger_ben = $_POST['styrka_höger_ben'];
         $styrka_vänster_ben = $_POST['styrka_vänster_ben'];
+        $gåförmåga = $_POST['gåförmåga'];
+        $längd = $_POST['längd'];
+        $vikt = $_POST['vikt'];
         $kryckor = isset($_POST['kryckor']) ? 1 : 0;
         $rullator = isset($_POST['rullator']) ? 1 : 0;
         $rullstol = isset($_POST['rullstol']) ? 1 : 0;
@@ -53,6 +56,9 @@ if(isset($_GET['id'])) {
             styrka_vänster_arm = :styrka_vänster_arm, 
             styrka_höger_ben = :styrka_höger_ben, 
             styrka_vänster_ben = :styrka_vänster_ben,
+            gåförmåga = :gåförmåga,
+            längd = :längd,
+            vikt = :vikt,
             kryckor = :kryckor,
             rullator = :rullator,
             rullstol = :rullstol,
@@ -91,6 +97,9 @@ if(isset($_GET['id'])) {
             ':styrka_vänster_arm' => $styrka_vänster_arm, 
             ':styrka_höger_ben' => $styrka_höger_ben, 
             ':styrka_vänster_ben' => $styrka_vänster_ben,
+            ':gåförmåga'=> $gåförmåga,
+            ':längd'=> $längd,
+            ':vikt'=> $vikt,
             ':kryckor' => $kryckor,
             ':rullator' => $rullator,
             ':rullstol' => $rullstol,
@@ -148,6 +157,9 @@ if(isset($_GET['id'])) {
         Styrka vänster arm: <input type="text" name="styrka_vänster_arm" value="<?php echo $result['styrka_vänster_arm']; ?>"><br>
         Styrka höger ben: <input type="text" name="styrka_höger_ben" value="<?php echo $result['styrka_höger_ben']; ?>"><br>
         Styrka vänster ben: <input type="text" name="styrka_vänster_ben" value="<?php echo $result['styrka_vänster_ben']; ?>"><br>
+        Gåförmåga: <input type="text" name="gåförmåga" value="<?php echo $result['gåförmåga']; ?>"><br>
+        Längd: <input type="text" name="längd" value="<?php echo $result['längd']; ?>"><br>
+        Vikt: <input type="text" name="vikt" value="<?php echo $result['vikt']; ?>"><br>
         Kryckor: <input type="checkbox" name="kryckor" <?php if($result['kryckor']) echo 'checked'; ?>><br>
         Rullator: <input type="checkbox" name="rullator" <?php if($result['rullator']) echo 'checked'; ?>><br>
         Rullstol: <input type="checkbox" name="rullstol" <?php if($result['rullstol']) echo 'checked'; ?>><br>

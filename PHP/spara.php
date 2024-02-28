@@ -15,6 +15,9 @@ if (isset($_POST['fnamn'])) {
     $vben = $_POST['vben'];
     $hhand = $_POST['hhand'];
     $vhand = $_POST['vhand'];
+    $gåförmåga = $_POST['gåförmåga'];
+    $längd = $_POST['längd'];
+    $vikt = $_POST['vikt'];
     $kryckor = $_POST['kryckor'];
     $rullator = $_POST['rullator'];
     $rullstol = $_POST['rullstol'];
@@ -48,9 +51,14 @@ if (isset($_POST['fnamn'])) {
     $compressedSvgContent = gzcompress($svgContent);
 
     // Förbered och bind parametrarna för att lägga till eller uppdatera poster
-    $stmt = $dbh->prepare("INSERT INTO din_tabell(fnamn, enamn, telnr, mail, styrka_höger_arm, styrka_vänster_arm, styrka_höger_ben, styrka_vänster_ben, styrka_höger_hand, styrka_vänster_hand, kryckor, rullator, rullstol, manuell_rullstol_hjälpmotor, elmoped, permobil, annat_hjälpmedel, kryckor_till_fordon, rullator_till_fordon, rullstol_till_fordon, hjälpmotor_till_fordon, elmoped_till_fordon, permobil_till_fordon, anpassad_bil, forare_passagerare, mindre_personbil, storre_personbil, suv, mindre_transportbil, amerikansk_golvsanktbil, minibuss, annat_fordon, vet_ej, svg_content, created_at, updated_at) 
+    /* $stmt = $dbh->prepare("INSERT INTO din_tabell(fnamn, enamn, telnr, mail, styrka_höger_arm, styrka_vänster_arm, styrka_höger_ben, styrka_vänster_ben, styrka_höger_hand, styrka_vänster_hand,  kryckor, rullator, rullstol, manuell_rullstol_hjälpmotor, elmoped, permobil, annat_hjälpmedel, kryckor_till_fordon, rullator_till_fordon, rullstol_till_fordon, hjälpmotor_till_fordon, elmoped_till_fordon, permobil_till_fordon, anpassad_bil, forare_passagerare, mindre_personbil, storre_personbil, suv, mindre_transportbil, amerikansk_golvsanktbil, minibuss, annat_fordon, vet_ej, svg_content, created_at, updated_at) 
                       VALUES (:fnamn, :enamn, :telnr, :mail, :right_arm, :left_arm, :right_leg, :left_leg, :right_hand, :left_hand, :kryckor, :rullator, :rullstol, :manuell_rullstol_hjälpmotor, :elmoped, :permobil, :annat_hjälpmedel, :kryckor_till_fordon, :rullator_till_fordon, :rullstol_till_fordon, :hjälpmotor_till_fordon, :elmoped_till_fordon, :permobil_till_fordon, :anpassad_bil, :forare_passagerare, :mindre_personbil, :storre_personbil, :suv, :mindre_transportbil, :amerikansk_golvsanktbil, :minibuss, :annat_fordon, :vet_ej, :svg_content, datetime('now'), datetime('now'))
                         ON CONFLICT(id) DO UPDATE SET fnamn = :fnamn, enamn = :enamn, telnr = :telnr, mail = :mail, styrka_höger_arm = :right_arm, styrka_vänster_arm = :left_arm, styrka_höger_ben = :right_leg, styrka_vänster_ben = :left_leg, styrka_höger_hand = :right_hand, styrka_vänster_hand = :left_hand, kryckor = :kryckor, rullator = :rullator, rullstol = :rullstol, manuell_rullstol_hjälpmotor = :manuell_rullstol_hjälpmotor, elmoped = :elmoped, permobil = :permobil, annat_hjälpmedel = :annat_hjälpmedel, kryckor_till_fordon = :kryckor_till_fordon, rullator_till_fordon = :rullator_till_fordon, rullstol_till_fordon = :rullstol_till_fordon, hjälpmotor_till_fordon = :hjälpmotor_till_fordon, elmoped_till_fordon = :elmoped_till_fordon, permobil_till_fordon = :permobil_till_fordon, forare_passagerare = :forare_passagerare, anpassad_bil = :anpassad_bil, mindre_personbil = :mindre_personbil, storre_personbil = :storre_personbil, suv = :suv, mindre_transportbil = :mindre_transportbil, amerikansk_golvsanktbil = :amerikansk_golvsanktbil, minibuss = :minibuss, annat_fordon = :annat_fordon, vet_ej = :vet_ej, updated_at = datetime('now')");
+     */
+    $stmt = $dbh->prepare("INSERT INTO din_tabell(fnamn, enamn, telnr, mail, styrka_höger_arm, styrka_vänster_arm, styrka_höger_ben, styrka_vänster_ben, styrka_höger_hand, styrka_vänster_hand, gåförmåga, längd, vikt, kryckor, rullator, rullstol, manuell_rullstol_hjälpmotor, elmoped, permobil, annat_hjälpmedel, kryckor_till_fordon, rullator_till_fordon, rullstol_till_fordon, hjälpmotor_till_fordon, elmoped_till_fordon, permobil_till_fordon, anpassad_bil, forare_passagerare, mindre_personbil, storre_personbil, suv, mindre_transportbil, amerikansk_golvsanktbil, minibuss, annat_fordon, vet_ej, svg_content, created_at, updated_at) 
+                      VALUES (:fnamn, :enamn, :telnr, :mail, :right_arm, :left_arm, :right_leg, :left_leg, :right_hand, :left_hand, :gåförmåga, :längd, :vikt, :kryckor, :rullator, :rullstol, :manuell_rullstol_hjälpmotor, :elmoped, :permobil, :annat_hjälpmedel, :kryckor_till_fordon, :rullator_till_fordon, :rullstol_till_fordon, :hjälpmotor_till_fordon, :elmoped_till_fordon, :permobil_till_fordon, :anpassad_bil, :forare_passagerare, :mindre_personbil, :storre_personbil, :suv, :mindre_transportbil, :amerikansk_golvsanktbil, :minibuss, :annat_fordon, :vet_ej, :svg_content, datetime('now'), datetime('now'))
+                        ON CONFLICT(id) DO UPDATE SET fnamn = :fnamn, enamn = :enamn, telnr = :telnr, mail = :mail, styrka_höger_arm = :right_arm, styrka_vänster_arm = :left_arm, styrka_höger_ben = :right_leg, styrka_vänster_ben = :left_leg, styrka_höger_hand = :right_hand, styrka_vänster_hand = :left_hand, gåförmåga = :gåförmåga, längd = :längd, vikt = :vikt, kryckor = :kryckor, rullator = :rullator, rullstol = :rullstol, manuell_rullstol_hjälpmotor = :manuell_rullstol_hjälpmotor, elmoped = :elmoped, permobil = :permobil, annat_hjälpmedel = :annat_hjälpmedel, kryckor_till_fordon = :kryckor_till_fordon, rullator_till_fordon = :rullator_till_fordon, rullstol_till_fordon = :rullstol_till_fordon, hjälpmotor_till_fordon = :hjälpmotor_till_fordon, elmoped_till_fordon = :elmoped_till_fordon, permobil_till_fordon = :permobil_till_fordon, forare_passagerare = :forare_passagerare, anpassad_bil = :anpassad_bil, mindre_personbil = :mindre_personbil, storre_personbil = :storre_personbil, suv = :suv, mindre_transportbil = :mindre_transportbil, amerikansk_golvsanktbil = :amerikansk_golvsanktbil, minibuss = :minibuss, annat_fordon = :annat_fordon, vet_ej = :vet_ej, updated_at = datetime('now')");
+   
     // Bind parametrarna från POST-data till de motsvarande SQL-parametrarna
     $stmt->bindParam(':fnamn', $fnamn);
     $stmt->bindParam(':enamn', $enamn);
@@ -62,6 +70,9 @@ if (isset($_POST['fnamn'])) {
     $stmt->bindParam(':left_leg', $vben);
     $stmt->bindParam(':right_hand', $hhand);
     $stmt->bindParam(':left_hand', $vhand);
+    $stmt->bindParam(':gåförmåga', $gåförmåga);
+    $stmt->bindParam('längd', $längd);
+    $stmt->bindParam('vikt', $vikt);
     $stmt->bindParam(':kryckor', $kryckor);
     $stmt->bindParam(':rullator', $rullator);
     $stmt->bindParam(':rullstol', $rullstol);
@@ -69,7 +80,6 @@ if (isset($_POST['fnamn'])) {
     $stmt->bindParam(':elmoped', $elmoped);
     $stmt->bindParam(':permobil', $permobil);
     $stmt->bindParam(':annat_hjälpmedel', $annat_hjälpmedel);
-    // Ytterligare bindningar...
     $stmt->bindParam(':kryckor_till_fordon', $kryckor_till_fordon);
     $stmt->bindParam(':rullator_till_fordon', $rullator_till_fordon);
     $stmt->bindParam(':rullstol_till_fordon', $rullstol_till_fordon);

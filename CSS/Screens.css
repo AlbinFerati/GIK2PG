@@ -95,6 +95,15 @@ input {
 .section_sliders li:nth-child(7) {
   grid-area: vhand;
 }
+.section_sliders li:nth-child(8) {
+  grid-area: gåförmåga;
+}
+.section_sliders li:nth-child(9) {
+  grid-area: längd;
+}
+.section_sliders li:nth-child(10) {
+  grid-area: vikt;
+}
 
 
 .kroppen_img {
@@ -324,7 +333,9 @@ footer a {
       "header header"
       "hhand vhand"
       "harm varm"
-      "hben vben";
+      "hben vben"
+      "gåförmåga gåförmåga"
+      "längd vikt";
     }
 
     .hjälpmedel .grid-hjälpmedel {
@@ -361,7 +372,9 @@ footer a {
       " . header header . "
       " . hhand vhand . "
       " . harm varm . "
-      " . hben vben . ";
+      " . hben vben . "
+      ". gåförmåga gåförmåga ."
+      ". längd vikt .";
     }
 
     .hjälpmedel .grid-hjälpmedel {

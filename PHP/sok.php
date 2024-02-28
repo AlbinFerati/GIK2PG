@@ -41,6 +41,9 @@
             <th>Styrka Vänster Ben</th>
             <th>Styrka Höger Hand</th>
             <th>Styrka Vänster Hand</th>
+            <th>Gåförmåga</th>
+            <th>Längd</th>
+            <th>Vikt</th>
             <th>Kryckor</th>
             <th>Rullator</th>
             <th>Rullstol</th>
@@ -83,6 +86,9 @@
                 echo "<td>".$row["styrka_vänster_ben"]."</td>";
                 echo "<td>".$row["styrka_höger_hand"]."</td>";
                 echo "<td>".$row["styrka_vänster_hand"]."</td>";
+                echo "<td>".$row["gåförmåga"]."</td>";
+                echo "<td>".$row["längd"]."</td>";
+                echo "<td>".$row["vikt"]."</td>";
                 echo "<td>".$row["kryckor"]."</td>";
                 echo "<td>".$row["rullator"]."</td>";
                 echo "<td>".$row["rullstol"]."</td>";
