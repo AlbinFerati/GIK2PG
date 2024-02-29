@@ -187,40 +187,7 @@ input {
    text-align: center; /* Centrera text och bild */
 }
 
-.hjälpmedel_med_i_fordon h3:nth-child(1){
-  grid-area: rubrik;
-}
-.hjälpmedel_med_i_fordon div:nth-child(2){
-  grid-row-start: 2; /* Börjar på rad 2 */
-  grid-row-end: auto; /* Anpassar sig till innehållets höjd */
-  grid-column-start: 2; /* Börjar på kolumn 2 */
-  grid-column-end: 6; /* Anpassar sig till innehållets bredd */
-}
-.hjälpmedel_med_i_fordon div:nth-child(n + 3) {
-  grid-row: auto; /* Låt griden bestämma raden */
-  grid-column-start: 2; /* Låt griden bestämma kolumnen */
-  grid-column-end: 6;
-}
-.hjälpmedel_med_i_fordon div:nth-child(n + 4){
-  grid-row: auto; /* Låt griden bestämma raden */
-  grid-column-start: 2; /* Låt griden bestämma kolumnen */
-  grid-column-end: 6;
-}
-.hjälpmedel_med_i_fordon div:nth-child(n + 5){
-  grid-row: auto; /* Låt griden bestämma raden */
-  grid-column-start: 2; /* Låt griden bestämma kolumnen */
-  grid-column-end: 6;
-}
-.hjälpmedel_med_i_fordon div:nth-child(n + 6){
-  grid-row: auto; /* Låt griden bestämma raden */
-  grid-column: 2; /* Låt griden bestämma kolumnen */
-  grid-column-end: 6;
-}
-.hjälpmedel_med_i_fordon div:nth-child(n +7){
-  grid-row: auto; /* Låt griden bestämma raden */
-  grid-column-start: 2; /* Låt griden bestämma kolumnen */
-  grid-column-end: 6;
-}
+
 
 .hjälpmedel_med_i_fordon, .checkbox_container{
   display: none;
@@ -550,6 +517,41 @@ footer a {
       " . kryckor rullator rullstol . "
       " . hjälpmotor elmoped permobil . "
       " . annat . . .";
+    }
+
+    .hjälpmedel_med_i_fordon h3:nth-child(1){
+      grid-area: rubrik;
+    }
+    .hjälpmedel_med_i_fordon div:nth-child(2){
+      grid-row-start: 2; /* Börjar på rad 2 */
+      grid-row-end: auto; /* Anpassar sig till innehållets höjd */
+      grid-column-start: 2; /* Börjar på kolumn 2 */
+      grid-column-end: 6; /* Anpassar sig till innehållets bredd */
+    }
+    .hjälpmedel_med_i_fordon div:nth-child(n + 3) {
+      grid-row: auto; /* Låt griden bestämma raden */
+      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-column-end: 6;
+    }
+    .hjälpmedel_med_i_fordon div:nth-child(n + 4){
+      grid-row: auto; /* Låt griden bestämma raden */
+      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-column-end: 6;
+    }
+    .hjälpmedel_med_i_fordon div:nth-child(n + 5){
+      grid-row: auto; /* Låt griden bestämma raden */
+      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-column-end: 6;
+    }
+    .hjälpmedel_med_i_fordon div:nth-child(n + 6){
+      grid-row: auto; /* Låt griden bestämma raden */
+      grid-column: 2; /* Låt griden bestämma kolumnen */
+      grid-column-end: 6;
+    }
+    .hjälpmedel_med_i_fordon div:nth-child(n +7){
+      grid-row: auto; /* Låt griden bestämma raden */
+      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-column-end: 6;
     }
 
     .hjälpmedel_med_i_fordon{
