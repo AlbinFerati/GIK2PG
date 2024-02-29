@@ -160,7 +160,7 @@ input {
 .hjälpmedel .grid-hjälpmedel {
   display: grid;
   gap: 1.5rem;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: auto;
   grid-template-columns: repeat(1, 1fr);
   grid-template-areas: 
   "header"
@@ -214,7 +214,7 @@ input {
     "minibuss"
     "annat"
     "vetej";
-  grid-template-rows: auto 1fr auto auto;
+  grid-template-rows: auto;
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -390,7 +390,7 @@ footer a {
     .hjälpmedel .grid-hjälpmedel {
       display: grid;
       gap: 1.5rem;
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: auto;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas: 
       "header header"
@@ -410,7 +410,7 @@ footer a {
         "suv transportbil"
         "amerikansk minibuss"
         "annat vetej";
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: auto;
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -443,13 +443,26 @@ footer a {
     .hjälpmedel .grid-hjälpmedel {
       display: grid;
       gap: 1.5rem;
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas: 
       "header header ."
       "kryckor rullator rullstol"
       "hjälpmotor elmoped permobil"
       "annat . .";
+    }
+
+    .fordon {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: 
+      "header header . "
+      "area2 . . "
+      "area3 . . "
+      "area4 area4 . "
+      "area5 . . ";
     }
   
     .cont_fordon {
@@ -460,7 +473,7 @@ footer a {
         "mindreBil kombi suv"
         "transportbil amerikansk minibuss"
         "annat . vetej";
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-template-columns: repeat(3, 1fr);
     }
    
