@@ -189,7 +189,7 @@ document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
 
     // Visa eller dölj rubriken baserat på om någon bild är markerad
     const rubrikHjälpmedelFordon = document.querySelector('.rubrikHjälpmedelFordon');
-    rubrikHjälpmedelFordon.style.display = anyChecked ? 'block' : 'none';
+    rubrikHjälpmedelFordon.style.display = anyChecked ? 'grid' : 'none';
   });
 });
 

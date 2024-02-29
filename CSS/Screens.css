@@ -38,9 +38,21 @@ h5{
   font-size: 1.5rem;
 }
 /* ------------------------------------------------------NAV---------------------------------------------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Sprider ut innehållet över hela bredden av navbaren */
+  align-items: center; /* Centrerar element vertikalt inom navbaren */
+}
+
 .adminIMG{
   max-block-size: 2rem;
   float: right;
+}
+.anpassarnaIMG {
+  display: block;
+  margin: 0 auto;
+
 }
 /* ------------------------------------------------------NAV---------------------------------------------------------- */
 /* ------------------------------------------------------KONTAKTINFO---------------------------------------------------------- */
@@ -341,6 +353,7 @@ input {
   font-size: 11px;
   border-radius: 5px;
   border: 2px solid, color(--color-1);
+  margin-bottom: 2rem;
   
 }
 .skicka:hover{
@@ -353,7 +366,7 @@ input {
 
 /* ------------------------------------------------------FOOTER---------------------------------------------------------- */
 
-.footer_container {
+/* .footer_container {
   background-color: var(--color-1);
   border-color: var(--color-1);
 }
@@ -367,7 +380,52 @@ footer a {
   color: var(--text-grey);
   text-decoration: none;
   
+} */
+
+footer {
+  background-color: #333; /* Dark background */
+  color: white; /* White text color */
+  padding: 20px; /* Padding around the content */
+  font-family: 'Arial', sans-serif; /* Font style */
 }
+
+.footer_container {
+  display: flex;
+  justify-content: space-between; /* Space out the child elements */
+}
+
+.contact-info, .links, .social-media {
+  flex: 1; /* Each child takes equal width */
+}
+
+.contact-info h2, .links h2, .social-media h2 {
+  margin-bottom: 10px; /* Space below headings */
+}
+
+.contact-info p, .links a, .social-media a {
+  margin-bottom: 5px; /* Space below paragraphs and links */
+}
+
+a {
+  color: white; /* Style for all anchor tags */
+  text-decoration: none; /* No underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+}
+
+.social-media img {
+  width: 40px; /* Set a fixed width for social icons */
+  margin-right: 10px; /* Space between icons */
+}
+
+.logotyper {
+  filter: brightness(0) invert(1); /* Make images white */
+}
+
+/* Add any additional styling you want here */
+
 
 /* ------------------------------------------------------ 320px ------------------------------------------------------------ */
 @media only screen and (min-width: 320px){
@@ -539,32 +597,32 @@ footer a {
       grid-row-start: 2; /* Börjar på rad 2 */
       grid-row-end: auto; /* Anpassar sig till innehållets höjd */
       grid-column-start: 2; /* Börjar på kolumn 2 */
-      grid-column-end: 6; /* Anpassar sig till innehållets bredd */
+      grid-column-end: 3; /* Anpassar sig till innehållets bredd */
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 3) {
       grid-row: auto; /* Låt griden bestämma raden */
       grid-column-start: 2; /* Låt griden bestämma kolumnen */
-      grid-column-end: 6;
+      grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 4){
       grid-row: auto; /* Låt griden bestämma raden */
       grid-column-start: 2; /* Låt griden bestämma kolumnen */
-      grid-column-end: 6;
+      grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 5){
       grid-row: auto; /* Låt griden bestämma raden */
       grid-column-start: 2; /* Låt griden bestämma kolumnen */
-      grid-column-end: 6;
+      grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 6){
       grid-row: auto; /* Låt griden bestämma raden */
       grid-column: 2; /* Låt griden bestämma kolumnen */
-      grid-column-end: 6;
+      grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n +7){
       grid-row: auto; /* Låt griden bestämma raden */
       grid-column-start: 2; /* Låt griden bestämma kolumnen */
-      grid-column-end: 6;
+      grid-column-end: 3;
     }
 
     .hjälpmedel_med_i_fordon{
