@@ -237,7 +237,8 @@ input {
 .cont_fordon {
   display: grid;
   gap: 1.5rem;
-  grid-template-areas: 
+  grid-template-areas:
+    "header" 
     "mindreBil" 
     "kombi"
     "suv" 
