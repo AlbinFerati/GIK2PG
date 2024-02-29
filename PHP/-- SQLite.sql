@@ -58,3 +58,10 @@ CREATE TABLE admin (
 INSERT INTO admin (username, password) VALUES ('adminseb', 'abc123');
 
 SELECT * FROM admin;
+
+CREATE TABLE IF NOT EXISTS otp_table (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_email VARCHAR(255) NOT NULL,
+    otp VARCHAR(6) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
