@@ -70,11 +70,12 @@
             </div>
         </section>       
         <!-----------------------------START DEL 1---------------------------->
-        <!-- <img src="./IMG/Kroppen/standing-human-body-silhouette-svgrepo-com.svg"> -->
         <section class="kroppen">
-          <h3>
-            Markera/klicka i kroppen utifrån de funktioner du har kvar, kroppen står riktad mot dig.
-          </h3>
+          <div class="rubrikKroppen">
+            <h3>
+              Markera/klicka i kroppen utifrån de funktioner du har kvar, kroppen står riktad mot dig.
+            </h3>
+          </div>
           <input type="hidden" name="svg_content" value='' id="svg-content">
           <svg class="siluett" version="1.1" viewBox="0 0 206.33 206.33" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
             <g
@@ -213,9 +214,7 @@
         <!-----------------------------START DEL 2---------------------------->
         
         <section class="hjälpmedel">
-            <!-- <h3>
-                Markera vilka hjälpmedel du använder idag:
-            </h3> -->
+            
             <section class="grid-hjälpmedel">
               <h3>
                 Markera vilka hjälpmedel du använder idag:
@@ -255,12 +254,9 @@
                 <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel">
               </div> 
             </section>
-            <!-- <div class="hjälpmedel_textfield">
-                  <label class="hjälpmedel" for="annat_hjälpmedel">Annat hjälpmedel:</label>
-                  <input type="text" id="annat_hjälpmedel" name="annat_hjälpmedel">
-            </div>  -->
+            
         <section class="hjälpmedel_med_i_fordon">
-          <h3>
+          <h3 class="rubrikHjälpmedelFordon">
             Vilken/vilka av hjälpmedlen behöver du få med i fordonet?
           </h3>
           <div id="kryckor_container" class="checkbox_container">
@@ -295,10 +291,10 @@
         <!-----------------------------START DEL 3---------------------------->
       
         <section class="fordon">
+
           <h3>
             Har du/ni någon anpassad bil idag?
           </h3>
-          <!-- <div class="fordon_label_container">  -->
             <div class="fordon_label_container">
                 <label class="fordon_label_container_label" for="choice_yes">Ja</label>
                 <input class="fordon_input" type="radio" id="choice_yes" name="anpassad_bil" value="1">
@@ -307,8 +303,6 @@
                 <label class="fordon_label_container_label" for="choice_no">Nej</label>
                 <input class="fordon_input" type="radio" id="choice_no" name="anpassad_bil" value="0">
             </div>
-          <!-- </div> -->
-        
               <!-- Del för förare/passagerare/både och -->
                   <div class="fordon_yes">
                     <h3>Ska bilen anpassas för förare, passagerare eller både och?</h3>
@@ -342,13 +336,7 @@
                         <input class="fordon_input" type="radio" id="badaoch_q2" name="forare_passagerare" value="Både">
                     </div>
                   </div>
-
-              <!-- <h3 class="if_no">
-                  Vilken typ av anpassad bil tror du skulle passa dina behov?
-              </h3>
-              <h3 class="if_yes">
-                  Ange vilken typ av anpassad bil ni har idag?
-              </h3> -->
+        </section>
                 <section class="grid-fordon cont_fordon">
                   <h3 class="if_no">
                     Vilken typ av anpassad bil tror du skulle passa dina behov?
@@ -386,35 +374,16 @@
                     <img class="img_fordon_hjälpmedel" src="/IMG/Fordon/minibuss.webp" alt="En bild på en minibuss" id="minibuss">
                     <input type="hidden" name="minibuss" value="0">
                 </div>
-                <!-- <div class="fordon_textfield" >   -->
-                  <!-- <div class="fordon_label_container"> -->
                     <div class="fordon_textfield">
                       <label for="annat_fordon">Annat fordon:</label>
                       <input class="fordon_textfield_input" type="text" id="annat_fordon" name="annat_fordon">
                     </div>
                     <div class="fordon_textfield1">
-                      <label for="vet_ej">Vet ej</label> <!-- Fixa så att Vet ej och Annat fordon ligger bra på sidan --> 
+                      <label for="vet_ej">Vet ej</label>
                       <input  class="fordon_textfield_input" type="checkbox" id="vet_ej" name="vet_ej">
                     </div>
-                  <!-- </div> -->
-                <!-- </div> -->
-            </section>
-            <!-- <div class="fordon_textfield" >  
-              <div class="fordon_label_container">
-                <div>
-                  <label for="annat_fordon">Annat fordon:</label>
-                  <input class="fordon_textfield_input" type="text" id="annat_fordon" name="annat_fordon">
-                </div>
-                <div>
-                  <label for="vet_ej">Vet ej</label> 
-                  <input  class="fordon_textfield_input" type="checkbox" id="vet_ej" name="vet_ej">
-                </div>
-              </div>
-            </div> -->
-
-            
-        </section>
-        <!-- <button class="skicka" type="submit">Skicka</button> -->
+            </section>            
+        
         <button class="skicka" type="submit" onclick="submitSVG()">Skicka</button>
       </form>
         <!-----------------------------SLUT DEL 3---------------------------->

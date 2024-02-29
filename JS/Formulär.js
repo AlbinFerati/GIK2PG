@@ -134,6 +134,33 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 // ------------TEST
+// document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
+//   item.addEventListener('click', function (event) {
+//     event.stopPropagation(); // Förhindra eventet från att bubbla uppåt i DOM-trädet
+
+//     const section = document.querySelector('.hjälpmedel_med_i_fordon');
+//     const targetId = this.dataset.target; // Hämta data-target attributet
+//     const checkbox = document.getElementById(targetId);
+
+//     if (checkbox) {
+//       // Uppdatera kryssrutan baserat på om bilden är markerad eller inte
+//       checkbox.checked = this.classList.contains('marked');
+      
+//       // Visa eller dölj kryssrutan baserat på om bilden är markerad eller inte
+//       checkbox.parentElement.style.display = this.classList.contains('marked') ? 'grid' : 'none';
+//     }
+
+//     // Uppdatera värdet på det dolda inputfältet baserat på om bilden är markerad eller inte
+//     var hiddenInput = this.querySelector('input[type="hidden"]');
+//     hiddenInput.value = this.classList.contains('marked') ? '1' : '0';
+
+//     // Kontrollera om någon bild är markerad efter uppdateringen
+//     const anyChecked = Array.from(document.querySelectorAll('.img_cont_hjälpmedel.marked')).length > 0;
+
+//     // Visa eller dölj sektionen baserat på om någon bild är markerad
+//     section.style.display = anyChecked ? 'grid' : 'none';
+//   });
+// });
 document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
   item.addEventListener('click', function (event) {
     event.stopPropagation(); // Förhindra eventet från att bubbla uppåt i DOM-trädet
@@ -147,7 +174,7 @@ document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
       checkbox.checked = this.classList.contains('marked');
       
       // Visa eller dölj kryssrutan baserat på om bilden är markerad eller inte
-      checkbox.parentElement.style.display = this.classList.contains('marked') ? 'block' : 'none';
+      checkbox.parentElement.style.display = this.classList.contains('marked') ? 'grid' : 'none';
     }
 
     // Uppdatera värdet på det dolda inputfältet baserat på om bilden är markerad eller inte
@@ -158,9 +185,14 @@ document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
     const anyChecked = Array.from(document.querySelectorAll('.img_cont_hjälpmedel.marked')).length > 0;
 
     // Visa eller dölj sektionen baserat på om någon bild är markerad
-    section.style.display = anyChecked ? 'block' : 'none';
+    section.style.display = anyChecked ? 'grid' : 'none';
+
+    // Visa eller dölj rubriken baserat på om någon bild är markerad
+    const rubrikHjälpmedelFordon = document.querySelector('.rubrikHjälpmedelFordon');
+    rubrikHjälpmedelFordon.style.display = anyChecked ? 'block' : 'none';
   });
 });
+
 
 
 // ---------TEST 2

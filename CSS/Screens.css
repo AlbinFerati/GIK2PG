@@ -26,7 +26,7 @@ body {
   
 label {
   display: block; /* Gör label till ett blockelement för att placera den ovanför bilden */
-  margin-bottom: 5px; /* Justera avståndet mellan etiketten och bilden */
+  margin-bottom: .5rem; /* Justera avståndet mellan etiketten och bilden */
   font-size: 1.5rem;
 }
 
@@ -77,7 +77,11 @@ input {
 }
 /* ------------------------------------------------------KONTAKTINFO---------------------------------------------------------- */
 /* ------------------------------------------------------KROPPEN---------------------------------------------------------- */
-
+.rubrikKroppen h3:nth-child(1){
+  text-align: left;
+  grid-area: rubrik;
+  align-self: flex-end;
+}
 
 
 .section_sliders h3:nth-child(1) {
@@ -129,7 +133,7 @@ input {
 .hjälpmedel .grid-hjälpmedel h3:nth-child(1) {
   text-align: left;
   grid-area: header;
-  align-self: flex-end;
+  /* align-self: flex-end; */
 }
 .hjälpmedel .grid-hjälpmedel div:nth-child(2) {
   grid-area: kryckor;
@@ -152,8 +156,21 @@ input {
 .hjälpmedel .grid-hjälpmedel div:nth-child(8) {
   grid-area: annat;
 } 
-.hjälpmedel_med_i_fordon, .checkbox_container{
-  display: none;
+
+.hjälpmedel .grid-hjälpmedel {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: 
+  "header"
+  "kryckor" 
+  "rullator"
+  "rullstol" 
+  "hjälpmotor"
+  "elmoped" 
+  "permobil"
+  "annat";
 }
 
 .img_hjälpmedel {
@@ -169,6 +186,51 @@ input {
    padding: 1rem; /* Justera utrymmet inuti ramen */
    text-align: center; /* Centrera text och bild */
 }
+
+.hjälpmedel_med_i_fordon h3:nth-child(1){
+  grid-area: rubrik;
+}
+.hjälpmedel_med_i_fordon div:nth-child(2){
+  grid-row-start: 2; /* Börjar på rad 2 */
+  grid-row-end: auto; /* Anpassar sig till innehållets höjd */
+  grid-column-start: 2; /* Börjar på kolumn 2 */
+  grid-column-end: 6; /* Anpassar sig till innehållets bredd */
+}
+.hjälpmedel_med_i_fordon div:nth-child(n + 3) {
+  grid-row: auto; /* Låt griden bestämma raden */
+  grid-column-start: 2; /* Låt griden bestämma kolumnen */
+  grid-column-end: 6;
+}
+.hjälpmedel_med_i_fordon div:nth-child(n + 4){
+  grid-row: auto; /* Låt griden bestämma raden */
+  grid-column-start: 2; /* Låt griden bestämma kolumnen */
+  grid-column-end: 6;
+}
+.hjälpmedel_med_i_fordon div:nth-child(n + 5){
+  grid-row: auto; /* Låt griden bestämma raden */
+  grid-column-start: 2; /* Låt griden bestämma kolumnen */
+  grid-column-end: 6;
+}
+.hjälpmedel_med_i_fordon div:nth-child(n + 6){
+  grid-row: auto; /* Låt griden bestämma raden */
+  grid-column: 2; /* Låt griden bestämma kolumnen */
+  grid-column-end: 6;
+}
+.hjälpmedel_med_i_fordon div:nth-child(n +7){
+  grid-row: auto; /* Låt griden bestämma raden */
+  grid-column-start: 2; /* Låt griden bestämma kolumnen */
+  grid-column-end: 6;
+}
+
+.hjälpmedel_med_i_fordon, .checkbox_container{
+  display: none;
+}
+.rubrikHjälpmedelFordon{
+  display: none;
+}
+/* .hjälpmedel_med_i_fordon{
+  display: none;
+} */
 /* ------------------------------------------------------HJÄLPMEDEL---------------------------------------------------------- */
 
 /* ------------------------------------------------------FORDON---------------------------------------------------------- */
@@ -184,9 +246,32 @@ input {
     "minibuss"
     "annat"
     "vetej";
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: auto 1fr auto auto;
   grid-template-columns: repeat(1, 1fr);
 }
+
+.fordon h3:nth-child(1) {
+  text-align: left;
+  grid-area: header;
+}
+
+.fordon div:nth-child(2){
+  text-align: left;
+  grid-area: area2;
+}
+.fordon div:nth-child(3){
+  text-align: left;
+  grid-area: area3;
+}
+.fordon div:nth-child(4){
+  text-align: left;
+  grid-area: area4;
+}
+.fordon div:nth-child(5){
+  text-align: left;
+  grid-area: area5;
+}
+
 
 .grid-fordon h3:nth-child(1) {
   text-align: left;
@@ -216,9 +301,6 @@ input {
 .img_cont_fordon:nth-child(8) {
   grid-area: minibuss;
 }
-/* .grid-fordon div:nth-child(9) {
-  grid-area: test;
-} */
 .grid-fordon div:nth-child(9) {
   grid-area: annat;
 }
@@ -283,15 +365,20 @@ input {
   display: none;
 }
 
-/* .flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-} */
-/* .fordon_textfield_input{
-  width: 100%;
-} */
+.skicka{
+  background-color: var(--button);
+  padding: 4px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  border-radius: 5px;
+  border: 2px solid, color(--color-1);
+  
+}
+.skicka:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 /* ------------------------------------------------------FORDON---------------------------------------------------------- */
 
 
@@ -422,6 +509,14 @@ footer a {
       " . fnamn enamn . "
       " . telnr mail . ";
     }
+    .rubrikKroppen {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-areas: 
+        ". rubrik rubrik ."; /* Placerar rubrikområdet i andra och tredje kolumnen */
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     .siluett {
       display: block;
@@ -446,7 +541,8 @@ footer a {
     .hjälpmedel .grid-hjälpmedel {
       display: grid;
       gap: 1.5rem;
-      
+      grid-template-rows: auto 1fr auto auto; 
+
       grid-template-columns: repeat(5, 1fr);
       grid-template-areas: 
       " . header header . ."
@@ -455,6 +551,29 @@ footer a {
       " . annat . . .";
     }
 
+    .hjälpmedel_med_i_fordon{
+      display: grid;
+      gap: 1.5rem;
+      grid-template-rows: auto 1fr auto auto;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 
+      " . rubrik rubrik . ."
+      " . . . . .";
+      grid-auto-flow: row;
+    }
+
+    .fordon {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-areas:
+        " . header header . . " 
+        " . area2 area2 area2 . "
+        " . area3 area3 area3 . "
+        " . area4 area4 area4 . "
+        " . area5 area5 area5 . ";
+      grid-template-rows: auto 1fr auto auto; 
+      grid-template-columns: repeat(5, 1fr);
+    }
 
     .cont_fordon {
       display: grid;
@@ -465,8 +584,9 @@ footer a {
         " . transportbil amerikansk minibuss . "
         " . annat . . ."
         ". vetej . . .";
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: auto 1fr auto auto; 
       grid-template-columns: repeat(5, 1fr);
     }
+
 
   }
