@@ -4,6 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adminsida - Sök information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+    
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    
+        input[type="text"], input[type="password"], input[type="number"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: calc(100% - 22px); /* Adjusts the width to account for padding and border */
+            box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+        }
+    
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+    
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+    
+        /* Additional styles for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #eaeaea;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
 </head>
 <body>
     <section>
@@ -36,11 +111,20 @@
     </section>
     <section>
         <h2>Skapa Admin</h2>
-        <form action="/PHP/läggtillrättsidasen.php" method="get">
+        <form action="/PHP/skapa.php" method="post">
+            <div>
+                <label for="uname">Användarnamn</label>
+                <input type="text" id="uname" name="uname">
+            </div>
+            <div>
+                <label for="psw">Lösenord</label>
+                <input type="password" id="psw" name="psw"> <!-- Changed type to "password" -->
+            </div>
             <div>
                 <button type="submit">Skapa</button>
             </div>
         </form>
     </section>
+    
 </body>
 </html>
