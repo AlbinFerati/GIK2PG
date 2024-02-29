@@ -118,13 +118,24 @@
             </div>
             <div>
                 <label for="psw">Lösenord</label>
-                <input type="password" id="psw" name="psw"> <!-- Changed type to "password" -->
+                <input type="password" id="psw" name="psw"> 
             </div>
             <div>
                 <button type="submit">Skapa</button>
             </div>
         </form>
     </section>
-    
+    <section>
+        <h2>Generera engångskod</h2>
+        <form action="/PHP/otp.php" method="post">
+            <div>
+                <label for="användare">Email till användare</label>
+                <input type="email" id="användare" name="användare">
+            </div>
+            <div>
+                <button type="submit">Tryck för att generera kod till angiven email</button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>
