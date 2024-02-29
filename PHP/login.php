@@ -14,18 +14,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['uname'];
     $password = $_POST['psw'];
 
-    // Prepare SQL statement to protect against SQL injection
-    $stmt = $dbh->prepare("SELECT * FROM admin WHERE username = :username AND password = :password");
+    // Prepare SQL statement to select user based on username only
+    $stmt = $dbh->prepare("SELECT * FROM admin WHERE username = :username");
     
     // Bind parameters
     $stmt->bindParam(':username', $username, PDO::PARAM_STR);
-    $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     
     // Execute the statement
     $stmt->execute();
 
-    // Check if a user with the provided username and password exists
-    if ($stmt->fetch(PDO::FETCH_ASSOC)) {
+    // Fetch the user
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Verify the password if user exists
+    if ($user && password_verify($password, $user['password'])) {
         // Set session variable to indicate user is logged in
         $_SESSION['loggedin'] = true;
 

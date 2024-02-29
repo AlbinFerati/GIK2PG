@@ -36,11 +36,20 @@
     </section>
     <section>
         <h2>Skapa Admin</h2>
-        <form action="/PHP/läggtillrättsidasen.php" method="get">
+        <form action="/PHP/skapa.php" method="post">
+            <div>
+                <label for="uname">Användarnamn</label>
+                <input type="text" id="uname" name="uname">
+            </div>
+            <div>
+                <label for="psw">Lösenord</label>
+                <input type="password" id="psw" name="psw"> <!-- Changed type to "password" -->
+            </div>
             <div>
                 <button type="submit">Skapa</button>
             </div>
         </form>
     </section>
+    
 </body>
 </html>
