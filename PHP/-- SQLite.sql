@@ -65,3 +65,5 @@ CREATE TABLE IF NOT EXISTS otp_table (
     otp VARCHAR(6) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+SELECT * FROM otp_table;

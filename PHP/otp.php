@@ -1,41 +1,58 @@
 <?php
+// Ladda PHPMailer biblioteket
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+
 
 // Database connection setup
-$dbh = new PDO('sqlite:../anpassarna.db');  // Adjust the path to your SQLite database as necessary
+$dbh = new PDO('sqlite:../anpassarna.db');  // Justera sökvägen till din SQLite-databas vid behov
 
-// Function to generate a 6-digit OTP
+// Funktion för att generera en 6-siffrig OTP
 function generateOTP() {
     return str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 }
 
-// Function to insert the OTP into the database
+// Funktion för att sätta in OTP i databasen
 function insertOTP($dbh, $email, $otp) {
     $stmt = $dbh->prepare("INSERT INTO otp_table (user_email, otp) VALUES (?, ?)");
     $stmt->execute([$email, $otp]);
 }
 
-// Function to send the OTP via email
+// Funktion för att skicka OTP via e-post med PHPMailer
 function sendOTPEmail($email, $otp) {
-    $subject = 'Din engångskod';
-    $message = "Din engångskod är: $otp";
-    $headers = 'From: fotbollskunge_albin@hotmail.com' . "\r\n" .
-               'Reply-To: no-reply@example.com' . "\r\n" .
-               'X-Mailer: PHP/' . phpversion();
+    // Skapa en ny instans av PHPMailer
+    $mail = new PHPMailer\PHPMailer\PHPMailer();
 
-    if (mail($email, $subject, $message, $headers)) {
+    // Konfigurera SMTP-inställningar
+    $mail->isSMTP();
+    $mail->Host = 'smtp-mail.outlook.com';  // Ersätt med din SMTP-serveradress
+    $mail->SMTPAuth = true;
+    $mail->Username = 'fotbollskungen_albin@hotmail.com'; // Ersätt med din SMTP-användarnamn
+    $mail->Password = 'albinii123'; // Ersätt med ditt SMTP-lösenord
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    // Konfigurera e-postmeddelandet
+    $mail->setFrom('fotbollskungen_albin@hotmail.com', 'Fotbollskungen Albin');
+    $mail->addAddress($email);
+    $mail->Subject = 'Din engångskod';
+    $mail->Body = "Din engångskod är: $otp";
+
+    // Skicka e-postmeddelandet
+    if ($mail->send()) {
         echo "Engångskod skickad framgångsrikt till $email";
     } else {
-        echo "Misslyckades med att skicka engångskod.";
+        echo "Misslyckades med att skicka engångskod: " . $mail->ErrorInfo;
     }
 }
 
-// Check for form submission
+// Kontrollera för formulärinsändning
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['användare'])) {
-    $userEmail = $_POST['användare'];  // Capture the email address from the form
-    $otp = generateOTP();  // Generate a new OTP
+    $userEmail = $_POST['användare'];  // Fånga e-postadressen från formuläret
+    $otp = generateOTP();  // Generera en ny OTP
 
-    insertOTP($dbh, $userEmail, $otp);  // Insert the OTP and email address into the database
-    sendOTPEmail($userEmail, $otp);  // Send the OTP to the user's email address
+    insertOTP($dbh, $userEmail, $otp);  // Sätt in OTP och e-postadress i databasen
+    sendOTPEmail($userEmail, $otp);  // Skicka OTP till användarens e-postadress
 }
-
 ?>
