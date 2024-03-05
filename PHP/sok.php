@@ -166,7 +166,7 @@
     ?>
 
     <br>
-    <a href="../admin.html">Gå tillbaka till sökningen</a>
+    <button onclick="window.location.href='../Admin.html'">Gå tillbaka till sökningen</button>
     <section>
         <h2>Hämta bild</h2>
         <form action="/PHP/get_image.php" method="get">

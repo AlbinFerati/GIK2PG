@@ -36,8 +36,17 @@ function sendOTPEmail($email, $otp) {
     // Konfigurera e-postmeddelandet
     $mail->setFrom('fotbollskungen_albin@hotmail.com', 'Fotbollskungen Albin');
     $mail->addAddress($email);
-    $mail->Subject = 'Din engångskod';
-    $mail->Body = "Din engångskod är: $otp";
+    $mail->Subject = 'Din engångskod från anpassarna';
+    // $mail->Body = "Hej! Din engångskod är: $otp";
+        // Bygg meddelandet
+        $message = "Hej!\n\n";
+        $message .= "Din engångskod är: $otp\n\n";
+        $message .= "Här är länken till formuläret: [länk]\n\n";
+        $message .= "Om du har frågor eller funderingar, kontakta oss på [mailadress].\n\n";
+        $message .= "Med vänliga hälsningar,\nAnpassarna";
+    
+        $mail->Body = $message;
+    $mail->CharSet = 'UTF-8'; // Sätt teckenkodningen till UTF-8
 
     // Skicka e-postmeddelandet
     if ($mail->send()) {

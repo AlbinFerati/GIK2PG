@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../CSS/edit.css">
+</head>
+<body>
+
 <?php
 // Ange din databasanslutningssträng här
 $dbh = new PDO('sqlite:../anpassarna.db');
@@ -145,7 +156,8 @@ if(isset($_GET['id'])) {
     // Visa formuläret för redigering av posten
     if($result) {
         ?>
-        <h2>Redigera post</h2>
+        
+        <h2>Redigera kund</h2>
         <?php if(!empty($message)) echo "<p>$message</p>"; ?>
         <form method="post">
         Förnamn: <input type="text" name="fnamn" value="<?php echo $result['fnamn']; ?>"><br>
@@ -193,4 +205,8 @@ if(isset($_GET['id'])) {
     echo "Inget ID skickades för redigering.";
 }
 ?>
-<a href="../Admin.html">Gå tillbaka till sökningen</a>
+<!-- <a href="../Admin.html">Gå tillbaka till sökningen</a> -->
+<button onclick="window.location.href='../Admin.html'">Gå tillbaka till sökningen</button>
+
+</body>
+</html>

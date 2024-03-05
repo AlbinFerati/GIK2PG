@@ -1,0 +1,84 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* More modern font */
+    margin: 20px;
+    background-color: #fafafa; /* Softer background color */
+    color: #555; /* Softer text color */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+section {
+    background-color: #fff;
+    padding: 30px; /* Increased padding for more space */
+    margin-bottom: 20px;
+    border-radius: 8px; /* Slightly larger border radius for softer edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"] {
+    padding: 12px; /* Slightly larger padding for larger touch targets */
+    margin: 10px 0 20px; /* Increased bottom margin for more space */
+    border: 1px solid #ccc; /* Softer border color */
+    border-radius: 6px; /* Slightly larger border radius for softer edges */
+    width: 100%; /* Full width inputs */
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    transition: border-color 0.3s; /* Smooth transition for interactive elements */
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="email"]:focus {
+    border-color: #007bff; /* Highlight focus */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px; /* Larger padding for a more substantial button */
+    border: none;
+    border-radius: 6px; /* Slightly larger border radius for softer edges */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; /* Reduced margin for closer association with inputs */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px; /* Slightly larger padding for more space */
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eaeaea;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

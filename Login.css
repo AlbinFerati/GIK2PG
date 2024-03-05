@@ -29,12 +29,7 @@ form {
     opacity: 0.8;
   }
   
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 1rem 1.8rem;
-    background-color: #f44336;
-  }
+
   
   
   /* Add padding to containers */
@@ -53,8 +48,5 @@ form {
     span.psw {
       display: block;
       float: none;
-    }
-    .cancelbtn {
-      width: 100%;
     }
   }
