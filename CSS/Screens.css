@@ -346,18 +346,15 @@ input {
 }
 
 .skicka{
-  background-color: var(--button);
-  padding: 4px 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 11px;
-  border-radius: 5px;
-  border: 2px solid, color(--color-1);
-  margin-bottom: 2rem;
-  
-}
-.skicka:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px; /* Larger padding for a more substantial button */
+  border: none;
+  border-radius: 6px; /* Slightly larger border radius for softer edges */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-bottom: 0.5rem;
 }
 
 /* ------------------------------------------------------FORDON---------------------------------------------------------- */

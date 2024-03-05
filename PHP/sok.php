@@ -43,6 +43,17 @@
         .actions a {
             color: #d00;
         }
+        .hämta_knapp {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px; /* Larger padding for a more substantial button */
+            border: none;
+            border-radius: 6px; /* Slightly larger border radius for softer edges */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            margin-bottom: 0.5rem;
+}
     </style>
 </head>
 <body>
@@ -166,7 +177,7 @@
     ?>
 
     <br>
-    <button onclick="window.location.href='../Admin.html'">Gå tillbaka till sökningen</button>
+    <a href="../admin.html">Gå tillbaka till sökningen</a>
     <section>
         <h2>Hämta bild</h2>
         <form action="/PHP/get_image.php" method="get">
@@ -175,7 +186,7 @@
                 <input type="number" id="bild_id" name="id">
             </div>
             <div>
-                <button type="submit">Hämta</button>
+                <button class= "hämta_knapp" type="submit">Hämta</button>
             </div>
         </form>
     </section>

@@ -28,7 +28,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
     border-color: #007bff; /* Highlight focus */
 }
 
-button {
+
+button, .spara_knapp {
     background-color: #007bff;
     color: white;
     padding: 12px 20px; /* Larger padding for a more substantial button */
@@ -37,6 +38,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-bottom: 0.2rem;
 }
 
 button:hover {

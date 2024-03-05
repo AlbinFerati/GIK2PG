@@ -195,7 +195,7 @@ if(isset($_GET['id'])) {
         Annat fordon: <input type="text" name="annat_fordon" value="<?php echo $result['annat_fordon']; ?>"><br>
         Vet ej: <input type="text" name="vet_ej" value="<?php echo $result['vet_ej']; ?>"><br>
 
-            <input type="submit" name="submit" value="Spara">
+            <input class= "spara_knapp" type="submit" name="submit" value="Spara">
         </form>
         <?php
     } else {
