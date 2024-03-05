@@ -132,7 +132,7 @@ function sendUserDetailsEmail($fnamn, $enamn, $telnr, $mail) {
 
         // Konfigurera e-postmeddelandet
         $mailer->setFrom('fotbollskungen_albin@hotmail.com', 'Nytt formulär');
-        $mailer->addAddress('H21sebno@du.se'); // Din egen e-postadress
+        $mailer->addAddress('fotbollskungen_albin@hotmail.com'); // Din egen e-postadress
         $mailer->Subject = 'Dina uppgifter hos Anpassarna';
 
         // Bygg e-postmeddelandet
@@ -147,7 +147,7 @@ function sendUserDetailsEmail($fnamn, $enamn, $telnr, $mail) {
 
         // Skicka e-postmeddelandet
         $mailer->send();
-        echo "Användaruppgifter skickade framgångsrikt till H21sebno@du.se";
+        echo "Användaruppgifter skickade framgångsrikt till Anpassarna";
     } catch (Exception $e) {
         echo "Misslyckades med att skicka användaruppgifter: " . $mailer->ErrorInfo;
     }

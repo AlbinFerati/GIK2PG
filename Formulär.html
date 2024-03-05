@@ -5,48 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link rel="stylesheet" type="text/css" href="/CSS/Formulär.css"> -->
-    <link rel="stylesheet" type="text/css" href="/CSS/Screens.css">
-    
-
-
-
+    <link rel="stylesheet" type="text/css" href="/CSS/Formulär.css">
 </head>
-
 <body>
     <header>
-        <!-- <img src="/IMG/Logotyper/logo.jpeg" alt="Anpassarna logga"> -->
-
 <!-- Top Navigation Menu -->
 <div class="topnav">
     <img class="anpassarnaIMG" src="IMG/Logotyper/logo.jpeg">
     <a href="/Login.html">
       <img class="adminIMG"src="/IMG/Logotyper/user.png" alt="Användarlogotyp">
-  </a>
-  
-    <!-- <a href="#home" class="active">Logo</a> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Navigation links (hidden by default) -->
-    <div id="myLinks">
-      <a href="https://anpassarna.se/">Hem</a>
-      <a href="https://anpassarna.se/hem/anpassning/">Bilanpassningar</a>
-      <a href="https://anpassarna.se/hem/tjanster/">Övriga tjänster</a>
-      <a href="https://anpassarna.se/hem/anpassning/produkter/">Produkter</a>
-      <a href="https://anpassarna.se/hem/kontakt/">Kontakt</a>
-      <!-- Dropdown Menu -->
-      <div class="dropdown">
-        <div class="dropdown-content">
-          <a href="https://anpassarna.se/om-oss/">Om oss</a>
-          <a href="https://anpassarna.se/personal/">Personal</a>
-          <a href="https://anpassarna.se/bidrag-och-fonder/">Bidrag & fonder</a>
-        </div>
-      </div>
-    </div>
-    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-  
+    </a>  
     </header>
     <main>
         <!-----------------------------Kontaktinfo---------------------------->
@@ -382,9 +350,18 @@
                       <label for="vet_ej">Vet ej</label>
                       <input  class="fordon_textfield_input" type="checkbox" id="vet_ej" name="vet_ej">
                     </div>
-            </section>            
-        
-        <button class="skicka" type="submit" onclick="submitSVG()">Skicka</button>
+            </section>
+            <div>
+              <input type="radio" id="checkruta">
+              <label for="radio">Jag godkänner att min information kommer att sparas</label>
+            </div>
+            <span id="warningMessage">Du måste godkänna villkoren först.</span>
+            <div>
+              <button class="skicka" type="submit" id="submitButton" onclick="submitSVG()">Skicka</button>
+            </div>
+            
+            
+            
       </form>
         <!-----------------------------SLUT DEL 3---------------------------->
         
@@ -428,8 +405,6 @@
           
             <div class="social-media">
               <h2>SOCIALA MEDIER:</h2>
-                <!-- https://www.flaticon.com/search?word=instagram -->
-                <!-- #BEBDBD -->
               <a  href="https://www.facebook.com/anpassarna"><img class="logotyper" src="/IMG/Logotyper/facebook-app-symbol.png" alt="En länk till anpassarnas Facebook sida"></a>
               <a  href="https://www.instagram.com/anpassarna/"><img class="logotyper" src="/IMG/Logotyper/instagram-logo.png" alt="En länk till anpassarnas Instagram sida"></a>
               <a href="https://fordonsanpassning.se/"><img src="/IMG/Logotyper/BSFtransparentGra.png" alt="En länk till BSF hemsida"></a>

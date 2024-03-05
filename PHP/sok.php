@@ -4,57 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adminsida - Sökresultat</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 20px;
-            background-color: #f9f9f9;
-            line-height: 1.6;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        table, th, td {
-            border: 1px solid #ccc;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            color: #333;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        a {
-            color: #06c;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .actions a {
-            color: #d00;
-        }
-        .hämta_knapp {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 20px; /* Larger padding for a more substantial button */
-            border: none;
-            border-radius: 6px; /* Slightly larger border radius for softer edges */
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-            margin-bottom: 0.5rem;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="../CSS/sok.css">
 </head>
 <body>
     <h2>Sökresultat</h2>
@@ -177,7 +127,7 @@
     ?>
 
     <br>
-    <a href="../admin.html">Gå tillbaka till sökningen</a>
+    <button onclick="window.location.href='../admin.html';">Tillbaka till Admin</button>
     <section>
         <h2>Hämta bild</h2>
         <form action="/PHP/get_image.php" method="get">
@@ -186,7 +136,7 @@
                 <input type="number" id="bild_id" name="id">
             </div>
             <div>
-                <button class= "hämta_knapp" type="submit">Hämta</button>
+                <button class type="submit">Hämta</button>
             </div>
         </form>
     </section>

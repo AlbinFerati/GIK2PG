@@ -10,6 +10,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visa Bild</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/sok.css">
 </head>
 <body>
     <?php
@@ -33,7 +34,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     ?>
     <div>
         <button onclick="window.location.href='../admin.html';">Tillbaka till Admin</button>
-        <!-- <a href="../admin.html">Gå tillbaka till sökningen</a> -->
+        <button onclick="history.back()">Tillbaka till sökning</button>
     </div>
 </body>
 </html>

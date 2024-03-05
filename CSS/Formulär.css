@@ -661,3 +661,13 @@ a:hover {
 
 
   }
+
+/* Stil för varningsmeddelandet */
+#warningMessage {
+  color: red;
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  display: none;
+}
+
+

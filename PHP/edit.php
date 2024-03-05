@@ -155,9 +155,9 @@ if(isset($_GET['id'])) {
 
     // Visa formuläret för redigering av posten
     if($result) {
-        ?>
-        
+        ?>      
         <h2>Redigera kund</h2>
+        <button onclick="history.back()">Tillbaka till sökning</button>  
         <?php if(!empty($message)) echo "<p>$message</p>"; ?>
         <form method="post">
         Förnamn: <input type="text" name="fnamn" value="<?php echo $result['fnamn']; ?>"><br>
@@ -195,7 +195,7 @@ if(isset($_GET['id'])) {
         Annat fordon: <input type="text" name="annat_fordon" value="<?php echo $result['annat_fordon']; ?>"><br>
         Vet ej: <input type="text" name="vet_ej" value="<?php echo $result['vet_ej']; ?>"><br>
 
-            <input class= "spara_knapp" type="submit" name="submit" value="Spara">
+            <button type="submit" name="submit" value="Spara">Spara</button>
         </form>
         <?php
     } else {

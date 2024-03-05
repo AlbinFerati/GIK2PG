@@ -67,3 +67,5 @@ CREATE TABLE IF NOT EXISTS otp_table (
 );
 
 SELECT * FROM otp_table;
+
+DELETE FROM admin WHERE id = 3;
