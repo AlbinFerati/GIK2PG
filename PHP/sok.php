@@ -127,11 +127,11 @@
     ?>
 
     <br>
-    <button onclick="window.location.href='../admin.html';">Tillbaka till Admin</button>
+    <button onclick="window.location.href='../admin.html';">Startsida</button>
     <section>
         <h2>Hämta bild</h2>
         <form action="/PHP/get_image.php" method="get">
-            <div>
+            <div class="bildsok">
                 <label for="bild_id">Bild ID:</label>
                 <input type="number" id="bild_id" name="id">
             </div>

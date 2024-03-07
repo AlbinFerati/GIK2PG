@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminsida - Visa OTP-koder</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/sok.css">
+</head>
+<body>
+    <h2>Visa alla OTP-koder</h2>
+    <?php
+    // Ange din databasanslutningssträng här
+    $dbh = new PDO('sqlite:../anpassarna.db');
+
+    // Förbered SQL-frågan för att hämta alla OTP-koder
+    $sql = "SELECT * FROM otp_table";
+    $stmt = $dbh->query($sql);
+
+    // Hämta alla rader från resultatet
+    $koder = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Visa alla koder i en tabell
+    if ($koder) {
+        echo "<table border='1'>";
+        echo "
+            <tr>
+                <th>Remove</th>
+                <th>ID</th>
+                <th>Useremail</th>
+                <th>OTP</th>
+                <th>Datum</th>
+            </tr>";
+        foreach ($koder as $row) {
+            echo "<tr>";
+            echo "<td><a href='removeOTP.php?id=".$row['id']."'>Remove</a></td>";
+            echo "<td>".$row['id']."</td>";
+            echo "<td>".$row['user_email']."</td>";
+            echo "<td>".$row['otp']."</td>";
+            echo "<td>".$row['created_at']."</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "Inga OTP-koder hittades.";
+    }
+    ?>
+
+    <br>
+    <button onclick="window.location.href='../admin.html';">Startsida</button>
+</body>
+</html>
+

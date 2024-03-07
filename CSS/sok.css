@@ -36,7 +36,11 @@ a:hover {
 .actions a {
     color: #d00;
 }
-button, .spara_knapp {
+.bildsok{
+    margin-bottom: 1rem;
+}
+
+button{
     background-color: #007bff;
     color: white;
     padding: 12px 20px; /* Larger padding for a more substantial button */

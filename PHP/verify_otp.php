@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['otp'])) {
     $userOtp = $_POST['otp'];
 
     // Modified query to check only the OTP and its validity
-    $stmt = $dbh->prepare("SELECT * FROM otp_table WHERE otp = ? AND DATETIME(created_at, '+24 hours') > CURRENT_TIMESTAMP");
+    $stmt = $dbh->prepare("SELECT * FROM otp_table WHERE otp = ? AND DATETIME(created_at, '+168 hours') > CURRENT_TIMESTAMP");
     $stmt->execute([$userOtp]);
     if ($stmt->fetch()) {
         // OTP is valid
