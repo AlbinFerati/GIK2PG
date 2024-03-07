@@ -108,7 +108,7 @@ if (isset($_POST['fnamn'])) {
 
     // Kör frågan
     if ($stmt->execute()) {
-        echo "Data har sparats/uppdaterats.";
+        echo "Din uppgifter har sparats. Tack för att du tog dig tiden att fylla i detta forumlär. Vi kommer att höra av oss inom kort.";
         
         sendUserDetailsEmail($fnamn, $enamn, $telnr, $mail);
     } else {

@@ -206,7 +206,7 @@ if(isset($_GET['id'])) {
 }
 ?>
 <!-- <a href="../Admin.html">Gå tillbaka till sökningen</a> -->
-<button onclick="window.location.href='../Admin.html'">Gå tillbaka till sökningen</button>
+<button onclick="window.location.href='../Admin.html'">Start sida</button>
 
 </body>
 </html>

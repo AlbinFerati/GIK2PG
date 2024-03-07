@@ -23,4 +23,4 @@ if(isset($_GET['id'])) {
 
 ?>
 <br>
-    <a href="../Admin.html">Gå tillbaka till sökningen</a>
+<button onclick="window.location.href='../admin.html';">Start sida</button>

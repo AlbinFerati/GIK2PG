@@ -33,8 +33,8 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     }
     ?>
     <div>
-        <button onclick="window.location.href='../admin.html';">Tillbaka till Admin</button>
-        <button onclick="history.back()">Tillbaka till sökning</button>
+        <button onclick="window.location.href='../admin.html';">Start sida</button>
+        <button onclick="history.back()">Tillbaka</button>
     </div>
 </body>
 </html>

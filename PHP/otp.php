@@ -41,7 +41,7 @@ function sendOTPEmail($email, $otp) {
         // Bygg meddelandet
         $message = "Hej!\n\n";
         $message .= "Din engångskod är: $otp\n\n";
-        $message .= "Här är länken till formuläret: [länk]\n\n";
+        $message .= "Här är länken till formuläret: http://localhost:8000/loginOTP.html\n\n";
         $message .= "Om du har frågor eller funderingar, kontakta oss på [mailadress].\n\n";
         $message .= "Med vänliga hälsningar,\nAnpassarna";
     
