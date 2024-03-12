@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $dbh = new PDO('sqlite:../anpassarna.db'); // Adjust the path as necessary
 
@@ -11,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['otp'])) {
     if ($stmt->fetch()) {
         // OTP is valid
         // Redirect to a logged-in page or dashboard
-        header('Location: /Formulär.html');
+        $_SESSION['otp_valid'] = true;
+        header('Location: ../Formulär.php');
         exit;
     } else {
         // OTP is invalid or expired

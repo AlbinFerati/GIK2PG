@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['loggedin'] = true;
 
         // Redirect to admin page
-        header("Location: ../Admin.html");
+        header("Location: ../Admin.php");
         exit();
     } else {
         // Authentication failed

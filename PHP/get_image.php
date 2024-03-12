@@ -1,4 +1,16 @@
 <?php
+session_start();
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+
+// Kontrollera om användaren är inloggad, annars omdirigera till inloggningssidan
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: /Login.html");
+    exit;
+}
+?>
+<?php
 // Ange din databasanslutningssträng här
 $dbh = new PDO('sqlite:../anpassarna.db');
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
@@ -33,7 +45,7 @@ $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
     }
     ?>
     <div>
-    <button onclick="window.location.href='../admin.html';">Startsida</button>
+    <button onclick="window.location.href='../admin.php';">Startsida</button>
         <button onclick="history.back()">Tillbaka</button>
     </div>
 </body>

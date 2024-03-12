@@ -1,3 +1,15 @@
+<?php
+session_start();
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+
+// Kontrollera om användaren är inloggad, annars omdirigera till inloggningssidan
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: /Login.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -127,7 +139,7 @@
     ?>
 
     <br>
-    <button onclick="window.location.href='../admin.html';">Startsida</button>
+    <button onclick="window.location.href='../admin.php';">Startsida</button>
     <section>
         <h2>Hämta bild</h2>
         <form action="/PHP/get_image.php" method="get">

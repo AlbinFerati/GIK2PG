@@ -1,3 +1,15 @@
+<?php
+session_start();
+echo "<pre>";
+print_r($_SESSION);
+echo "</pre>";
+
+// Kontrollera om användaren är inloggad, annars omdirigera till inloggningssidan
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: /Login.html");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -71,5 +83,9 @@
             </div>
         </form>
     </section>
+    <form action="/PHP/LogoutAdmin.php" method="post">
+    <button type="submit">Logga ut</button>
+    </form>
+
 </body>
 </html>
