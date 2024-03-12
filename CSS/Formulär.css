@@ -201,9 +201,29 @@ input {
 
 
 
-.hjälpmedel_med_i_fordon, .checkbox_container{
+/* .hjälpmedel_med_i_fordon, .checkbox_container{
   display: none;
+} */
+.checkbox_container {
+  display: inline-grid; /* Använd inline-grid för att placera elementen på samma rad */
+  grid-template-columns: auto auto; /* Två kolumner med automatisk bredd för att rymma label och checkbox */
+  align-items: center; /* Centrera elementen vertikalt */
 }
+
+.checkbox_container input[type="checkbox"],
+.checkbox_container label {
+  display: none; /* Dölj checkbox och label som standard */
+}
+
+.checkbox_container.show {
+  display: inline-grid; /* Visa checkbox container när den är märkt som "show" */
+}
+
+.checkbox_container.show input[type="checkbox"],
+.checkbox_container.show label {
+  display: inline; /* Visa checkbox och label när container är märkt som "show" */
+}
+
 .rubrikHjälpmedelFordon{
   display: none;
 }
@@ -344,6 +364,14 @@ input {
 .fordon_textfield1{
   display: none;
 }
+.godkänner{
+  display: flex; 
+  align-items: center;
+}
+
+.godkännerInput{
+  margin-right: 22rem;
+}
 
 .skicka{
   background-color: #007bff;
@@ -430,11 +458,11 @@ a:hover {
 
   .contact-info, .links, .social-media {
     text-align: center; 
-    margin-bottom: 20px; 
+    margin-bottom: 2rem; 
   }
 
   .social-media img {
-    margin: 0 auto 10px; 
+    margin: 0 auto 1rem; 
     display: block; 
   }
 }
@@ -559,24 +587,24 @@ a:hover {
       grid-template-areas: 
       " . fnamn enamn . "
       " . telnr mail . ";
-      border: 1px solid #dddddd; /* En ljus grå nyans för ramen */
+      border: .1rem solid #dddddd; /* En ljus grå nyans för ramen */
       padding: 2rem; /* Behåller tidigare angivet utrymme */
       margin: 0 auto; /* Centrerar sektionen */
       background-color: #f5f5f5; /* En mycket ljus grå nyans för bakgrunden */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
+      box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1); /* Lätt skugga för djup */
       border-radius: 1rem; /* Rundade hörn */
       width: 43%; /* Automatisk bredd baserat på innehållet */
     }
   
   .kontaktinfo div {
-      margin-bottom: 10px; /* Behåller tidigare avstånd mellan textrutorna */
-      padding: 0 10px; /* Ger lite utrymme mellan divs */
+      margin-bottom: 1rem; /* Behåller tidigare avstånd mellan textrutorna */
+      padding: 0 1rem; /* Ger lite utrymme mellan divs */
       width: max-content;
   }
   
   .kontaktinfo label {
       color: #333; /* Mörkgrå färg för texten */
-      margin-bottom: 5px;
+      margin-bottom: .5rem;
   }
 
   .rubrikKroppen {
@@ -621,43 +649,56 @@ a:hover {
       " . hjälpmotor elmoped permobil . "
       " . annat . . .";
     }
-
-    .hjälpmedel_med_i_fordon h3:nth-child(1){
-      grid-area: rubrik;
+    .hjälpmedel_med_i_fordon {
+      display: grid;
+      /* gap: 1.5rem; */
+      grid-template-rows: auto 1fr auto auto;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: 
+        " . rubrik rubrik . ."
+        " . . . . .";
+      grid-auto-flow: row dense; /* Divarna fyller i rutnätet rad för rad och undviker överlappning */
     }
+    
+    .rubrikHjälpmedelFordon {
+      grid-area: rubrik; /* Placera rubriken i det definierade området */
+    }
+    
     .hjälpmedel_med_i_fordon div:nth-child(2){
-      grid-row-start: 2; /* Börjar på rad 2 */
-      grid-row-end: auto; /* Anpassar sig till innehållets höjd */
-      grid-column-start: 2; /* Börjar på kolumn 2 */
-      grid-column-end: 3; /* Anpassar sig till innehållets bredd */
+      grid-row-start: 2; 
+      grid-row-end: auto; 
+      grid-column-start: 2; 
+      grid-column-end: 3; 
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 3) {
-      grid-row: auto; /* Låt griden bestämma raden */
-      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-row: auto; 
+      grid-column-start: 2; 
       grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 4){
-      grid-row: auto; /* Låt griden bestämma raden */
-      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-row: auto; 
+      grid-column-start: 2; 
       grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 5){
-      grid-row: auto; /* Låt griden bestämma raden */
-      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-row: auto; 
+      grid-column-start: 2; 
       grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n + 6){
-      grid-row: auto; /* Låt griden bestämma raden */
-      grid-column: 2; /* Låt griden bestämma kolumnen */
+      grid-row: auto; 
+      grid-column: 2; 
       grid-column-end: 3;
     }
     .hjälpmedel_med_i_fordon div:nth-child(n +7){
-      grid-row: auto; /* Låt griden bestämma raden */
-      grid-column-start: 2; /* Låt griden bestämma kolumnen */
+      grid-row: auto; 
+      grid-column-start: 2; 
       grid-column-end: 3;
     }
 
-    .hjälpmedel_med_i_fordon{
+
+
+    /* .hjälpmedel_med_i_fordon{
       display: grid;
       gap: 1.5rem;
       grid-template-rows: auto 1fr auto auto;
@@ -666,7 +707,7 @@ a:hover {
       " . rubrik rubrik . ."
       " . . . . .";
       grid-auto-flow: row;
-    }
+    } */ 
 
     .fordon {
       display: grid;

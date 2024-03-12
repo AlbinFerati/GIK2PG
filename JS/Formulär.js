@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+
 document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
   item.addEventListener('click', function (event) {
     event.stopPropagation(); // Förhindra eventet från att bubbla uppåt i DOM-trädet
@@ -82,9 +83,9 @@ document.querySelectorAll('.img_cont_hjälpmedel').forEach((item) => {
     if (checkbox) {
       // Uppdatera kryssrutan baserat på om bilden är markerad eller inte
       checkbox.checked = this.classList.contains('marked');
-      
-      // Visa eller dölj kryssrutan baserat på om bilden är markerad eller inte
-      checkbox.parentElement.style.display = this.classList.contains('marked') ? 'grid' : 'none';
+
+      // Visa eller dölj checkbox container baserat på om bilden är markerad eller inte
+      checkbox.parentElement.classList.toggle('show', this.classList.contains('marked'));
     }
 
     // Uppdatera värdet på det dolda inputfältet baserat på om bilden är markerad eller inte
