@@ -64,6 +64,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </form>
     </section>
     <section>
+        <h2>Visa alla Admins</h2>
+        <form action="/PHP/visaAdmin.php" method="post">
+            <div>
+                <button type="submit">Visa Admins</button>
+            </div>
+        </form>
+    </section>
+    <section>
         <h2>Generera engångskod</h2>
         <form action="/PHP/otp.php" method="post">
             <div>
