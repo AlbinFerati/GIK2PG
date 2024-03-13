@@ -42,7 +42,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </tr>";
         foreach ($koder as $row) {
             echo "<tr>";
-            echo "<td><a href='removeOTP.php?id=".$row['id']."'>Remove</a></td>";
+            echo "<td><a href='removeAdmin.php?id=".$row['id']."'>Remove</a></td>";
             echo "<td>".$row['id']."</td>";
             echo "<td>".$row['username']."</td>";
             echo "</tr>";
