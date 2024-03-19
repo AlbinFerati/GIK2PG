@@ -12,9 +12,9 @@ if (!isset($_SESSION['otp_valid']) || $_SESSION['otp_valid'] !== true) {
 }
 
 // Skriv ut innehållet av $_SESSION
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
 ?>
 
 

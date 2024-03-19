@@ -169,7 +169,7 @@ if(isset($_GET['id'])) {
     if($result) {
         ?>      
         <h2>Redigera kund</h2>
-        <button onclick="history.back()">Tillbaka</button>  
+        <!-- <button onclick="history.back()">Tillbaka</button>   -->
         <?php if(!empty($message)) echo "<p>$message</p>"; ?>
         <form method="post">
         Förnamn: <input type="text" name="fnamn" value="<?php echo $result['fnamn']; ?>"><br>
