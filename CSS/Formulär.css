@@ -16,7 +16,6 @@ html {
   --text-grey: hsl(0, 0%, 84%);
   --text-hover: hsl(199, 100%, 40%);
   --button: hsl(199, 100%, 51%);
-  /* --body_typography-font-family: Roboto;  VAD GÖR DERNNA? */
 }
 /* BODY */
 body {
@@ -69,9 +68,6 @@ h5{
   grid-area: mail;
 }
 
-/* .hjälpmedel_textfield input{
-  width: 45%;
-} */
 .kontaktinfo {
   font-size: 1.6rem;
   margin: 5rem 0rem;
@@ -391,21 +387,7 @@ input {
 
 /* ------------------------------------------------------FOOTER---------------------------------------------------------- */
 
-/* .footer_container {
-  background-color: var(--color-1);
-  border-color: var(--color-1);
-}
 
-
-footer {
-  color: var(--color-2);
-}
-
-footer a {
-  color: var(--text-grey);
-  text-decoration: none;
-  
-} */
 
 footer {
   background-color: #333; 
@@ -696,18 +678,6 @@ a:hover {
       grid-column-end: 3;
     }
 
-
-
-    /* .hjälpmedel_med_i_fordon{
-      display: grid;
-      gap: 1.5rem;
-      grid-template-rows: auto 1fr auto auto;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: 
-      " . rubrik rubrik . ."
-      " . . . . .";
-      grid-auto-flow: row;
-    } */ 
 
     .fordon {
       display: grid;
