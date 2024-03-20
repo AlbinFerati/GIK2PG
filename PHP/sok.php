@@ -13,10 +13,47 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adminsida - Sökresultat</title>
     <link rel="stylesheet" type="text/css" href="../CSS/sok.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        // Funktion för att ladda ner en viss rad från databasen
+        function ladda_ner_rad() {
+            var id_to_download = $('#id_to_download').val();
+            $.ajax({
+                type: 'POST',
+                url: 'download.php',
+                data: { id: id_to_download },
+                success: function(response) {
+                    // Skicka data till användaren som en nedladdningsfil
+                    var blob = new Blob([response]);
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'data.csv';
+                    link.click();
+                }
+            });
+        }
+
+        // Funktion för att ladda ner hela tabellen från databasen
+        function ladda_ner_hela_tabellen() {
+            $.ajax({
+                type: 'POST',
+                url: 'download.php',
+                data: { ladda_ner_hela: true },
+                success: function(response) {
+                    // Skicka data till användaren som en nedladdningsfil
+                    var blob = new Blob([response]);
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'databasen.csv';
+                    link.click();
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <h2>Sökresultat</h2>
@@ -136,6 +173,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             echo "Inga resultat hittades.";
         }
     }
+    // Funktion för att ladda ner ett visst id från databasen
+
     ?>
 
     <br>
@@ -152,5 +191,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </div>
         </form>
     </section>
+    <section>
+        <form id="ladda_ner_rad_form" method="post" action="download.php">
+        <label for="id_to_download">ID att ladda ner:</label>
+        <input type="text" id="id_to_download" name="id_to_download">
+        <button type="submit" value="Ladda ner rad"> Ladda ned id</button>
+        </form>
+    </section>
+    <button type="button" onclick="ladda_ner_hela_tabellen()">Ladda ner hela tabellen</button>
+
 </body>
 </html>
