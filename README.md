@@ -22,13 +22,13 @@ I vårt GitHub-repositorium hittar du all kod relaterad till vårt projekt som a
 
 För att få koden att fungera behöver du se till att ha PHP och Composer installerat korrekt på din dator.  
 
-Guide PHP MacOS: https://medium.com/@rodolfovmartins/how-to-install-php-on-mac-6795ce469802
+Guide PHP MacOS: https://www.php.net/manual/en/install.macosx.php
 
 Guide Composer MacOS: https://getcomposer.org/doc/00-intro.md
  
-Guide PHP Windows:
+Guide PHP Windows: https://www.php.net/manual/en/install.windows.php
 
-Guide Composer Windows: 
+Guide Composer Windows: https://getcomposer.org/doc/00-intro.md
  
 
 ### Tack för att du är intresserad av vårt arbete och för ditt engagemang för att göra världen mer tillgänglig för personer med funktionsnedsättningar.  
