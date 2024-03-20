@@ -379,6 +379,7 @@ if (!isset($_SESSION['otp_valid']) || $_SESSION['otp_valid'] !== true) {
             <span id="warningMessage">Du måste godkänna villkoren först.</span>
             <div>
               <button class="skicka" type="submit" id="submitButton" onclick="submitSVG()">Skicka</button>
+              
             </div>
             
             

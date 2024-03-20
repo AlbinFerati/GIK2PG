@@ -367,10 +367,19 @@ input {
 .godkänner{
   display: flex; 
   align-items: center;
+  
+
 }
 
 .godkännerInput{
   margin-right: 22rem;
+  max-width: fit-content;
+  margin: 0 0 0 1rem;
+}
+/* LA TILL DENNA SOM PÅVERKAR ALLA CHECKBOXES*/
+input[type=checkbox] {
+  display: flex;
+  max-width: fit-content;
 }
 
 .skicka{

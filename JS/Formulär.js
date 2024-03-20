@@ -129,7 +129,7 @@ yesCheckbox.addEventListener('change', function () {
   if (yesCheckbox.checked) {
     // Om användaren klickar på "Ja", visa Q1-diven och bilderna
     fordon_textfield.style.display = 'block';
-    fordon_textfield1.style.display = 'block';
+    fordon_textfield1.style.display = 'flex';
     fordon_yesDiv.style.display = 'block';
     if_yes.style.display = 'block';
     cont_fordon.style.display = 'grid';
@@ -154,7 +154,7 @@ noCheckbox.addEventListener('change', function () {
   if (noCheckbox.checked) {
     // Om användaren klickar på "Nej", visa Q1-diven och bilderna
     fordon_textfield.style.display = 'block';
-    fordon_textfield1.style.display = 'block';
+    fordon_textfield1.style.display = 'flex';
     fordon_noDiv.style.display = 'block';
     if_no.style.display = 'block';
     cont_fordon.style.display = 'grid';
