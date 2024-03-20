@@ -8,7 +8,7 @@
 
 ## Om Projektet 
 
-Systemet består av en frontend- och backend-lager. Kunden fyller i ett formulär (se figur 1) med information om sina fysiska förmågor. Det finns en admin-sida för att visa, redigera och ta bort resultat, skapa administratörer och skicka ut engångslösenord (OTP) till användare. Dessutom finns det en databas för att lagra formulärinformation, administratörer och OTP:er. 
+Systemet består av en frontend- och backend-lager. Kunden fyller i ett formulär med information om sina fysiska förmågor. Det finns en admin-sida för att visa, redigera och ta bort resultat, skapa administratörer och skicka ut engångslösenord (OTP) till användare. Dessutom finns det en databas för att lagra formulärinformation, administratörer och OTP:er. 
 
  
 
