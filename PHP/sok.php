@@ -193,9 +193,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </section>
     <section>
         <form id="ladda_ner_rad_form" method="post" action="download.php">
-        <label for="id_to_download">ID att ladda ner:</label>
-        <input type="text" id="id_to_download" name="id_to_download">
-        <button type="submit" value="Ladda ner rad"> Ladda ned id</button>
+            <label for="id_to_download">ID att ladda ner:</label>
+            <input type="text" id="id_to_download" name="id_to_download">
+            <button type="submit" value="Ladda ner rad"> Ladda ned id</button>
         </form>
     </section>
     <button type="button" onclick="ladda_ner_hela_tabellen()">Ladda ner hela tabellen</button>
