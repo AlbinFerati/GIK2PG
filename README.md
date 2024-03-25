@@ -41,7 +41,7 @@ Composer av DEVSENSE
 
 1. Gå in i Windowns Powershell för Admin. 
 
-2. Skriv detta commando: 
+2. Skriv detta commando:   
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 3. Nu har du installerat chocolatey. 
