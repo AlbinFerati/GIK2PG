@@ -28,15 +28,14 @@ I vårt GitHub-repositorium hittar du all kod relaterad till vårt projekt som a
 
 ## Lägg till följande extensions i Visual studio ifall dem inte lagt till automatiskt; 
 PHP av DEVSENSE   
-PHP Profiler av DEVSENSE   
-PHP Server av brapifra   
-SQLite av alexcvzz  
+
+PHP Profiler av DEVSENSE  
+ 
+PHP Server av brapifra  
+ 
+SQLite av alexcvzz 
+ 
 Composer av DEVSENSE  
-
-1. Hämta ovan extensions 
-
-2. Sedan Composer av DEVSENSE 
-
 
 ## Hur man gör för att få igång PHP för Windows: 
 
