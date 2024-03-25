@@ -27,41 +27,42 @@ I vårt GitHub-repositorium hittar du all kod relaterad till vårt projekt som a
 ## For setup and deployment instructions, refer to the respective sections below. 
 
 ## Lägg till följande extensions i Visual studio ifall dem inte lagt till automatiskt; 
-PHP av DEVSENSE
-PHP Profiler av DEVSENSE
-PHP Server av brapifra
-SQLite av alexcvzz
- 
+PHP av DEVSENSE   
+PHP Profiler av DEVSENSE   
+PHP Server av brapifra   
+SQLite av alexcvzz  
+Composer av DEVSENSE  
 
-Hämta ovan extensions 
+1. Hämta ovan extensions 
 
-Sedan Composer av DEVSENSE 
+2. Sedan Composer av DEVSENSE 
 
-Hur man gör för att få igång PHP för Windows: 
 
-Gå in i Windowns Powershell för Admin. 
+## Hur man gör för att få igång PHP för Windows: 
 
-Skriv detta commando, utan citattecken: “Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1') "‌"))“ 
+1. Gå in i Windowns Powershell för Admin. 
 
-Nu har du installerat chocolatey. 
+2. Skriv detta commando, utan citattecken: “Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1') "‌"))“ 
 
-Kör sedan “choco install php” i powershell. 
+3. Nu har du installerat chocolatey. 
 
-Starta om datorn. 
+4. Kör sedan “choco install php” i powershell. 
 
-Navigera till stället där du laddade ner php. 
+5. Starta om datorn. 
 
-Öppna filen “php.ini” med textredigeraren. 
+6. Navigera till stället där du laddade ner php. 
 
-Ta bort semikolon framför alla rader med namnet “pdo_sqlite” och framför “extension=sqlite3”. 
+7. Öppna filen “php.ini” med textredigeraren. 
 
-Öppna visual studio code för att lägga in länken till PHP 
+8. Ta bort semikolon framför alla rader med namnet “pdo_sqlite” och framför “extension=sqlite3”. 
 
- Skriv “settings” i sökfältet och välj den med den lokala sökvägen (ej den med .vscode). 
+9. Öppna visual studio code för att lägga in länken till PHP 
 
- Lägg till länken till php filsökägen (C:/tools/php83/php.exe) efter: php.validate.executablePath. 
+10. Skriv “settings” i sökfältet och välj den med den lokala sökvägen (ej den med .vscode). 
 
- Du kan nu starta servern med kommandot “php -S localhost:8000”. 
+11. Lägg till länken till php filsökägen (C:/tools/php83/php.exe) efter: php.validate.executablePath. 
+
+12. Du kan nu starta servern med kommandot “php -S localhost:8000”. 
 
 ### Klar 
 
@@ -71,23 +72,23 @@ Ta bort semikolon framför alla rader med namnet “pdo_sqlite” och framför �
 
 ## Hur man gör för att få igång PHP för MAC: 
 
-Öppna terminalen. 
+1. Öppna terminalen. 
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh" 
+2. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh" 
 
-brew update 
+3. brew update 
 
-brew install php 
+4. brew install php 
 
-php -v 
+5. php -v 
 
-öppna sedan Visual Stuido code för att lägga in länken till PHP 
+6. Öppna sedan Visual Stuido code för att lägga in länken till PHP 
 
-Lägg in denna länk "/opt/homebrew/bin/php", utan “ “. 
+7. Lägg in denna länk "/opt/homebrew/bin/php", utan “ “. 
 
-Du kan nu starta servern med kommandot “php -S localhost:8000”, utan “ “. 
+8. Du kan nu starta servern med kommandot “php -S localhost:8000”, utan “ “. 
 
-### klar 
+### Klar 
 
  
 
@@ -97,19 +98,19 @@ Du kan nu starta servern med kommandot “php -S localhost:8000”, utan “ “
 
 WINDOWS: 
 
-Ladda ner Composer från https://getcomposer.org/download/ . 
+1. Ladda ner Composer från https://getcomposer.org/download/ . 
 
-Öppna mappen php83 som bör ligga i tools under C: om du har följt nedladdningsinstruktionerna utan ändringar. 
+2.Öppna mappen php83 som bör ligga i tools under C: om du har följt nedladdningsinstruktionerna utan ändringar. 
 
-Leta rätt på filen php.ini och öppna den. 
+3. Leta rätt på filen php.ini och öppna den. 
 
-Ta bort semikolon för “; extension=openssl”. 
+4. Ta bort semikolon för “; extension=openssl”. 
 
-Ta bort semikolon för “; openssl.cafile=”. 
+5. Ta bort semikolon för “; openssl.cafile=”. 
 
-Ta bort semikolon för “; openssl.capath=”. 
+6. Ta bort semikolon för “; openssl.capath=”. 
 
-Spara med php.ini med de ändringar du har gjort. 
+7. Spara med php.ini med de ändringar du har gjort. 
 
 ### Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
 
@@ -121,28 +122,28 @@ Spara med php.ini med de ändringar du har gjort.
 
 ## MAC: 
 
-Om du har homebrew installerat redan så öppna terminalen och gå till steg 3 annars gör steg 2. 
+1. Om du har homebrew installerat redan så öppna terminalen och gå till steg 3 annars gör steg 2. 
 
-Installera homebrew från terminalen med detta: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) "‌")" 
+2. Installera homebrew från terminalen med detta: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) "‌")" 
 
-skriv detta i terminalen: brew install composer 
+3. Skriv detta i terminalen: brew install composer 
 
-Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
+4. Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
 
  
 
  
 ## För att PHP mailer ska fungera 
 
-Ändra mailadress i otp.php-filen i PHP-mappen. 
+1. Ändra mailadress i otp.php-filen i PHP-mappen. 
 
-Följande kodrader behöver ändras: 
+2. Följande kodrader behöver ändras: 
 
-$mail->Username = 'skriv in din mailadress här'  
+3. $mail->Username = 'skriv in din mailadress här'  
 
-$mail->Password = 'skriv in ditt lösen här' 
+4. $mail->Password = 'skriv in ditt lösen här' 
 
-$mail->setFrom('skriv in din mailadress här','namn på avsändare') 
+5. $mail->setFrom('skriv in din mailadress här','namn på avsändare') 
 
  
 
