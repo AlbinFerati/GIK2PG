@@ -26,7 +26,7 @@ I vårt GitHub-repositorium hittar du all kod relaterad till vårt projekt som a
 
 ## For setup and deployment instructions, refer to the respective sections below. 
 
-# Lägg till följande extensions i Visual studio ifall dem inte lagt till automatiskt; 
+## Lägg till följande extensions i Visual studio ifall dem inte lagt till automatiskt; 
 PHP av DEVSENSE
 PHP Profiler av DEVSENSE
 PHP Server av brapifra
@@ -63,13 +63,13 @@ Ta bort semikolon framför alla rader med namnet “pdo_sqlite” och framför �
 
  Du kan nu starta servern med kommandot “php -S localhost:8000”. 
 
-# Klar 
+### Klar 
 
  
 
  
 
-# Hur man gör för att få igång PHP för MAC: 
+## Hur man gör för att få igång PHP för MAC: 
 
 Öppna terminalen. 
 
@@ -87,13 +87,13 @@ Lägg in denna länk "/opt/homebrew/bin/php", utan “ “.
 
 Du kan nu starta servern med kommandot “php -S localhost:8000”, utan “ “. 
 
-# klar 
+### klar 
 
  
 
  
 
-# Få igång Composer & PHP mailer 
+## Få igång Composer & PHP mailer 
 
 WINDOWS: 
 
@@ -111,7 +111,7 @@ Ta bort semikolon för “; openssl.capath=”.
 
 Spara med php.ini med de ändringar du har gjort. 
 
-# Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
+### Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
 
  
 
@@ -119,7 +119,7 @@ Spara med php.ini med de ändringar du har gjort.
 
  
 
-# MAC: 
+## MAC: 
 
 Om du har homebrew installerat redan så öppna terminalen och gå till steg 3 annars gör steg 2. 
 
@@ -132,7 +132,7 @@ Nu ska programmet fungera på din enhet om du startat servern korrekt med komman
  
 
  
-# För att PHP mailer ska fungera 
+## För att PHP mailer ska fungera 
 
 Ändra mailadress i otp.php-filen i PHP-mappen. 
 
@@ -146,7 +146,7 @@ $mail->setFrom('skriv in din mailadress här','namn på avsändare')
 
  
 
-# Om ovan instruktioner av någon anledning inte skulle fungera så hänvisar vi till följande; 
+## Om ovan instruktioner av någon anledning inte skulle fungera så hänvisar vi till följande; 
 
 Guide PHP MacOS: https://www.php.net/manual/en/install.macosx.php 
 
