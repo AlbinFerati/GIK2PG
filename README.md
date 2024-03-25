@@ -119,7 +119,7 @@ WINDOWS:
 
  
 
-## MAC: 
+MAC: 
 
 1. Om du har homebrew installerat redan så öppna terminalen och gå till steg 3 annars gör steg 2. 
 
