@@ -41,7 +41,8 @@ Composer av DEVSENSE
 
 1. Gå in i Windowns Powershell för Admin. 
 
-2. Skriv detta commando, utan citattecken: “Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1') "‌"))“ 
+2. Skriv detta commando, utan citattecken: 
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 3. Nu har du installerat chocolatey. 
 
@@ -123,7 +124,7 @@ MAC:
 
 1. Om du har homebrew installerat redan så öppna terminalen och gå till steg 3 annars gör steg 2. 
 
-2. Installera homebrew från terminalen med detta: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh) "‌")" 
+2. Installera homebrew från terminalen med detta: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh"
 
 3. Skriv detta i terminalen: brew install composer 
 
