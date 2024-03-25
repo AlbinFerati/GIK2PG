@@ -28,13 +28,13 @@ function sendOTPEmail($email, $otp) {
     $mail->isSMTP();
     $mail->Host = 'smtp-mail.outlook.com';  // Ersätt med din SMTP-serveradress
     $mail->SMTPAuth = true;
-    $mail->Username = 'fotbollskungen_albin@hotmail.com'; // Ersätt med din SMTP-användarnamn
-    $mail->Password = 'albinii123'; // Ersätt med ditt SMTP-lösenord
+    $mail->Username = 'Ersätt_med_mailadress'; // Ersätt med din SMTP-användarnamn
+    $mail->Password = 'Ersätt_med_lösenord_till_mailadress'; // Ersätt med ditt SMTP-lösenord
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
     // Konfigurera e-postmeddelandet
-    $mail->setFrom('fotbollskungen_albin@hotmail.com', 'Fotbollskungen Albin');
+    $mail->setFrom('Ersätt_med_mailadress', 'Ersätt_detta_med_valfri_Text');
     $mail->addAddress($email);
     $mail->Subject = 'Din engångskod från anpassarna';
     // $mail->Body = "Hej! Din engångskod är: $otp";
