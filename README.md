@@ -99,7 +99,7 @@ WINDOWS:
 
 1. Ladda ner Composer från https://getcomposer.org/download/ . 
 
-2.Öppna mappen php83 som bör ligga i tools under C: om du har följt nedladdningsinstruktionerna utan ändringar. 
+2. Öppna mappen php83 som bör ligga i tools under C: om du har följt nedladdningsinstruktionerna utan ändringar. 
 
 3. Leta rätt på filen php.ini och öppna den. 
 
@@ -111,7 +111,7 @@ WINDOWS:
 
 7. Spara med php.ini med de ändringar du har gjort. 
 
-### Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
+8. Nu ska programmet fungera på din enhet om du startat servern korrekt med kommandot “php -S localhost:8000” 
 
  
 
